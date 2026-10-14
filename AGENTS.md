@@ -1,4 +1,4 @@
-# The Hype (Astro blog)
+# World Wide Hype (Astro blog)
 
 Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` triggers the GitHub Actions build and deploy.
 
@@ -15,8 +15,10 @@ Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` trigge
    title: 'Title (under 70 characters)'
    description: 'One or two sentences shown in search results'
    pubDate: 'YYYY-MM-DDTHH:mm:00Z'
+   location: { name: 'Place', lat: 0.0, lon: 0.0 }
    ---
    ```
+   `location` is where the story happens (city, or country if it is nationwide); it puts a dot on the home page map. Use approximate coordinates with 1–2 decimals.
 6. Body structure (English, 800–1200 words):
    - Lead: 2–3 sentences on what happened
    - `## What happened`: the key facts

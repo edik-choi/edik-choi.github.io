@@ -1,0 +1,129 @@
+<button id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+	<svg viewBox="0 0 24 32" width="22" height="30" aria-hidden="true">
+		<defs>
+			<radialGradient id="lantern-glow">
+				<stop offset="0" stop-color="#ffc94a" stop-opacity="0.7" />
+				<stop offset="1" stop-color="#ffc94a" stop-opacity="0" />
+			</radialGradient>
+		</defs>
+		<circle class="glow" cx="12" cy="17" r="12" fill="url(#lantern-glow)" />
+		<path d="M8.5 6a3.5 3.5 0 0 1 7 0" fill="none" stroke="currentColor" stroke-width="1.5" />
+		<path d="M8 6h8l2 3H6z" fill="currentColor" />
+		<rect class="glass" x="7" y="9" width="10" height="15" rx="2" stroke="currentColor" stroke-width="1.5" />
+		<g class="flame">
+			<path d="M12 12.5c2.5 3 3.5 5.5 0 9-3.5-3.5-2.5-6 0-9z" fill="#ffa62b" />
+			<path d="M12 16c1.2 1.5 1.5 3 0 4.5-1.5-1.5-1.2-3 0-4.5z" fill="#fff1b8" />
+		</g>
+		<rect x="5" y="24" width="14" height="3" rx="1" fill="currentColor" />
+	</svg>
+</button>
+
+<script>
+	const btn = document.getElementById('theme-toggle')!;
+	const root = document.documentElement;
+	const sync = () => btn.setAttribute('aria-pressed', String(root.dataset.theme === 'dark'));
+	sync();
+	btn.addEventListener('click', () => {
+		root.dataset.theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+		try {
+			localStorage.setItem('theme', root.dataset.theme);
+		} catch {}
+		sync();
+	});
+</script>
+
+<style>
+	button {
+		position: relative;
+		display: flex;
+		padding: 0.4em;
+		border: 0;
+		background: none;
+		color: rgb(var(--black));
+		cursor: pointer;
+	}
+	svg {
+		overflow: visible;
+		transform-origin: 50% 0;
+	}
+	/* Light cast around the lantern */
+	button::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width: 260px;
+		height: 260px;
+		margin: -130px 0 0 -130px;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle,
+			rgba(255, 196, 80, 0.24) 0 22%,
+			rgba(255, 196, 80, 0.14) 22% 40%,
+			rgba(255, 196, 80, 0.07) 40% 60%,
+			transparent 60%
+		);
+		mix-blend-mode: screen;
+		pointer-events: none;
+		opacity: 0;
+		transform: scale(0.3);
+		transition: opacity 0.6s, transform 0.6s;
+	}
+	:global([data-theme='dark']) button::before {
+		opacity: 1;
+		transform: scale(1);
+		animation: sway-light 3s ease-in-out infinite;
+	}
+	:global([data-theme='dark']) svg {
+		animation: sway 3s ease-in-out infinite;
+	}
+	@keyframes sway {
+		0%, 100% { transform: rotate(6deg); }
+		50% { transform: rotate(-6deg); }
+	}
+	@keyframes sway-light {
+		0%, 100% { transform: translateX(-10px) scale(1); opacity: 0.9; }
+		25% { opacity: 1; }
+		50% { transform: translateX(10px) scale(1.05); opacity: 0.85; }
+		75% { opacity: 1; }
+	}
+	.glass {
+		fill: transparent;
+		transition: fill 0.5s;
+	}
+	.glow {
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	.flame {
+		transform-origin: 12px 21.5px;
+		transform: scale(0);
+		transition: transform 0.4s cubic-bezier(0.3, 1.6, 0.6, 1);
+	}
+	:global([data-theme='dark']) .glass {
+		fill: rgba(255, 190, 70, 0.3);
+	}
+	:global([data-theme='dark']) .glow {
+		opacity: 1;
+	}
+	:global([data-theme='dark']) .flame {
+		transform: scale(1);
+	}
+	:global([data-theme='dark']) .flame path {
+		transform-origin: 12px 21.5px;
+		animation: flicker 1.6s ease-in-out infinite alternate;
+	}
+	@keyframes flicker {
+		0% { transform: scale(1, 1) skewX(0deg); }
+		30% { transform: scale(0.95, 1.06) skewX(-3deg); }
+		60% { transform: scale(1.03, 0.94) skewX(2deg); }
+		100% { transform: scale(0.97, 1.03) skewX(-1deg); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.flame, .glass, .glow { transition: none; }
+		:global([data-theme='dark']) .flame path,
+		:global([data-theme='dark']) svg,
+		:global([data-theme='dark']) button::before { animation: none; }
+		button::before { transition: none; }
+	}
+</style>

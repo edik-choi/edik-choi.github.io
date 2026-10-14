@@ -14,6 +14,10 @@ const blog = defineCollection({
 			pubDate: z.coerce.date(),
 			updatedDate: z.coerce.date().optional(),
 			heroImage: z.optional(image()),
+			// Where the story happens; drawn as a dot on the home page map
+			location: z
+				.object({ name: z.string(), lat: z.number(), lon: z.number() })
+				.optional(),
 		}),
 });
 

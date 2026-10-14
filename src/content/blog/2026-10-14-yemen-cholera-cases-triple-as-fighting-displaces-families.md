@@ -2,6 +2,7 @@
 title: 'Yemen Cholera Cases Triple in Three Weeks as Fighting Displaces Families'
 description: 'The WHO says weekly suspected cholera cases in Yemen rose from 217 to 647 in three weeks, as renewed fighting pushes more than 200,000 people from their homes.'
 pubDate: '2026-10-14T07:05:00Z'
+location: { name: 'Yemen', lat: 15.6, lon: 48.0 }
 ---
 
 The World Health Organization (WHO) said on 13 October that suspected cholera cases in Yemen have <mark>roughly tripled in three weeks</mark>. The rise comes as renewed fighting between the Houthis and the government has forced large numbers of people into crowded camps with limited safe water. The agency says its emergency response is badly underfunded.

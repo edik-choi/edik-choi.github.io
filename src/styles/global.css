@@ -17,6 +17,17 @@
 		0 2px 6px rgba(var(--gray), 25%), 0 8px 24px rgba(var(--gray), 33%),
 		0 16px 32px rgba(var(--gray), 33%);
 }
+:root[data-theme='dark'] {
+	--bg: #171a10;
+	--accent: #a6d46a;
+	--accent-dark: #c4e690;
+	--highlight: #4d5e1c;
+	--black: 238, 242, 220;
+	--gray: 160, 172, 130;
+	--gray-light: 54, 62, 38;
+	--gray-dark: 214, 220, 196;
+	color-scheme: dark;
+}
 body {
 	font-family: var(--font-body);
 	margin: 0;
@@ -148,4 +159,19 @@ mark {
 	padding: 0 0.1em;
 	box-decoration-break: clone;
 	-webkit-box-decoration-break: clone;
+}
+/* Draw the highlight left to right as the mark scrolls into view */
+@supports (animation-timeline: view()) {
+	@media (prefers-reduced-motion: no-preference) {
+		mark {
+			background-repeat: no-repeat;
+			animation: highlight linear both;
+			animation-timeline: view();
+			animation-range: entry 100% cover 35%;
+		}
+	}
+}
+@keyframes highlight {
+	from { background-size: 0% 100%; }
+	to { background-size: 100% 100%; }
 }

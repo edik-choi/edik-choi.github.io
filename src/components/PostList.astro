@@ -16,7 +16,7 @@ const thumbnail = (post: CollectionEntry<'blog'>) => post.body?.match(/!\[[^\]]*
 		posts.map((post) => {
 			const thumb = thumbnail(post);
 			return (
-				<li>
+				<li data-post={post.id}>
 					<a href={`/blog/${post.id}/`}>
 						<div class="text">
 							<h3 class="title">{post.data.title}</h3>

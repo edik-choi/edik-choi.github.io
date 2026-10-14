@@ -1,6 +1,7 @@
 ---
 import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
+import ThemeToggle from './ThemeToggle.astro';
 ---
 
 <header>
@@ -12,6 +13,7 @@ import HeaderLink from './HeaderLink.astro';
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">All posts</HeaderLink>
 			<HeaderLink href="/about">About</HeaderLink>
+			<ThemeToggle />
 		</div>
 	</nav>
 </header>
@@ -20,6 +22,7 @@ import HeaderLink from './HeaderLink.astro';
 		position: sticky;
 		top: 0;
 		z-index: 10;
+		overflow-x: clip;
 		margin: 0;
 		padding: 0 1em;
 		background: var(--bg);
@@ -48,6 +51,10 @@ import HeaderLink from './HeaderLink.astro';
 	nav a.active {
 		text-decoration: none;
 		border-bottom-color: var(--accent);
+	}
+	.internal-links {
+		display: flex;
+		align-items: center;
 	}
 	.social-links,
 	.social-links a {

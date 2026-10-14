@@ -1,0 +1,123 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import land from '../assets/world-land.txt?raw';
+
+interface Props {
+	posts: CollectionEntry<'blog'>[];
+}
+
+const { posts } = Astro.props;
+// Equirectangular, same projection the land path was generated with (1000x500 = whole globe)
+const x = (lon: number) => ((lon + 180) / 360) * 1000;
+const y = (lat: number) => ((90 - lat) / 180) * 500;
+const pins = posts.filter((p) => p.data.location);
+---
+
+<figure>
+	<svg viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
+		<path class="land" d={land} />
+		{
+			pins.map((post) => {
+				const { name, lat, lon } = post.data.location!;
+				return (
+					<a href={`/blog/${post.id}/`} data-post={post.id} aria-label={`${post.data.title} (${name})`}>
+						<title>{`${name}: ${post.data.title}`}</title>
+						<circle class="hit" cx={x(lon)} cy={y(lat)} r="22" />
+						<circle class="ring" cx={x(lon)} cy={y(lat)} r="9" />
+						<circle class="dot" cx={x(lon)} cy={y(lat)} r="9" />
+						<text x={x(lon)} y={y(lat) - 26} text-anchor="middle">{name}</text>
+					</a>
+				);
+			})
+		}
+	</svg>
+</figure>
+
+<script>
+	// Hovering a post in the list lights up its pin on the map
+	const pins = document.querySelectorAll<SVGAElement>('svg a[data-post]');
+	let current: string | undefined;
+	const light = (e: Event) => {
+		const id = (e.target as Element).closest<HTMLElement>('li[data-post]')?.dataset.post;
+		if (id === current) return;
+		current = id;
+		pins.forEach((pin) => {
+			pin.classList.toggle('active', pin.dataset.post === id);
+			if (pin.dataset.post === id) pin.parentNode!.appendChild(pin); // draw on top of overlapping pins
+		});
+	};
+	document.addEventListener('mouseover', light);
+	document.addEventListener('focusin', light);
+</script>
+
+<style>
+	figure {
+		margin: 0 0 2em;
+	}
+	svg {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+	.land {
+		fill: rgb(var(--gray-light));
+	}
+	.hit {
+		fill: transparent;
+	}
+	.dot {
+		fill: var(--accent);
+		stroke: var(--bg);
+		stroke-width: 3;
+	}
+	.ring {
+		fill: none;
+		stroke: var(--accent);
+		stroke-width: 2;
+		transform-box: fill-box;
+		transform-origin: center;
+		animation: ping 2.4s ease-out infinite;
+	}
+	.dot,
+	text {
+		transform-box: fill-box;
+		transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.6, 1), opacity 0.3s;
+	}
+	.dot {
+		transform-origin: center;
+	}
+	text {
+		transform-origin: bottom;
+		fill: rgb(var(--black));
+		font-size: 30px;
+		font-weight: 700;
+		paint-order: stroke;
+		stroke: var(--bg);
+		stroke-width: 6px;
+		opacity: 0;
+		transform: translateY(8px);
+		pointer-events: none;
+	}
+	a:hover .dot,
+	a:focus-visible .dot,
+	.active .dot {
+		fill: var(--accent-dark);
+		transform: scale(1.6);
+	}
+	a:hover text,
+	a:focus-visible text,
+	.active text {
+		opacity: 1;
+		transform: none;
+	}
+	.active .ring {
+		animation-duration: 1s;
+	}
+	@keyframes ping {
+		from { transform: scale(1); opacity: 0.9; }
+		to { transform: scale(3); opacity: 0; }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.ring { animation: none; opacity: 0; }
+	}
+</style>

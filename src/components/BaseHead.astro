@@ -21,6 +21,13 @@ const { title, description, image = FallbackImage } = Astro.props;
 <!-- Global Metadata -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
+<script is:inline>
+	let t;
+	try {
+		t = localStorage.getItem('theme');
+	} catch {}
+	document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+</script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />
 <link rel="sitemap" href="/sitemap-index.xml" />
@@ -52,6 +59,6 @@ const { title, description, image = FallbackImage } = Astro.props;
 <meta name="twitter:card" content="summary_large_image" />
 
 <!-- GoatCounter analytics -->
-<script is:inline data-goatcounter="https://thehype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script is:inline data-goatcounter="https://worldwidehype.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
 <meta name="google-site-verification" content="RjWNlqPFWkHt_wCW-o_kKZOev2M3yL4-PilthFxidW4" />
