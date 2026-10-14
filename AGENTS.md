@@ -8,6 +8,7 @@ Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` trigge
 2. Use web search to find world issues from the last 24–48 hours and pick one that matters to a global audience. Rotate category (politics, economy, conflict, climate, technology, society) and region so recent posts aren't lopsided.
 3. Cross-check facts against at least 2 reputable sources (Reuters, AP, BBC, Al Jazeera, government or international-organization releases, etc.). Leave out anything unverified, or attribute it explicitly ("according to ..."). Copy numbers, dates and names exactly as the sources give them.
 4. File: `src/content/blog/YYYY-MM-DD-english-slug.md` (UTC date, lowercase, hyphens).
+   `pubDate` must be the actual current time: run `date -u +%Y-%m-%dT%H:%M:00Z` and paste the output as-is. Never round or guess a time, and never use a future time.
 5. Frontmatter (quotes required):
    ```
    ---
