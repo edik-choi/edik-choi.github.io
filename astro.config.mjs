@@ -11,11 +11,11 @@ export default defineConfig({
 	fonts: [
 		{
 			provider: fontProviders.google(),
-			name: 'Google Sans',
-			cssVariable: '--font-sans',
-			weights: [400, 500, 700],
+			name: 'Antic Didone',
+			cssVariable: '--font-body',
+			weights: [400],
 			styles: ['normal'],
-			fallbacks: ['Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'sans-serif'],
+			fallbacks: ['Georgia', 'AppleMyungjo', 'Noto Serif KR', 'serif'],
 		},
 	],
 });
