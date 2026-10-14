@@ -31,10 +31,6 @@ Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` trigge
 
 Write all commit messages in Korean (e.g. `글 추가: <title>`, `UI 스타일 수정`).
 
-## Backlog
-
-Todo and done items live in `BACKLOG.md`. Update it when you start or finish a task.
-
 ## Development
 
 Requires Node 22 or later. Dev server: `npx astro dev --background`
