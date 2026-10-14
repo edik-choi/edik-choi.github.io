@@ -11,7 +11,7 @@ export default defineConfig({
 	fonts: [
 		{
 			provider: fontProviders.google(),
-			name: 'Source Serif 4',
+			name: 'Cormorant Garamond',
 			cssVariable: '--font-body',
 			weights: [400, 700],
 			styles: ['normal', 'italic'],
