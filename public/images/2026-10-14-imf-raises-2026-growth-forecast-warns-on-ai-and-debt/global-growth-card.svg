@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
 <text x="60" y="90" font-size="40" font-weight="bold" fill="#1a1a1a">IMF 2026 global growth forecast</text>
-<text x="600" y="360" font-size="240" font-weight="bold" fill="#0b5cad" text-anchor="middle">3.1%</text>
+<text x="600" y="360" font-size="240" font-weight="bold" fill="#2f6b0f" text-anchor="middle">3.1%</text>
 <text x="600" y="440" font-size="40" fill="#1a1a1a" text-anchor="middle">up from 3.0% in the July forecast</text>
 <text x="600" y="510" font-size="36" fill="#1a1a1a" text-anchor="middle">2025: 3.5%   |   2027 forecast: 3.4%</text>
-<text x="60" y="635" font-size="28" fill="#555555">Source: ABC News (AP), France 24 (AFP) reporting on the IMF outlook</text>
+<text x="60" y="635" font-size="28" fill="#4a4a3a">Source: ABC News (AP), France 24 (AFP) reporting on the IMF outlook</text>
 </svg>

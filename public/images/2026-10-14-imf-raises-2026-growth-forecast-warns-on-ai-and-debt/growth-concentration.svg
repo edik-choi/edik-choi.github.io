@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
 <text x="60" y="80" font-size="40" font-weight="bold" fill="#1a1a1a">Countries accounting for 95% of global growth</text>
-<text x="300" y="330" font-size="200" font-weight="bold" fill="#555555" text-anchor="middle">54</text>
+<text x="300" y="330" font-size="200" font-weight="bold" fill="#4a4a3a" text-anchor="middle">54</text>
 <text x="300" y="400" font-size="36" fill="#1a1a1a" text-anchor="middle">as of April</text>
 <text x="600" y="320" font-size="100" fill="#1a1a1a" text-anchor="middle">→</text>
-<text x="900" y="330" font-size="200" font-weight="bold" fill="#0b5cad" text-anchor="middle">32</text>
+<text x="900" y="330" font-size="200" font-weight="bold" fill="#2f6b0f" text-anchor="middle">32</text>
 <text x="900" y="400" font-size="36" fill="#1a1a1a" text-anchor="middle">in October</text>
 <text x="600" y="520" font-size="36" fill="#1a1a1a" text-anchor="middle">Fewer economies are driving the world's expansion</text>
-<text x="60" y="635" font-size="28" fill="#555555">Source: ABC News (AP) reporting on the IMF outlook</text>
+<text x="60" y="635" font-size="28" fill="#4a4a3a">Source: ABC News (AP) reporting on the IMF outlook</text>
 </svg>

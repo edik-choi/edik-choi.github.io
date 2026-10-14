@@ -4,13 +4,13 @@ description: 'A former Ukrainian officer went on trial in Germany over the 2022 
 pubDate: '2026-10-14T04:52:00Z'
 ---
 
-A Ukrainian former military officer went on trial in Hamburg on Wednesday, 14 October 2026, accused of organising the September 2022 explosions that ruptured the Nord Stream gas pipelines under the Baltic Sea. The defendant, identified under German privacy rules only as Serhii K., denies any involvement. According to Al Jazeera, it is the first public hearing of evidence in an investigation that has lasted four years.
+A Ukrainian former military officer went on trial in Hamburg on Wednesday, 14 October 2026, <mark>accused of organising the September 2022 explosions</mark> that ruptured the Nord Stream gas pipelines under the Baltic Sea. The defendant, identified under German privacy rules only as Serhii K., denies any involvement. According to Al Jazeera, it is <mark>the first public hearing of evidence</mark> in an investigation that has lasted four years.
 
 ## What happened
 
 The trial is being held before the Hanseatic Higher Regional Court in Hamburg, in its State Security Senate. Serhii K., described by Al Jazeera as a 50-year-old former Ukrainian military officer, is the only person currently on trial. Keystone-SDA, in a report published by blue News in September, said he was reportedly an officer in a Ukrainian special forces unit at the time of the attack.
 
-German prosecutors allege that he organised the operation together with other members of the military, acting for unidentified Ukrainian state entities, and that he led a group of agents that included divers and an explosives expert. According to the prosecution case as reported by Al Jazeera, he entered Germany through Poland on a forged Ukrainian passport about three weeks before the attack. The group is alleged to have used a sailboat hired in Rostock to reach an area near the Danish island of Bornholm, where military-grade explosives with timers were attached to the pipelines on the seabed.
+German prosecutors allege that he organised the operation together with other members of the military, acting for unidentified Ukrainian state entities, and that he led a group of agents that included divers and an explosives expert. According to the prosecution case as reported by Al Jazeera, <mark>he entered Germany through Poland on a forged Ukrainian passport</mark> about three weeks before the attack. The group is alleged to have used a sailboat hired in Rostock to reach an area near the Danish island of Bornholm, where military-grade explosives with timers were attached to the pipelines on the seabed.
 
 The charges, as summarised by Keystone-SDA, include alleged complicity in war crimes by attacking civilian targets, causing an explosion with explosives, destroying structures and disrupting public services. The court's assessment at this stage is preliminary. Serhii K. was arrested in Italy in August 2025 and extradited to Germany in November of that year, according to Al Jazeera.
 
@@ -26,11 +26,11 @@ On the eve of the trial, Russia said it expected a "just verdict" naming the per
 
 ## Background
 
-On 26 September 2022, Swedish seismologists detected several blasts, some 17 hours apart. Three of the four concrete-coated steel pipelines ruptured, releasing large methane plumes. Nord Stream 1 had supplied about half of Germany's natural gas imports. Nord Stream 2 was built but never opened, after Berlin cancelled its approval shortly before Russia invaded Ukraine.
+On 26 September 2022, Swedish seismologists detected several blasts, some 17 hours apart. <mark>Three of the four concrete-coated steel pipelines ruptured</mark>, releasing large methane plumes. Nord Stream 1 had supplied about half of Germany's natural gas imports. Nord Stream 2 was built but never opened, after Berlin cancelled its approval shortly before Russia invaded Ukraine.
 
 ![Key figures: 3 of 4 Nord Stream pipelines ruptured; about half of Germany's gas imports came via Nord Stream 1](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/key-figures.svg)
 
-Germany is reportedly the only country still pursuing the case. The Kyiv Independent, in a February 2026 report, said Denmark and Sweden closed their own investigations in 2024. Germany's case has relied on evidence that, according to that report, includes a DNA match, a photograph of a person resembling the defendant who crossed the EU border under a different name, and testimony from a driver who allegedly transported a suspect by bus. The defendant's lawyers question the origin of these materials, and his lawyer, Mykola Katerynchuk, has called it "a political case" with no direct evidence of his client's involvement.
+<mark>Germany is reportedly the only country still pursuing the case</mark>. The Kyiv Independent, in a February 2026 report, said Denmark and Sweden closed their own investigations in 2024. Germany's case has relied on evidence that, according to that report, includes a DNA match, a photograph of a person resembling the defendant who crossed the EU border under a different name, and testimony from a driver who allegedly transported a suspect by bus. The defendant's lawyers question the origin of these materials, and his lawyer, Mykola Katerynchuk, has called it "a political case" with no direct evidence of his client's involvement.
 
 The case has also raised legal disputes. In a separate matter, a Polish court refused in October 2025 to extradite another suspect, with the judge holding that the explosions occurred in international waters and that Germany lacked grounds for an arrest warrant. According to the Kyiv Independent, Germany's top criminal court disagreed, saying the damage occurred on German territory where the pipelines end. The same court described the pipelines as "civilian assets" not directly tied to Russia's war effort, rejected claims of functional and combatant immunity, and said that if Ukrainian authorities directed the sabotage, it would not be justified under international law.
 
@@ -38,7 +38,7 @@ The case has also raised legal disputes. In a separate matter, a Polish court re
 
 The proceedings are the first time evidence about the attack is being presented in open court. For Germany, the case concerns infrastructure that once carried a large share of its gas supply, and whose destruction contributed to the energy price shock that followed Russia's full-scale invasion of Ukraine.
 
-The trial also touches a sensitive point in relations between two close partners. Al Jazeera notes that the case has strained ties between Berlin and Kyiv, even though Germany remains one of Ukraine's strongest backers. A finding that Ukrainian state entities were involved, or a finding that they were not, would carry diplomatic weight, as would any ruling on the legal questions above, such as whether combatant immunity applies to covert operations against infrastructure.
+The trial also touches a sensitive point in relations between two close partners. Al Jazeera notes that <mark>the case has strained ties between Berlin and Kyiv</mark>, even though Germany remains one of Ukraine's strongest backers. A finding that Ukrainian state entities were involved, or a finding that they were not, would carry diplomatic weight, as would any ruling on the legal questions above, such as whether combatant immunity applies to covert operations against infrastructure.
 
 More broadly, the case is a test of how national courts handle alleged sabotage of critical undersea infrastructure, including where jurisdiction lies when damage occurs in international waters and which legal protections apply to members of armed forces acting covertly.
 
@@ -48,7 +48,7 @@ More broadly, the case is a test of how national courts handle alleged sabotage 
 - **Rulings on immunity and jurisdiction.** The court's treatment of combatant immunity and of where the offence is considered to have occurred could shape later cases.
 - **The second suspect.** Whether and when Vladimir Z. is handed over to Germany and faces proceedings.
 - **Reactions from Kyiv and Moscow.** Both governments have made public statements ahead of the trial, and further comments are likely as testimony emerges.
-- **The timetable.** Hearing dates run through December, with more planned in January and February 2027, so a verdict is not expected before then.
+- **The timetable.** Hearing dates run through December, with more planned in January and February 2027, so <mark>a verdict is not expected before then</mark>.
 
 ![Trial timetable: 16 hearing dates set through 17 December 2026, with more dates in January and February 2027](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/timetable.svg)
 

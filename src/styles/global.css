@@ -8,6 +8,7 @@
 	--bg: #f6fcbb;
 	--accent: #2f6b0f;
 	--accent-dark: #1f4a08;
+	--highlight: #cfe86a;
 	--black: 15, 18, 25;
 	--gray: 92, 107, 64;
 	--gray-light: 221, 231, 154;
@@ -137,4 +138,14 @@ hr {
 	clip-path: inset(50%);
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
+}
+
+/* Highlighter-pen effect for key phrases (<mark> in posts) */
+mark {
+	font-weight: 700;
+	color: inherit;
+	background: linear-gradient(transparent 55%, var(--highlight) 55%);
+	padding: 0 0.1em;
+	box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
 }
