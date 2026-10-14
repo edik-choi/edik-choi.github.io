@@ -165,7 +165,10 @@ mark {
 	@media (prefers-reduced-motion: no-preference) {
 		mark {
 			background-repeat: no-repeat;
-			animation: highlight linear both;
+			/* Longhands only: the minifier folds a shorthand + timeline into one invalid shorthand */
+			animation-name: highlight;
+			animation-timing-function: linear;
+			animation-fill-mode: both;
 			animation-timeline: view();
 			animation-range: entry 100% cover 35%;
 		}

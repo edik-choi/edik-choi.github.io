@@ -67,7 +67,10 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 					height: 4px;
 					background: var(--accent);
 					transform-origin: left;
-					animation: read linear both;
+					/* Longhands only: the minifier folds a shorthand + timeline into one invalid shorthand */
+					animation-name: read;
+					animation-timing-function: linear;
+					animation-fill-mode: both;
 					animation-timeline: scroll(root);
 				}
 			}

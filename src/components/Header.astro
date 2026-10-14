@@ -25,7 +25,9 @@ import ThemeToggle from './ThemeToggle.astro';
 		overflow-x: clip;
 		margin: 0;
 		padding: 0 1em;
-		background: var(--bg);
+		background: color-mix(in srgb, var(--bg) 70%, transparent);
+		-webkit-backdrop-filter: blur(12px);
+		backdrop-filter: blur(12px);
 		border-bottom: 1px solid rgb(var(--gray-light));
 	}
 	h2 {
