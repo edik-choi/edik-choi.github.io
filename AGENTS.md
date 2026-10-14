@@ -1,4 +1,4 @@
-# World Issues Brief (Astro blog)
+# The Hype (Astro blog)
 
 Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` triggers the GitHub Actions build and deploy.
 
