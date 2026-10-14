@@ -1,31 +1,31 @@
-# 세계 이슈 브리핑 (Astro 블로그)
+# World Issues Brief (Astro blog)
 
-GitHub Pages(https://edik-choi.github.io)에 배포. `main`에 push하면 GitHub Actions가 빌드·배포한다.
+Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` triggers the GitHub Actions build and deploy.
 
-## 자동 포스팅 규칙
+## Auto-posting rules
 
-1. `src/content/blog/`의 기존 글 제목·날짜를 확인해 최근 7일과 겹치는 주제는 피한다. 같은 사건의 의미 있는 새 전개는 허용.
-2. 웹 검색으로 최근 24~48시간의 세계 이슈를 찾고, 한국 독자에게 중요한 주제를 고른다. 분야(정치·경제·분쟁·기후·기술·사회)와 지역이 최근 글과 치우치지 않게 한다.
-3. 사실은 최소 2개의 공신력 있는 출처(Reuters, AP, BBC, 연합뉴스, 각국 정부·국제기구 발표 등)로 교차 확인한다. 확인되지 않은 내용은 쓰지 않거나 "보도에 따르면"으로 명시한다. 수치·날짜·인명은 출처 그대로 쓴다.
-4. 파일: `src/content/blog/YYYY-MM-DD-영문-슬러그.md` (KST 날짜, 소문자·하이픈).
-5. frontmatter (따옴표 필수):
+1. Check titles and dates of existing posts in `src/content/blog/` and avoid topics covered in the last 7 days. A meaningful new development in the same story is fine.
+2. Use web search to find world issues from the last 24–48 hours and pick one that matters to a global audience. Rotate category (politics, economy, conflict, climate, technology, society) and region so recent posts aren't lopsided.
+3. Cross-check facts against at least 2 reputable sources (Reuters, AP, BBC, Al Jazeera, government or international-organization releases, etc.). Leave out anything unverified, or attribute it explicitly ("according to ..."). Copy numbers, dates and names exactly as the sources give them.
+4. File: `src/content/blog/YYYY-MM-DD-english-slug.md` (UTC date, lowercase, hyphens).
+5. Frontmatter (quotes required):
    ```
    ---
-   title: '제목 (40자 이내)'
-   description: '검색 결과에 보일 요약 1~2문장'
-   pubDate: 'YYYY-MM-DDTHH:mm:00+09:00'
+   title: 'Title (under 70 characters)'
+   description: 'One or two sentences shown in search results'
+   pubDate: 'YYYY-MM-DDTHH:mm:00Z'
    ---
    ```
-6. 본문 구조 (한국어, 1500~2500자):
-   - 도입: 무슨 일이 있었는지 2~3문장
-   - `## 무슨 일이 있었나` — 핵심 사실
-   - `## 배경` — 왜 이런 일이 생겼는지
-   - `## 왜 중요한가` — 세계·한국에 미치는 영향
-   - `## 앞으로 지켜볼 점`
-   - `## 참고 자료` — `- [매체명: 기사 제목](URL)` 형식, 실제로 연 URL만
-7. 톤: 중립적·설명적. 의견 주장, 선정적 제목, 추측 금지. 사망자·피해 등 민감한 내용은 절제해서 쓴다.
-8. `npm run build`가 통과하면 커밋하고 `main`에 push한다. 커밋 메시지: `post: <제목>`.
+6. Body structure (English, 800–1200 words):
+   - Lead: 2–3 sentences on what happened
+   - `## What happened`: the key facts
+   - `## Background`: why it happened
+   - `## Why it matters`: the impact on the world
+   - `## What to watch`
+   - `## Sources`: `- [Outlet: Article title](URL)`, listing only URLs you actually opened
+7. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
+8. When `npm run build` passes, commit and push to `main`. Commit message: `post: <title>`.
 
-## 개발
+## Development
 
-Node 22 이상 필요. 개발 서버: `npx astro dev --background`
+Requires Node 22 or later. Dev server: `npx astro dev --background`
