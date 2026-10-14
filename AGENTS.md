@@ -25,7 +25,15 @@ Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` trigge
    - `## What to watch`
    - `## Sources`: `- [Outlet: Article title](URL)`, listing only URLs you actually opened
 7. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
-8. When `npm run build` passes, commit and push to `main`. Commit message: `post: <title>`.
+8. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
+
+## Commits
+
+Write all commit messages in Korean (e.g. `글 추가: <title>`, `UI 스타일 수정`).
+
+## Backlog
+
+Todo and done items live in `BACKLOG.md`. Update it when you start or finish a task.
 
 ## Development
 
