@@ -13,17 +13,9 @@ export default defineConfig({
 			provider: fontProviders.google(),
 			name: 'Source Serif 4',
 			cssVariable: '--font-body',
-			weights: [400, 600],
+			weights: [400, 700],
 			styles: ['normal', 'italic'],
 			fallbacks: ['Georgia', 'AppleMyungjo', 'Noto Serif KR', 'serif'],
-		},
-		{
-			provider: fontProviders.google(),
-			name: 'DM Sans',
-			cssVariable: '--font-heading',
-			weights: [500, 700],
-			styles: ['normal'],
-			fallbacks: ['Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'sans-serif'],
 		},
 	],
 });
