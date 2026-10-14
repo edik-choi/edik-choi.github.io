@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#ffffff"/>
+<text x="60" y="80" font-size="40" font-weight="bold" fill="#1a1a1a">2026 growth forecasts, selected economies (%)</text>
+<g font-size="32" fill="#1a1a1a">
+<text x="60" y="190">India</text><rect x="330" y="155" width="700" height="48" fill="#0b5cad"/><text x="1045" y="190">7.0</text>
+<text x="60" y="270">China</text><rect x="330" y="235" width="450" height="48" fill="#0b5cad"/><text x="795" y="270">4.5</text>
+<text x="60" y="350">Emerging</text><rect x="330" y="315" width="370" height="48" fill="#0b5cad"/><text x="715" y="350">3.7</text>
+<text x="60" y="430">United States</text><rect x="330" y="395" width="230" height="48" fill="#0b5cad"/><text x="575" y="430">2.3</text>
+<text x="60" y="510">Advanced</text><rect x="330" y="475" width="210" height="48" fill="#0b5cad"/><text x="555" y="510">2.1</text>
+<text x="60" y="590">Euro area</text><rect x="330" y="555" width="110" height="48" fill="#d97706"/><text x="455" y="590">1.1</text>
+</g>
+<text x="60" y="650" font-size="28" fill="#555555">Source: ABC News (AP) reporting on the IMF outlook</text>
+</svg>
