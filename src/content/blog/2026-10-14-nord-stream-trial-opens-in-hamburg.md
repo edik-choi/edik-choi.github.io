@@ -14,15 +14,21 @@ German prosecutors allege that he organised the operation together with other me
 
 The charges, as summarised by Keystone-SDA, include alleged complicity in war crimes by attacking civilian targets, causing an explosion with explosives, destroying structures and disrupting public services. The court's assessment at this stage is preliminary. Serhii K. was arrested in Italy in August 2025 and extradited to Germany in November of that year, according to Al Jazeera.
 
+![Timeline from the September 2022 pipeline blasts to the trial opening in Hamburg on 14 October 2026](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/timeline.svg)
+
 The court has set sixteen hearing dates through 17 December, with further dates in January and February 2027, according to Keystone-SDA. Al Jazeera reports the trial is expected to run into February next year.
 
 Al Jazeera also reports that a second suspect, named as Vladimir Z., a trained scuba diver whom prosecutors say was one of the divers on the team, was arrested in Croatia in August. A Croatian court approved his handover to Germany last month.
 
 On the eve of the trial, Russia said it expected a "just verdict" naming the perpetrators and those who ordered the operation, Al Jazeera reports. Moscow denies blowing up its own pipelines, and Ukraine's government also denies involvement.
 
+![Diagram of positions: Germany prosecuting, the defendant denying involvement, Ukraine denying involvement, Russia denying a role and expecting a just verdict](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/who-says-what.svg)
+
 ## Background
 
 On 26 September 2022, Swedish seismologists detected several blasts, some 17 hours apart. Three of the four concrete-coated steel pipelines ruptured, releasing large methane plumes. Nord Stream 1 had supplied about half of Germany's natural gas imports. Nord Stream 2 was built but never opened, after Berlin cancelled its approval shortly before Russia invaded Ukraine.
+
+![Key figures: 3 of 4 Nord Stream pipelines ruptured; about half of Germany's gas imports came via Nord Stream 1](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/key-figures.svg)
 
 Germany is reportedly the only country still pursuing the case. The Kyiv Independent, in a February 2026 report, said Denmark and Sweden closed their own investigations in 2024. Germany's case has relied on evidence that, according to that report, includes a DNA match, a photograph of a person resembling the defendant who crossed the EU border under a different name, and testimony from a driver who allegedly transported a suspect by bus. The defendant's lawyers question the origin of these materials, and his lawyer, Mykola Katerynchuk, has called it "a political case" with no direct evidence of his client's involvement.
 
@@ -43,6 +49,8 @@ More broadly, the case is a test of how national courts handle alleged sabotage 
 - **The second suspect.** Whether and when Vladimir Z. is handed over to Germany and faces proceedings.
 - **Reactions from Kyiv and Moscow.** Both governments have made public statements ahead of the trial, and further comments are likely as testimony emerges.
 - **The timetable.** Hearing dates run through December, with more planned in January and February 2027, so a verdict is not expected before then.
+
+![Trial timetable: 16 hearing dates set through 17 December 2026, with more dates in January and February 2027](/images/2026-10-14-nord-stream-trial-opens-in-hamburg/timetable.svg)
 
 ## Sources
 
