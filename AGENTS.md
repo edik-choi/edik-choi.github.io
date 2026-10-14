@@ -24,8 +24,14 @@ Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` trigge
    - `## Why it matters`: the impact on the world
    - `## What to watch`
    - `## Sources`: `- [Outlet: Article title](URL)`, listing only URLs you actually opened
-7. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
-8. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
+7. Images: every post includes 3–4 infographics that you draw yourself as SVG files (no photos, no AI-generated images, no images copied from other sites).
+   - Kinds to choose from: a chart of key numbers (bar/line), a timeline of events, a key-figure card (one big number with a short label), a map-style or relationship diagram of the actors involved. Pick the kinds that suit the story; don't repeat the same kind more than twice.
+   - Use only facts and numbers that are in the post and verified by its sources. Put a small "Source: <outlet>" line at the bottom of each graphic.
+   - Files: `public/images/<post-slug>/<name>.svg` (the slug is the post filename without `.md`). Embed in the body with `![Descriptive alt text](/images/<post-slug>/<name>.svg)` right after the paragraph it illustrates. Spread them through the post, not all in one place.
+   - SVG format: `viewBox="0 0 1200 675"`, white background `<rect width="100%" height="100%" fill="#ffffff"/>`, dark text (#1a1a1a), at most 3 accent colors, `font-family="Helvetica, Arial, sans-serif"`, text at least 28px so it stays legible on phones. Self-contained: no external fonts, images or scripts. Make sure text never overflows or overlaps.
+   - Commit the SVG files together with the post.
+8. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
+9. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
 
 ## Commits
 
