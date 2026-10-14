@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Diagram of how renewed fighting leads to cholera risk"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="80" font-size="44" fill="#1a1a1a" font-weight="bold" text-anchor="start">How displacement raises cholera risk</text>
+<rect x="150" y="130" width="900" height="95" rx="14" fill="#eef6b0" stroke="#2f6b0f" stroke-width="3"/>
+<text x="180" y="172" font-size="36" fill="#2f6b0f" font-weight="bold" text-anchor="start">Renewed fighting</text>
+<text x="180" y="210" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="start">Houthis and government</text>
+<path d="M600 225 v30" stroke="#8a9560" stroke-width="4"/><path d="M585 242 l15 15 l15 -15" fill="none" stroke="#8a9560" stroke-width="4"/>
+<rect x="150" y="255" width="900" height="95" rx="14" fill="#eef6b0" stroke="#2f6b0f" stroke-width="3"/>
+<text x="180" y="297" font-size="36" fill="#2f6b0f" font-weight="bold" text-anchor="start">200,000+ displaced</text>
+<text x="180" y="335" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="start">IOM: 217,000+</text>
+<path d="M600 350 v30" stroke="#8a9560" stroke-width="4"/><path d="M585 367 l15 15 l15 -15" fill="none" stroke="#8a9560" stroke-width="4"/>
+<rect x="150" y="380" width="900" height="95" rx="14" fill="#eef6b0" stroke="#2f6b0f" stroke-width="3"/>
+<text x="180" y="422" font-size="36" fill="#2f6b0f" font-weight="bold" text-anchor="start">Crowded camps</text>
+<text x="180" y="460" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="start">Little safe water</text>
+<path d="M600 475 v30" stroke="#8a9560" stroke-width="4"/><path d="M585 492 l15 15 l15 -15" fill="none" stroke="#8a9560" stroke-width="4"/>
+<rect x="150" y="505" width="900" height="95" rx="14" fill="#eef6b0" stroke="#a14d12" stroke-width="3"/>
+<text x="180" y="547" font-size="36" fill="#a14d12" font-weight="bold" text-anchor="start">Cholera rises</text>
+<text x="180" y="585" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="start">8,034 cases in 2026</text>
+<text x="60" y="640" font-size="28" fill="#5c6b40" font-weight="normal" text-anchor="start">Source: Al Jazeera, The New Arab (citing WHO)</text>
+</svg>

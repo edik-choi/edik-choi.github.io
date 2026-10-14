@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif" role="img" aria-label="Bar chart of weekly suspected cholera cases in Yemen"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="80" font-size="44" fill="#1a1a1a" font-weight="bold" text-anchor="start">Weekly suspected cholera cases, Yemen</text>
+<text x="60" y="125" font-size="30" fill="#4a4a3a" font-weight="normal" text-anchor="start">Cases roughly tripled in three weeks</text>
+<line x1="100" y1="560" x2="1100" y2="560" stroke="#8a9560" stroke-width="2"/>
+<rect x="250" y="446" width="260" height="114" fill="#2f6b0f"/>
+<rect x="690" y="220" width="260" height="340" fill="#a14d12"/>
+<text x="380" y="431" font-size="44" fill="#1a1a1a" font-weight="bold" text-anchor="middle">217</text>
+<text x="820" y="205" font-size="44" fill="#a14d12" font-weight="bold" text-anchor="middle">647</text>
+<text x="380" y="600" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="middle">6-12 Sept</text>
+<text x="820" y="600" font-size="28" fill="#4a4a3a" font-weight="normal" text-anchor="middle">27 Sept-3 Oct</text>
+<text x="60" y="640" font-size="28" fill="#5c6b40" font-weight="normal" text-anchor="start">Source: Al Jazeera, The New Arab (citing WHO)</text>
+</svg>
