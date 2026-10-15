@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="90" font-size="44" font-weight="bold" fill="#1a1a1a">How the FAO says the shock unfolds</text>
+<g fill="#eef6b0" stroke="#8a9560" stroke-width="2"><rect x="40" y="260" width="160" height="110" rx="12"/><rect x="230" y="260" width="160" height="110" rx="12"/><rect x="420" y="260" width="160" height="110" rx="12"/><rect x="610" y="260" width="160" height="110" rx="12"/><rect x="800" y="260" width="160" height="110" rx="12"/></g>
+<rect x="990" y="260" width="170" height="110" rx="12" fill="#a14d12"/>
+<g font-size="28" font-weight="bold" fill="#1a1a1a" text-anchor="middle"><text x="120" y="327">Energy</text><text x="310" y="327">Fertiliser</text><text x="500" y="327">Seeds</text><text x="690" y="327">Lower</text><text x="690" y="357" font-size="30">yields</text><text x="880" y="327">Prices</text></g>
+<text x="1075" y="327" font-size="28" font-weight="bold" fill="#f6fcbb" text-anchor="middle">Food</text><text x="1075" y="357" font-size="28" font-weight="bold" fill="#f6fcbb" text-anchor="middle">inflation</text>
+<g stroke="#2f6b0f" stroke-width="4"><line x1="202" y1="315" x2="228" y2="315"/><line x1="392" y1="315" x2="418" y2="315"/><line x1="582" y1="315" x2="608" y2="315"/><line x1="772" y1="315" x2="798" y2="315"/><line x1="962" y1="315" x2="988" y2="315"/></g>
+<text x="600" y="470" font-size="34" fill="#2f6b0f" text-anchor="middle">Full crisis possible within 6 to 12 months (FAO, May)</text>
+<text x="60" y="655" font-size="28" fill="#5c6b40">Source: The New Arab (FAO statement)</text></svg>
