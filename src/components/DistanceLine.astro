@@ -1,0 +1,36 @@
+---
+// "Berlin is about 8,100 km from you." Where the reader is comes from their device's time zone,
+// so no permission prompt and nothing leaves the browser.
+interface Props {
+	place: { name: string; lat: number; lon: number };
+}
+
+const { place } = Astro.props;
+---
+
+<p class="distance" data-name={place.name} data-lat={place.lat} data-lon={place.lon} hidden></p>
+
+<script>
+	// Time zone → coordinates of its main city, generated from /usr/share/zoneinfo/zone.tab
+	// ponytail: time-zone accuracy (a whole zone maps to one city); switch to geolocation if exact distance matters
+	import zones from '../assets/tz-coords.json';
+
+	const el = document.querySelector<HTMLElement>('p.distance');
+	const me = (zones as Record<string, number[]>)[Intl.DateTimeFormat().resolvedOptions().timeZone];
+	if (el && me) {
+		const r = Math.PI / 180;
+		const [a, b] = me, c = +el.dataset.lat!, d = +el.dataset.lon!;
+		const h = Math.sin(((c - a) * r) / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(((d - b) * r) / 2) ** 2;
+		const km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
+		el.textContent = km < 100 ? `${el.dataset.name} is less than 100 km from you.` : `${el.dataset.name} is about ${km.toLocaleString('en')} km from you.`;
+		el.hidden = false;
+	}
+</script>
+
+<style>
+	.distance {
+		margin: 0 0 1.5em;
+		color: rgb(var(--gray));
+		font-weight: 700;
+	}
+</style>

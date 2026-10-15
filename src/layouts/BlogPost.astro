@@ -6,11 +6,12 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostMeters from '../components/PostMeters.astro';
+import DistanceLine from '../components/DistanceLine.astro';
 import TrustBadge from '../components/TrustBadge.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, category, hype, sources = 0, trusted = false, ogImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -121,6 +122,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, sou
 						{category && <button type="button" class="share" data-title={title}>Share this story</button>}
 						<hr />
 					</div>
+					{place && <DistanceLine place={place} />}
 					<PostMeters hype={hype} sources={sources} />
 					<slot />
 				</div>
