@@ -1,5 +1,5 @@
 ---
-// Pin icon + "8,100 km" under the post title: how far the story is from the reader. Where the reader is comes from their device's time zone,
+// Pin icon + "8,100 km from Seoul" under the post title: how far the story is from the reader. Where the reader is comes from their device's time zone,
 // so no permission prompt and nothing leaves the browser.
 interface Props {
 	place: { name: string; lat: number; lon: number };
@@ -19,15 +19,18 @@ const { place } = Astro.props;
 	import zones from '../assets/tz-coords.json';
 
 	const el = document.querySelector<HTMLElement>('.distance');
-	const me = (zones as Record<string, number[]>)[Intl.DateTimeFormat().resolvedOptions().timeZone];
+	const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+	const me = (zones as Record<string, number[]>)[tz];
+	// "America/Argentina/Buenos_Aires" → "Buenos Aires"
+	const city = tz.split('/').pop()!.replace(/_/g, ' ');
 	if (el && me) {
 		const r = Math.PI / 180;
 		const [a, b] = me, c = +el.dataset.lat!, d = +el.dataset.lon!;
 		const h = Math.sin(((c - a) * r) / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(((d - b) * r) / 2) ** 2;
 		const km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
 		const text = km < 100 ? '< 100 km' : `${km.toLocaleString('en')} km`;
-		el.querySelector('span')!.textContent = text;
-		el.title = `${el.dataset.name} is about ${text} from you`;
+		el.querySelector('span')!.textContent = `${text} from ${city}`;
+		el.title = `${el.dataset.name} is about ${text} from ${city} (your time zone)`;
 		el.hidden = false;
 	}
 </script>
