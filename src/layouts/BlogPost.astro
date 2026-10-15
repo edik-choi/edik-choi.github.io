@@ -116,10 +116,10 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 									Last updated on <FormattedDate date={updatedDate} />
 								</div>
 							)}
-							{place && <DistanceLine place={place} />}
 						</div>
 						{trusted && <TrustBadge large />}
 						<h1>{title}</h1>
+						{place && <DistanceLine place={place} />}
 						{category && <button type="button" class="share" data-title={title}>Share this story</button>}
 						<hr />
 					</div>

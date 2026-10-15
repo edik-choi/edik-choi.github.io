@@ -1,5 +1,5 @@
 ---
-// Pin icon + "8,100 km" under the post date: how far the story is from the reader. Where the reader is comes from their device's time zone,
+// Pin icon + "8,100 km" under the post title: how far the story is from the reader. Where the reader is comes from their device's time zone,
 // so no permission prompt and nothing leaves the browser.
 interface Props {
 	place: { name: string; lat: number; lon: number };
@@ -38,7 +38,8 @@ const { place } = Astro.props;
 		justify-content: center;
 		align-items: center;
 		gap: 0.25em;
-		margin-top: 0.4em;
+		margin: -0.2em 0 1em;
+		color: rgb(var(--gray));
 	}
 	.distance[hidden] {
 		display: none;
