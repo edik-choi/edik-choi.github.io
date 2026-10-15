@@ -2,6 +2,7 @@
 title: 'Nord Stream Sabotage Trial Opens in Hamburg'
 description: 'A former Ukrainian officer went on trial in Germany over the 2022 Nord Stream pipeline blasts, the first public hearing of evidence in a years-long investigation.'
 pubDate: '2026-10-14T04:52:00Z'
+category: 'politics'
 location: { name: 'Hamburg', lat: 53.55, lon: 9.99 }
 hype: { attention: 9, impact: 2 }
 ---

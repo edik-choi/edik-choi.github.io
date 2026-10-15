@@ -10,7 +10,7 @@ import TrustBadge from '../components/TrustBadge.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, trusted = false, ogImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, hype, sources = 0, trusted = false, ogImage } = Astro.props;
 ---
 
 <html lang="en">
@@ -76,6 +76,21 @@ const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, 
 					animation-timeline: scroll(root);
 				}
 			}
+			.share {
+				margin-bottom: 1em;
+				padding: 0.4em 1.1em;
+				border: 1px solid var(--accent);
+				border-radius: 999px;
+				background: transparent;
+				color: var(--accent);
+				font: inherit;
+				font-size: 0.9rem;
+				cursor: pointer;
+			}
+			.share:hover {
+				background: var(--accent);
+				color: var(--bg);
+			}
 			@keyframes read {
 				from { transform: scaleX(0); }
 				to { transform: scaleX(1); }
@@ -103,6 +118,7 @@ const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, 
 						</div>
 						{trusted && <TrustBadge large />}
 						<h1>{title}</h1>
+						{category && <button type="button" class="share" data-title={title}>Share this story</button>}
 						<hr />
 					</div>
 					<PostMeters hype={hype} sources={sources} />
@@ -111,5 +127,21 @@ const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, 
 			</article>
 		</main>
 		<Footer />
+		<script>
+			// Phones get the native share sheet; desktops copy the link
+			const btn = document.querySelector<HTMLButtonElement>('.share');
+			btn?.addEventListener('click', async () => {
+				const url = location.href;
+				if (navigator.share) {
+					try {
+						await navigator.share({ title: btn!.dataset.title, url });
+					} catch {} // cancelled
+					return;
+				}
+				await navigator.clipboard.writeText(url);
+				btn!.textContent = 'Link copied ✓';
+				setTimeout(() => (btn!.textContent = 'Share this story'), 2000);
+			});
+		</script>
 	</body>
 </html>

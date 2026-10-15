@@ -11,6 +11,9 @@ const allPosts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 const posts = allPosts.slice(0, 10);
+// Ticker: everything from the 24 hours before the newest post, so it is never empty between builds
+const since = allPosts[0]?.data.pubDate.valueOf() - 24 * 60 * 60 * 1000;
+const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
 ---
 
 <!doctype html>
@@ -21,6 +24,28 @@ const posts = allPosts.slice(0, 10);
 	<body>
 		<Header />
 		<main>
+			{
+				today.length > 0 && (
+					<div class="ticker">
+						<span class="label">Today in the world</span>
+						<div class="track">
+							<div class="belt">
+								{[0, 1].map((copy) => (
+									<ul aria-hidden={copy ? 'true' : undefined}>
+										{today.map((p) => (
+											<li>
+												<a href={`/blog/${p.id}/`} tabindex={copy ? -1 : undefined}>
+													{p.data.title}
+												</a>
+											</li>
+										))}
+									</ul>
+								))}
+							</div>
+						</div>
+					</div>
+				)
+			}
 			<h1>{SITE_TITLE}</h1>
 			<p>{SITE_DESCRIPTION}</p>
 			<WorldMap posts={posts} />
@@ -31,3 +56,74 @@ const posts = allPosts.slice(0, 10);
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.ticker {
+		display: flex;
+		align-items: stretch;
+		margin-bottom: 1.5rem;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 8px;
+		overflow: hidden;
+		font-size: 0.9rem;
+	}
+	.label {
+		flex-shrink: 0;
+		padding: 0.5em 0.9em;
+		background: var(--accent);
+		color: var(--bg);
+		font-weight: 700;
+		white-space: nowrap;
+	}
+	.track {
+		min-width: 0;
+		overflow: hidden;
+		mask-image: linear-gradient(90deg, transparent, #000 2em, #000 calc(100% - 2em), transparent);
+	}
+	.belt {
+		display: flex;
+		width: max-content;
+		animation: ticker 40s linear infinite;
+	}
+	.ticker:hover .belt,
+	.ticker:focus-within .belt {
+		animation-play-state: paused;
+	}
+	.belt ul {
+		display: flex;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.belt li {
+		padding: 0.5em 1.5em;
+		white-space: nowrap;
+	}
+	.belt li::before {
+		content: '●';
+		margin-right: 0.6em;
+		color: var(--accent);
+		font-size: 0.6em;
+		vertical-align: middle;
+	}
+	.belt a {
+		color: rgb(var(--gray-dark));
+		text-decoration: none;
+	}
+	.belt a:hover {
+		color: var(--accent);
+	}
+	@keyframes ticker {
+		to {
+			transform: translateX(-50%);
+		}
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.belt {
+			animation: none;
+		}
+		.track {
+			overflow-x: auto;
+		}
+	}
+</style>

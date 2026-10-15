@@ -1,54 +1,16 @@
 ---
+import type { GetStaticPaths } from 'astro';
 import { getCollection } from 'astro:content';
-import BaseHead from '../../components/BaseHead.astro';
-import Footer from '../../components/Footer.astro';
-import Header from '../../components/Header.astro';
-import PostList from '../../components/PostList.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
+import PostIndex from '../../components/PostIndex.astro';
 
-export async function getStaticPaths({ paginate }) {
+export const getStaticPaths = (async ({ paginate }) => {
 	const posts = (await getCollection('blog')).sort(
 		(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 	);
 	return paginate(posts, { pageSize: 10 });
-}
+}) satisfies GetStaticPaths;
 
 const { page } = Astro.props;
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>All posts</h1>
-			<PostList posts={page.data} />
-			{
-				page.lastPage > 1 && (
-					<nav class="pager">
-						{page.url.prev ? <a href={page.url.prev}>← Newer</a> : <span />}
-						<span>
-							{page.currentPage} / {page.lastPage}
-						</span>
-						{page.url.next ? <a href={page.url.next}>Older →</a> : <span />}
-					</nav>
-				)
-			}
-		</main>
-		<Footer />
-	</body>
-</html>
-
-<style>
-	.pager {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		margin-top: 2rem;
-	}
-	.pager > :last-child {
-		justify-self: end;
-	}
-</style>
+<PostIndex page={page} />

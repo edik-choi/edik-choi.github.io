@@ -2,6 +2,7 @@
 title: 'IMF Lifts 2026 Growth Forecast but Warns on AI and Debt'
 description: 'The IMF raised its 2026 global growth forecast to 3.1%, but said the outlook is uneven and that war, an AI-driven boom and rising debt are the main risks.'
 pubDate: '2026-10-14T06:01:00Z'
+category: 'economy'
 location: { name: 'Washington, D.C.', lat: 38.9, lon: -77.04 }
 hype: { attention: 10, impact: 7 }
 ---

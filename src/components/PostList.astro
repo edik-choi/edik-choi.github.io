@@ -23,7 +23,7 @@ const { posts } = Astro.props;
 							<h3 class="title">{post.data.title}</h3>
 							<p class="desc">{post.data.description}</p>
 							<p class="date">
-								<FormattedDate date={post.data.pubDate} />
+								<FormattedDate date={post.data.pubDate} /> · <span class="cat">{post.data.category}</span>
 							</p>
 						</div>
 						{thumb && <img src={thumb} alt="" loading="lazy" width="1200" height="675" />}
@@ -72,6 +72,9 @@ const { posts } = Astro.props;
 		margin: 0;
 		font-size: 0.85rem;
 		color: rgb(var(--gray));
+	}
+	.cat {
+		text-transform: capitalize;
 	}
 	img {
 		flex-shrink: 0;

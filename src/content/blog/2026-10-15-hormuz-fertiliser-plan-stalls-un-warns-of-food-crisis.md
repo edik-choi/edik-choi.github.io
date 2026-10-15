@@ -2,6 +2,7 @@
 title: 'UN Warns of Food Crisis as Hormuz Fertiliser Plan Stalls'
 description: 'A UN official says Asia and Africa could face a food security crisis unless Iran and the US agree within weeks to a plan to move fertiliser through the Strait of Hormuz.'
 pubDate: '2026-10-15T00:18:00Z'
+category: 'economy'
 location: { name: 'Strait of Hormuz', lat: 26.57, lon: 56.25 }
 hype: { attention: 6, impact: 7 }
 ---

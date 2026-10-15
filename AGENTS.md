@@ -15,6 +15,7 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    title: 'Title (under 70 characters)'
    description: 'One or two sentences shown in search results'
    pubDate: 'YYYY-MM-DDTHH:mm:00Z'
+   category: 'economy'
    location: { name: 'Place', lat: 0.0, lon: 0.0 }
    hype: { attention: 0, impact: 0 }
    ---
@@ -23,6 +24,7 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    - `attention` (0–10): run one standard web search on the story's key terms (no domain filter) and count the distinct news outlets among the results that cover this story, including earlier coverage of it. Cap at 10. Charities, agencies and blogs don't count.
    - `impact` (0–10): the sum of five criteria, 0–2 each, using only facts in the post. People affected (0: under 1 million, 1: 1–100 million, 2: over 100 million). Countries affected (0: one, 1: 2–10, 2: more than 10 or global). Economy (0: little, 1: a sector or region, 2: global markets or prices). Human safety (0: none, 1: risk to lives or health, 2: reported deaths or a declared humanitarian emergency). Duration (0: days, 1: months, 2: years or longer).
    - The "Verified" bar is counted automatically from the Sources list; nothing to add.
+   `category` is exactly one of: politics, economy, conflict, climate, technology, society (the build fails otherwise). It powers the category filter on the All posts page.
    `location` is where the story happens (city, or country if it is nationwide); it puts a dot on the home page map. Use approximate coordinates with 1–2 decimals.
 6. Body structure (English, 800–1200 words):
    - Lead: 2–3 sentences on what happened
