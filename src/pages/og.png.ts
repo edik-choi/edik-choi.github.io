@@ -9,14 +9,14 @@ export const GET: APIRoute = async () => {
 	const cut = SITE_DESCRIPTION.indexOf(', ') + 1 || SITE_DESCRIPTION.length;
 	const [line1, line2] = [SITE_DESCRIPTION.slice(0, cut), SITE_DESCRIPTION.slice(cut).trim()];
 	const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-	<rect width="100%" height="100%" fill="#f6fcbb"/>
-	<svg x="100" y="40" width="1000" height="500" viewBox="0 0 1000 500"><path d="${land}" fill="#eef6b0"/></svg>
-	<rect x="80" y="225" width="12" height="200" fill="#2f6b0f"/>
+	<rect width="100%" height="100%" fill="#171a10"/>
+	<svg x="100" y="40" width="1000" height="500" viewBox="0 0 1000 500"><path d="${land}" fill="#262c18"/></svg>
+	<rect x="80" y="225" width="12" height="200" fill="#a6d46a"/>
 	<g font-family="Helvetica, Arial, sans-serif">
-		<text x="120" y="300" font-size="96" font-weight="700" fill="#1a1a1a">${SITE_TITLE}</text>
-		<text x="120" y="365" font-size="36" fill="#4a4a3a">${line1}</text>
-		<text x="120" y="412" font-size="36" fill="#4a4a3a">${line2}</text>
-		<text x="120" y="560" font-size="30" font-weight="700" fill="#2f6b0f">worldwidehype.live</text>
+		<text x="120" y="300" font-size="96" font-weight="700" fill="#eef2dc">${SITE_TITLE}</text>
+		<text x="120" y="365" font-size="36" fill="#c9d0b4">${line1}</text>
+		<text x="120" y="412" font-size="36" fill="#c9d0b4">${line2}</text>
+		<text x="120" y="560" font-size="30" font-weight="700" fill="#a6d46a">worldwidehype.live</text>
 	</g>
 </svg>`;
 	const png = await sharp(Buffer.from(svg)).png().toBuffer();
