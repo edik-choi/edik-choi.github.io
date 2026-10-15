@@ -1,0 +1,113 @@
+---
+// Indicators shown under a post's title. Scoring rules live in AGENTS.md (Auto-posting rules).
+interface Props {
+	hype?: { attention: number; impact: number };
+	status?: 'breaking' | 'developing' | 'ongoing' | 'resolved';
+	sources: number;
+}
+
+const { hype, status, sources } = Astro.props;
+const steps = ['breaking', 'developing', 'ongoing', 'resolved'] as const;
+const current = status ? steps.indexOf(status) : -1;
+const bars = [
+	hype && { label: 'Attention', value: hype.attention, max: 10, title: 'How many of 10 major outlets covered this story' },
+	hype && { label: 'Impact', value: hype.impact, max: 10, title: 'Scored on people, countries, economy, safety and duration' },
+	sources > 0 && { label: 'Verified', value: Math.min(sources, 5), max: 5, text: `${sources} source${sources > 1 ? 's' : ''}`, title: 'Independent sources this post was cross-checked against' },
+].filter((b) => !!b);
+---
+
+{(bars.length > 0 || status) && (
+	<section class="meters" aria-label="Story indicators">
+		{bars.map((b) => (
+			<div class="row" title={b.title}>
+				<span class="label">{b.label}</span>
+				<span class="track" role="meter" aria-valuemin="0" aria-valuemax={b.max} aria-valuenow={b.value} aria-label={b.label}>
+					<span class="fill" style={`width:${(b.value / b.max) * 100}%`}></span>
+				</span>
+				<span class="value">{b.text ?? `${b.value}/${b.max}`}</span>
+			</div>
+		))}
+		{status && (
+			<div class="row" title="Where the story stands">
+				<span class="label">Status</span>
+				<ol class="steps">
+					{steps.map((s, i) => (
+						<li class:list={{ done: i <= current, now: i === current }} aria-current={i === current ? 'step' : undefined}>{s}</li>
+					))}
+				</ol>
+			</div>
+		)}
+	</section>
+)}
+
+<style>
+	.meters {
+		display: grid;
+		gap: 0.6em;
+		margin: 0 0 2em;
+		padding: 1em 1.2em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 10px;
+		font-size: 0.9em;
+	}
+	.row {
+		display: grid;
+		grid-template-columns: 5.5em 1fr 5.5em;
+		align-items: center;
+		gap: 0.8em;
+	}
+	.label {
+		font-weight: 700;
+		color: rgb(var(--black));
+	}
+	.value {
+		color: rgb(var(--gray));
+		text-align: right;
+		white-space: nowrap;
+	}
+	.track {
+		height: 10px;
+		border-radius: 5px;
+		background: rgb(var(--gray-light));
+		overflow: hidden;
+	}
+	.fill {
+		display: block;
+		height: 100%;
+		border-radius: 5px;
+		background: var(--accent);
+	}
+	.steps {
+		grid-column: 2 / 4;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 4px;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.steps li {
+		margin: 0;
+		padding-top: 6px;
+		border-top: 6px solid rgb(var(--gray-light));
+		color: rgb(var(--gray));
+		font-size: 0.85em;
+		text-transform: capitalize;
+	}
+	.steps li.done {
+		border-top-color: var(--accent);
+	}
+	.steps li.now {
+		color: rgb(var(--black));
+		font-weight: 700;
+	}
+	@media (max-width: 480px) {
+		.row {
+			grid-template-columns: 4.8em 1fr 4.8em;
+			gap: 0.5em;
+		}
+		.steps li {
+			font-size: 0.75em;
+		}
+	}
+</style>

@@ -18,6 +18,11 @@ const blog = defineCollection({
 			location: z
 				.object({ name: z.string(), lat: z.number(), lon: z.number() })
 				.optional(),
+			// Top-of-post indicators; scoring rules in AGENTS.md
+			hype: z
+				.object({ attention: z.number().int().min(0).max(10), impact: z.number().int().min(0).max(10) })
+				.optional(),
+			status: z.enum(['breaking', 'developing', 'ongoing', 'resolved']).optional(),
 		}),
 });
 

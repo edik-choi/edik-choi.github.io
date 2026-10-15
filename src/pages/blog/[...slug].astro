@@ -13,8 +13,10 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await render(post);
+// Verification meter: count the links listed under "## Sources"
+const sources = (post.body?.split('## Sources')[1]?.match(/^- \[/gm) ?? []).length;
 ---
 
-<BlogPost {...post.data}>
+<BlogPost {...post.data} sources={sources}>
 	<Content />
 </BlogPost>

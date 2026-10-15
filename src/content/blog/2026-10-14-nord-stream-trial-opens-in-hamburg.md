@@ -3,6 +3,8 @@ title: 'Nord Stream Sabotage Trial Opens in Hamburg'
 description: 'A former Ukrainian officer went on trial in Germany over the 2022 Nord Stream pipeline blasts, the first public hearing of evidence in a years-long investigation.'
 pubDate: '2026-10-14T04:52:00Z'
 location: { name: 'Hamburg', lat: 53.55, lon: 9.99 }
+hype: { attention: 9, impact: 2 }
+status: 'developing'
 ---
 
 A Ukrainian former military officer went on trial in Hamburg on Wednesday, 14 October 2026, <mark>accused of organising the September 2022 explosions</mark> that ruptured the Nord Stream gas pipelines under the Baltic Sea. The defendant, identified under German privacy rules only as Serhii K., denies any involvement. According to Al Jazeera, it is <mark>the first public hearing of evidence</mark> in an investigation that has lasted four years.
