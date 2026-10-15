@@ -21,7 +21,8 @@ const thumbnail = (post: CollectionEntry<'blog'>) => post.body?.match(/!\[[^\]]*
 				<li data-post={post.id}>
 					<a href={`/blog/${post.id}/`}>
 						<div class="text">
-							<h3 class="title">{post.data.title}{isTrusted(post) && <TrustBadge />}</h3>
+							{isTrusted(post) && <TrustBadge />}
+							<h3 class="title">{post.data.title}</h3>
 							<p class="desc">{post.data.description}</p>
 							<p class="date">
 								<FormattedDate date={post.data.pubDate} />
