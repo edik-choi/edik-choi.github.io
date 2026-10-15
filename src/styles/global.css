@@ -179,7 +179,7 @@ mark {
 	from { background-size: 0% 100%; }
 	to { background-size: 100% 100%; }
 }
-/* Infographics are light SVGs; flip them for dark mode (hue-rotate keeps greens green) */
-:root[data-theme='dark'] :is(.prose, .post-list) img[src$='.svg'] {
+/* Infographics are light SVGs; flip them dark on the light theme for contrast (hue-rotate keeps greens green) */
+:root:not([data-theme='dark']) :is(.prose, .post-list) img[src$='.svg'] {
 	filter: invert(1) hue-rotate(180deg);
 }
