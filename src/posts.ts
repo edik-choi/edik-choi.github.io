@@ -7,3 +7,6 @@ export const sourceCount = (body = '') => (body.split('## Sources')[1]?.match(/^
 // Impact is left out on purpose: how big a story is says nothing about how reliable it is.
 export const isTrusted = (post: CollectionEntry<'blog'>) =>
 	sourceCount(post.body) >= 3 && (post.data.hype?.attention ?? 0) >= 6;
+
+// First image in the post body: list thumbnail and link-preview image
+export const firstImage = (body = '') => body.match(/!\[[^\]]*\]\(([^)\s]+)\)/)?.[1];

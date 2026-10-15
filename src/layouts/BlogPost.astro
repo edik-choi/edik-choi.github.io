@@ -8,14 +8,14 @@ import Header from '../components/Header.astro';
 import PostMeters from '../components/PostMeters.astro';
 import TrustBadge from '../components/TrustBadge.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean };
+type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
 
-const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, trusted = false } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, trusted = false, ogImage } = Astro.props;
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} image={ogImage} imageAlt={ogImage && `Infographic: ${title}`} published={pubDate} />
 		<style>
 			main {
 				width: calc(100% - 2em);

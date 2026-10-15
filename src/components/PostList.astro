@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import { isTrusted } from '../trust';
+import { firstImage, isTrusted } from '../posts';
 import FormattedDate from './FormattedDate.astro';
 import TrustBadge from './TrustBadge.astro';
 
@@ -9,14 +9,12 @@ interface Props {
 }
 
 const { posts } = Astro.props;
-// Thumbnail = first image in the post body
-const thumbnail = (post: CollectionEntry<'blog'>) => post.body?.match(/!\[[^\]]*\]\(([^)\s]+)\)/)?.[1];
 ---
 
 <ul class="post-list">
 	{
 		posts.map((post) => {
-			const thumb = thumbnail(post);
+			const thumb = firstImage(post.body);
 			return (
 				<li data-post={post.id}>
 					<a href={`/blog/${post.id}/`}>

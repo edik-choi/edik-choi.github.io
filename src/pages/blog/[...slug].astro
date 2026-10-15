@@ -1,7 +1,7 @@
 ---
 import { type CollectionEntry, getCollection, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
-import { isTrusted, sourceCount } from '../../trust';
+import { firstImage, isTrusted, sourceCount } from '../../posts';
 
 export async function getStaticPaths() {
 	const posts = await getCollection('blog');
@@ -17,6 +17,6 @@ const { Content } = await render(post);
 const sources = sourceCount(post.body);
 ---
 
-<BlogPost {...post.data} sources={sources} trusted={isTrusted(post)}>
+<BlogPost {...post.data} sources={sources} trusted={isTrusted(post)} ogImage={firstImage(post.body)?.endsWith('.svg') ? `/og/${post.id}.png` : undefined}>
 	<Content />
 </BlogPost>
