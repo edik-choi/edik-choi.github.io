@@ -33,8 +33,9 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    - SVG format: `viewBox="0 0 1200 675"`, background matching the site `<rect width="100%" height="100%" fill="#f6fcbb"/>`. Colors: text #1a1a1a; primary accent #2f6b0f (forest green); secondary accent #a14d12 (rust) for contrast or the one thing to emphasise; muted text #4a4a3a; source line #5c6b40; box fills #eef6b0; thin lines #8a9560. No other colors. `font-family="Helvetica, Arial, sans-serif"`, text at least 28px so it stays legible on phones. Self-contained: no external fonts, images or scripts. Make sure text never overflows or overlaps.
    - Commit the SVG files together with the post.
 8. Highlights: mark 5–7 key facts per post with `<mark>...</mark>` (rendered bold with a highlighter-pen effect). Each is a short phrase or one clause (a number, a decision, the core claim), never a whole sentence. Spread them across sections; never inside headings, links, image alt text or the Sources list. Keep using `**Label:**` only for list labels.
-9. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
-10. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
+9. Internal links: if an earlier post covers the same story or a closely related one, link to it once or twice in the body with a natural anchor phrase, as `[phrase](/blog/<post-slug>/)` (no `.md`). Only link posts that exist in `src/content/blog/`; never in headings or the Sources list. Skip it when nothing related exists.
+10. Tone: neutral and explanatory. No opinion, sensational headlines or speculation. Handle deaths and casualties with restraint.
+11. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
 
 ## Commits
 
