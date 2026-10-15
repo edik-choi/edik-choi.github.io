@@ -38,7 +38,7 @@ const { place } = Astro.props;
 			} catch {}
 			show(date);
 			stamp.classList.add('done', 'thud');
-		}, { threshold: 1 }).observe(stamp);
+		}, { threshold: 0.9 }).observe(stamp); // not 1: sub-pixel sizes can leave the ratio at 0.99999 forever
 	}
 </script>
 
