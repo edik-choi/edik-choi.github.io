@@ -1,5 +1,5 @@
 ---
-// "Berlin is about 8,100 km from you." Where the reader is comes from their device's time zone,
+// Pin icon + "8,100 km" under the post date: how far the story is from the reader. Where the reader is comes from their device's time zone,
 // so no permission prompt and nothing leaves the browser.
 interface Props {
 	place: { name: string; lat: number; lon: number };
@@ -8,29 +8,39 @@ interface Props {
 const { place } = Astro.props;
 ---
 
-<p class="distance" data-name={place.name} data-lat={place.lat} data-lon={place.lon} hidden></p>
+<div class="distance" data-name={place.name} data-lat={place.lat} data-lon={place.lon} hidden>
+	<svg viewBox="0 0 24 24" width="1em" height="1em" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z" /></svg>
+	<span></span>
+</div>
 
 <script>
 	// Time zone → coordinates of its main city, generated from /usr/share/zoneinfo/zone.tab
 	// ponytail: time-zone accuracy (a whole zone maps to one city); switch to geolocation if exact distance matters
 	import zones from '../assets/tz-coords.json';
 
-	const el = document.querySelector<HTMLElement>('p.distance');
+	const el = document.querySelector<HTMLElement>('.distance');
 	const me = (zones as Record<string, number[]>)[Intl.DateTimeFormat().resolvedOptions().timeZone];
 	if (el && me) {
 		const r = Math.PI / 180;
 		const [a, b] = me, c = +el.dataset.lat!, d = +el.dataset.lon!;
 		const h = Math.sin(((c - a) * r) / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(((d - b) * r) / 2) ** 2;
 		const km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
-		el.textContent = km < 100 ? `${el.dataset.name} is less than 100 km from you.` : `${el.dataset.name} is about ${km.toLocaleString('en')} km from you.`;
+		const text = km < 100 ? '< 100 km' : `${km.toLocaleString('en')} km`;
+		el.querySelector('span')!.textContent = text;
+		el.title = `${el.dataset.name} is about ${text} from you`;
 		el.hidden = false;
 	}
 </script>
 
 <style>
 	.distance {
-		margin: 0 0 1.5em;
-		color: rgb(var(--gray));
-		font-weight: 700;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 0.25em;
+		margin-top: 0.4em;
+	}
+	.distance[hidden] {
+		display: none;
 	}
 </style>
