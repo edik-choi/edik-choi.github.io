@@ -33,6 +33,7 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: left;
+	-webkit-tap-highlight-color: transparent;
 	background: var(--bg);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
