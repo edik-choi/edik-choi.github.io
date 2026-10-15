@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="85" font-size="44" font-weight="bold" fill="#1a1a1a">Sea arrivals to Europe, 2026 vs 2025</text>
+<text x="60" y="135" font-size="30" fill="#4a4a3a">Approximate, same period of each year</text>
+<text x="60" y="235" font-size="32" fill="#1a1a1a">2025</text>
+<rect x="60" y="255" width="1000" height="70" fill="#eef6b0" stroke="#8a9560"/><rect x="60" y="255" width="1000" height="70" fill="#2f6b0f"/>
+<text x="80" y="302" font-size="34" font-weight="bold" fill="#f6fcbb">~98,000</text>
+<text x="60" y="410" font-size="32" fill="#1a1a1a">2026</text>
+<rect x="60" y="430" width="1000" height="70" fill="#eef6b0" stroke="#8a9560"/><rect x="60" y="430" width="612" height="70" fill="#a14d12"/>
+<text x="80" y="477" font-size="34" font-weight="bold" fill="#f6fcbb">~60,000</text>
+<text x="600" y="580" font-size="40" font-weight="bold" fill="#a14d12" text-anchor="middle">Down 39%</text>
+<text x="60" y="655" font-size="28" fill="#5c6b40">Source: Al Jazeera (citing IOM)</text></svg>
