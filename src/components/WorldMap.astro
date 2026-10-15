@@ -44,6 +44,7 @@ for (const post of posts) {
 		}
 	</svg>
 </figure>
+<button class="back" type="button" hidden>↑ Back to map</button>
 
 <script>
 	// Hovering a post in the list lights up its pin on the map
@@ -63,15 +64,23 @@ for (const post of posts) {
 	document.addEventListener('focusin', light);
 
 	// A dot with several stories scrolls to the list and marks them there instead of opening one
+	const items = [...document.querySelectorAll<HTMLElement>('li[data-post]')];
+	const back = document.querySelector<HTMLButtonElement>('button.back')!;
 	pins.forEach((pin) => {
 		const ids = pin.dataset.posts!.split(' ');
 		if (ids.length < 2) return;
 		pin.addEventListener('click', (e) => {
 			e.preventDefault();
-			const items = [...document.querySelectorAll<HTMLElement>('li[data-post]')];
 			items.forEach((li) => li.classList.toggle('lit', ids.includes(li.dataset.post!)));
 			items.find((li) => ids.includes(li.dataset.post!))?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			back.hidden = false;
 		});
+	});
+	// Clears the marks and returns to the map
+	back.addEventListener('click', () => {
+		items.forEach((li) => li.classList.remove('lit'));
+		back.hidden = true;
+		document.querySelector('figure svg')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
 	});
 </script>
 
@@ -143,6 +152,25 @@ for (const post of posts) {
 	}
 	.active .ring {
 		animation-duration: 1s;
+	}
+	.back {
+		position: fixed;
+		bottom: 1.5em;
+		left: 50%;
+		z-index: 10;
+		transform: translateX(-50%);
+		padding: 0.6em 1.2em;
+		border: 0;
+		border-radius: 999px;
+		background: var(--accent);
+		color: var(--bg);
+		font: inherit;
+		font-weight: 700;
+		box-shadow: var(--box-shadow);
+		cursor: pointer;
+	}
+	.back[hidden] {
+		display: none;
 	}
 	@keyframes ping {
 		from { transform: scale(1); opacity: 0.9; }
