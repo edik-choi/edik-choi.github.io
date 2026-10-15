@@ -84,6 +84,10 @@ const thumbnail = (post: CollectionEntry<'blog'>) => post.body?.match(/!\[[^\]]*
 		border: 1px solid rgb(var(--gray-light));
 		border-radius: 8px;
 	}
+	/* Set by the world map when a dot with several stories is clicked */
+	li.lit a {
+		background: linear-gradient(90deg, var(--highlight), transparent 80%);
+	}
 	a:hover .title {
 		color: var(--accent);
 	}

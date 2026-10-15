@@ -10,22 +10,34 @@ const { posts } = Astro.props;
 // Equirectangular, same projection the land path was generated with (1000x500 = whole globe)
 const x = (lon: number) => ((lon + 180) / 360) * 1000;
 const y = (lat: number) => ((90 - lat) / 180) * 500;
-const pins = posts.filter((p) => p.data.location);
+// Posts closer than this (map units, ~9 degrees) share one dot. Posts come newest first, so the newest names the dot.
+const NEAR = 25;
+const pins: { x: number; y: number; name: string; posts: CollectionEntry<'blog'>[] }[] = [];
+for (const post of posts) {
+	const { name, lat, lon } = post.data.location ?? {};
+	if (name === undefined) continue;
+	const px = x(lon!), py = y(lat!);
+	const pin = pins.find((p) => Math.hypot(p.x - px, p.y - py) < NEAR);
+	if (pin) pin.posts.push(post);
+	else pins.push({ x: px, y: py, name, posts: [post] });
+}
 ---
 
 <figure>
 	<svg viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
 		<path class="land" d={land} />
 		{
-			pins.map((post) => {
-				const { name, lat, lon } = post.data.location!;
+			pins.map(({ x: cx, y: cy, name, posts: group }) => {
+				const many = group.length > 1;
+				const label = many ? `${name} · ${group.length} stories` : name;
 				return (
-					<a href={`/blog/${post.id}/`} data-post={post.id} aria-label={`${post.data.title} (${name})`}>
-						<title>{`${name}: ${post.data.title}`}</title>
-						<circle class="hit" cx={x(lon)} cy={y(lat)} r="22" />
-						<circle class="ring" cx={x(lon)} cy={y(lat)} r="9" />
-						<circle class="dot" cx={x(lon)} cy={y(lat)} r="9" />
-						<text x={x(lon)} y={y(lat) - 26} text-anchor="middle">{name}</text>
+					<a href={`/blog/${group[0].id}/`} data-posts={group.map((p) => p.id).join(' ')} aria-label={many ? `${label}: show them in the list` : `${group[0].data.title} (${name})`}>
+						<title>{many ? `${label}\n${group.map((p) => p.data.title).join('\n')}` : `${name}: ${group[0].data.title}`}</title>
+						<circle class="hit" cx={cx} cy={cy} r="22" />
+						<circle class="ring" cx={cx} cy={cy} r="9" />
+						<circle class="dot" cx={cx} cy={cy} r={many ? 13 : 9} />
+						{many && <text class="count" x={cx} y={cy} dy="0.35em" text-anchor="middle">{group.length}</text>}
+						<text class="name" x={cx} y={cy - 26} text-anchor="middle">{label}</text>
 					</a>
 				);
 			})
@@ -35,19 +47,32 @@ const pins = posts.filter((p) => p.data.location);
 
 <script>
 	// Hovering a post in the list lights up its pin on the map
-	const pins = document.querySelectorAll<SVGAElement>('svg a[data-post]');
+	const pins = document.querySelectorAll<SVGAElement>('svg a[data-posts]');
+	const has = (pin: SVGAElement, id?: string) => !!id && pin.dataset.posts!.split(' ').includes(id);
 	let current: string | undefined;
 	const light = (e: Event) => {
 		const id = (e.target as Element).closest<HTMLElement>('li[data-post]')?.dataset.post;
 		if (id === current) return;
 		current = id;
 		pins.forEach((pin) => {
-			pin.classList.toggle('active', pin.dataset.post === id);
-			if (pin.dataset.post === id) pin.parentNode!.appendChild(pin); // draw on top of overlapping pins
+			pin.classList.toggle('active', has(pin, id));
+			if (has(pin, id)) pin.parentNode!.appendChild(pin); // draw on top of overlapping pins
 		});
 	};
 	document.addEventListener('mouseover', light);
 	document.addEventListener('focusin', light);
+
+	// A dot with several stories scrolls to the list and marks them there instead of opening one
+	pins.forEach((pin) => {
+		const ids = pin.dataset.posts!.split(' ');
+		if (ids.length < 2) return;
+		pin.addEventListener('click', (e) => {
+			e.preventDefault();
+			const items = [...document.querySelectorAll<HTMLElement>('li[data-post]')];
+			items.forEach((li) => li.classList.toggle('lit', ids.includes(li.dataset.post!)));
+			items.find((li) => ids.includes(li.dataset.post!))?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		});
+	});
 </script>
 
 <style>
@@ -79,14 +104,20 @@ const pins = posts.filter((p) => p.data.location);
 		animation: ping 2.4s ease-out infinite;
 	}
 	.dot,
-	text {
+	.name {
 		transform-box: fill-box;
 		transition: transform 0.3s cubic-bezier(0.3, 1.6, 0.6, 1), opacity 0.3s;
 	}
 	.dot {
 		transform-origin: center;
 	}
-	text {
+	.count {
+		fill: var(--bg);
+		font-size: 16px;
+		font-weight: 700;
+		pointer-events: none;
+	}
+	.name {
 		transform-origin: bottom;
 		fill: rgb(var(--black));
 		font-size: 30px;
@@ -104,9 +135,9 @@ const pins = posts.filter((p) => p.data.location);
 		fill: var(--accent-dark);
 		transform: scale(1.6);
 	}
-	a:hover text,
-	a:focus-visible text,
-	.active text {
+	a:hover .name,
+	a:focus-visible .name,
+	.active .name {
 		opacity: 1;
 		transform: none;
 	}
