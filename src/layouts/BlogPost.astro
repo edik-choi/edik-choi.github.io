@@ -6,10 +6,11 @@ import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import PostMeters from '../components/PostMeters.astro';
+import TrustBadge from '../components/TrustBadge.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & { sources?: number };
+type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean };
 
-const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0 } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0, trusted = false } = Astro.props;
 ---
 
 <html lang="en">
@@ -101,6 +102,7 @@ const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0 }
 							)}
 						</div>
 						<h1>{title}</h1>
+						{trusted && <TrustBadge />}
 						<hr />
 					</div>
 					<PostMeters hype={hype} sources={sources} />

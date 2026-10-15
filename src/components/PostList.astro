@@ -1,6 +1,8 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import { isTrusted } from '../trust';
 import FormattedDate from './FormattedDate.astro';
+import TrustBadge from './TrustBadge.astro';
 
 interface Props {
 	posts: CollectionEntry<'blog'>[];
@@ -19,7 +21,7 @@ const thumbnail = (post: CollectionEntry<'blog'>) => post.body?.match(/!\[[^\]]*
 				<li data-post={post.id}>
 					<a href={`/blog/${post.id}/`}>
 						<div class="text">
-							<h3 class="title">{post.data.title}</h3>
+							<h3 class="title">{post.data.title}{isTrusted(post) && <TrustBadge />}</h3>
 							<p class="desc">{post.data.description}</p>
 							<p class="date">
 								<FormattedDate date={post.data.pubDate} />
