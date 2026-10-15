@@ -9,6 +9,7 @@ import PostMeters from '../components/PostMeters.astro';
 import DistanceLine from '../components/DistanceLine.astro';
 import TrustBadge from '../components/TrustBadge.astro';
 import WeatherBackdrop from '../components/WeatherBackdrop.astro';
+import PassportStamp from '../components/PassportStamp.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
 
@@ -127,6 +128,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 					</div>
 					<PostMeters hype={hype} sources={sources} />
 					<slot />
+					{place && <PassportStamp place={place.name} />}
 				</div>
 			</article>
 		</main>

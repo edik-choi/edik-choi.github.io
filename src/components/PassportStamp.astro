@@ -1,0 +1,89 @@
+---
+// Reaching the end of a post stamps it into the reader's "passport" (localStorage); the home map shows the stamps
+interface Props {
+	place: string;
+}
+
+const { place } = Astro.props;
+---
+
+<div class="stamp" data-place={place} aria-live="polite">
+	<span class="top">World Wide Hype</span>
+	<strong>READ</strong>
+	<span class="place">{place}</span>
+	<span class="date"></span>
+</div>
+
+<script>
+	const KEY = 'wwh-passport';
+	const stamp = document.querySelector<HTMLElement>('.stamp')!;
+	const id = location.pathname.split('/').filter(Boolean).pop()!;
+	let book: Record<string, { place: string; date: string }> = {};
+	try {
+		book = JSON.parse(localStorage.getItem(KEY) || '{}');
+	} catch {}
+	const show = (date: string) => (stamp.querySelector('.date')!.textContent = date);
+
+	if (book[id]) {
+		show(book[id].date);
+		stamp.classList.add('done');
+	} else {
+		new IntersectionObserver(([entry], obs) => {
+			if (!entry.isIntersecting) return;
+			obs.disconnect();
+			const date = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).toUpperCase();
+			book[id] = { place: stamp.dataset.place!, date };
+			try {
+				localStorage.setItem(KEY, JSON.stringify(book));
+			} catch {}
+			show(date);
+			stamp.classList.add('done', 'thud');
+		}, { threshold: 1 }).observe(stamp);
+	}
+</script>
+
+<style>
+	.stamp {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		width: fit-content;
+		min-width: 9em;
+		margin: 3em auto 1em;
+		padding: 0.6em 1.4em;
+		border: 4px double var(--stamp);
+		border-radius: 14px;
+		color: var(--stamp);
+		font-family: Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		line-height: 1.2;
+		opacity: 0;
+		transform: rotate(-8deg);
+	}
+	.stamp.done {
+		opacity: 0.85;
+	}
+	.thud {
+		animation: thud 0.45s cubic-bezier(0.3, 1.4, 0.6, 1);
+	}
+	.top,
+	.date {
+		font-size: 0.7rem;
+		letter-spacing: 0.15em;
+	}
+	strong {
+		font-size: 2.2rem;
+		letter-spacing: 0.2em;
+	}
+	.place {
+		font-weight: 700;
+		letter-spacing: 0.08em;
+	}
+	@keyframes thud {
+		from { opacity: 0; transform: rotate(-20deg) scale(2.4); }
+		to { opacity: 0.85; transform: rotate(-8deg) scale(1); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		.thud { animation: none; }
+	}
+</style>

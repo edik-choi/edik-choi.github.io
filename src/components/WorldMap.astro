@@ -43,10 +43,27 @@ for (const post of posts) {
 			})
 		}
 	</svg>
+	<figcaption class="passport" hidden></figcaption>
 </figure>
 <button class="back" type="button" hidden>↑ Back to map</button>
 
 <script>
+	// Passport: pins with a story the reader finished get a stamp mark (see PassportStamp.astro)
+	let book: Record<string, { place: string }> = {};
+	try {
+		book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
+	} catch {}
+	const read = Object.keys(book);
+	if (read.length) {
+		document.querySelectorAll<SVGAElement>('svg a[data-posts]').forEach((pin) => {
+			if (pin.dataset.posts!.split(' ').some((id) => book[id])) pin.classList.add('read');
+		});
+		const places = new Set(read.map((id) => book[id].place)).size;
+		const caption = document.querySelector<HTMLElement>('.passport')!;
+		caption.textContent = `Your passport: ${read.length} ${read.length > 1 ? 'stamps' : 'stamp'} from ${places} ${places > 1 ? 'places' : 'place'}`;
+		caption.hidden = false;
+	}
+
 	// Hovering a post in the list lights up its pin on the map
 	const pins = document.querySelectorAll<SVGAElement>('svg a[data-posts]');
 	const has = (pin: SVGAElement, id?: string) => !!id && pin.dataset.posts!.split(' ').includes(id);
@@ -146,6 +163,22 @@ for (const post of posts) {
 	.active .name {
 		opacity: 1;
 		transform: none;
+	}
+	.read .dot {
+		fill: var(--stamp);
+	}
+	.read .ring {
+		stroke: var(--stamp);
+	}
+	.passport {
+		margin-top: 0.5em;
+		color: var(--stamp);
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 0.85rem;
+		font-weight: 700;
+		letter-spacing: 0.1em;
+		text-align: center;
+		text-transform: uppercase;
 	}
 	.active .ring {
 		animation-duration: 1s;
