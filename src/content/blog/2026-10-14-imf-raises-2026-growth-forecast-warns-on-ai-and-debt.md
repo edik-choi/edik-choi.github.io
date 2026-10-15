@@ -4,7 +4,6 @@ description: 'The IMF raised its 2026 global growth forecast to 3.1%, but said t
 pubDate: '2026-10-14T06:01:00Z'
 location: { name: 'Washington, D.C.', lat: 38.9, lon: -77.04 }
 hype: { attention: 10, impact: 7 }
-status: 'resolved'
 ---
 
 The International Monetary Fund <mark>raised its forecast for global economic growth in 2026 to 3.1%</mark>, up from 3.0% in July, in its World Economic Outlook released on 12 October at its annual meetings in Bangkok. The Fund described the outlook as highly uneven and said risks are tilted to the downside, citing the war in the Middle East, an AI-driven investment boom and high public debt.

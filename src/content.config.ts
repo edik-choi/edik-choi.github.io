@@ -22,7 +22,6 @@ const blog = defineCollection({
 			hype: z
 				.object({ attention: z.number().int().min(0).max(10), impact: z.number().int().min(0).max(10) })
 				.optional(),
-			status: z.enum(['breaking', 'developing', 'ongoing', 'resolved']).optional(),
 		}),
 });
 

@@ -4,7 +4,6 @@ description: 'A UN official says Asia and Africa could face a food security cris
 pubDate: '2026-10-15T00:18:00Z'
 location: { name: 'Strait of Hormuz', lat: 26.57, lon: 56.25 }
 hype: { attention: 6, impact: 7 }
-status: 'developing'
 ---
 
 On Wednesday, 14 October 2026, UN Under-Secretary-General Jorge Moreira da Silva warned that <mark>parts of Asia and Africa could face a food security crisis</mark> if a UN plan to move fertiliser through the Strait of Hormuz is not agreed. According to Al Jazeera and Reuters, he said it was "absolutely critical" for Iran and the United States to accept the proposal <mark>within weeks</mark>, because planting season is approaching.

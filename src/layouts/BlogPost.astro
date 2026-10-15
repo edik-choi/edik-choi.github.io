@@ -9,7 +9,7 @@ import PostMeters from '../components/PostMeters.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { sources?: number };
 
-const { title, description, pubDate, updatedDate, heroImage, hype, status, sources = 0 } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, hype, sources = 0 } = Astro.props;
 ---
 
 <html lang="en">
@@ -103,7 +103,7 @@ const { title, description, pubDate, updatedDate, heroImage, hype, status, sourc
 						<h1>{title}</h1>
 						<hr />
 					</div>
-					<PostMeters hype={hype} status={status} sources={sources} />
+					<PostMeters hype={hype} sources={sources} />
 					<slot />
 				</div>
 			</article>

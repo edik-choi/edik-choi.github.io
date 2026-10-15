@@ -4,7 +4,6 @@ description: 'The WHO says weekly suspected cholera cases in Yemen rose from 217
 pubDate: '2026-10-14T07:05:00Z'
 location: { name: 'Yemen', lat: 15.6, lon: 48.0 }
 hype: { attention: 6, impact: 3 }
-status: 'developing'
 ---
 
 The World Health Organization (WHO) said on 13 October that suspected cholera cases in Yemen have <mark>roughly tripled in three weeks</mark>. The rise comes as renewed fighting between the Houthis and the government has forced large numbers of people into crowded camps with limited safe water. The agency says its emergency response is badly underfunded.
