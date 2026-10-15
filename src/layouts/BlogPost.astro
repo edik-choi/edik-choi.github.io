@@ -8,6 +8,7 @@ import Header from '../components/Header.astro';
 import PostMeters from '../components/PostMeters.astro';
 import DistanceLine from '../components/DistanceLine.astro';
 import TrustBadge from '../components/TrustBadge.astro';
+import WeatherBackdrop from '../components/WeatherBackdrop.astro';
 
 type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
 
@@ -101,6 +102,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 
 	<body>
 		<div class="progress" aria-hidden="true"></div>
+		<WeatherBackdrop />
 		<Header />
 		<main>
 			<article>

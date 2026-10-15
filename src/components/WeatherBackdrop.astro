@@ -1,0 +1,53 @@
+---
+// Faint rain or snow behind the page when it is raining or snowing where the reader is right now.
+// Reader location comes from their time zone (same table as DistanceLine); live weather from Open-Meteo
+// (free, no key), which only receives that time zone city's coordinates.
+---
+
+<div class="weather" aria-hidden="true"></div>
+
+<script>
+	import zones from '../assets/tz-coords.json';
+
+	const el = document.querySelector<HTMLElement>('.weather');
+	const me = (zones as Record<string, number[]>)[Intl.DateTimeFormat().resolvedOptions().timeZone];
+	if (el && me && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+		fetch(`https://api.open-meteo.com/v1/forecast?latitude=${me[0]}&longitude=${me[1]}&current=weather_code`)
+			.then((r) => r.json())
+			.then(({ current }) => {
+				// WMO weather codes: drizzle/rain/showers/thunderstorm vs snow
+				const c = current.weather_code as number;
+				const kind = (c >= 71 && c <= 77) || c === 85 || c === 86 ? 'snow' : (c >= 51 && c <= 67) || (c >= 80 && c <= 82) || c >= 95 ? 'rain' : '';
+				if (kind) el.classList.add(kind);
+			})
+			.catch(() => {});
+	}
+</script>
+
+<style>
+	.weather {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		pointer-events: none;
+		opacity: 0;
+		background: rgb(var(--gray));
+		transition: opacity 3s;
+	}
+	.rain {
+		opacity: 0.14;
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cg stroke='%23000' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M10 5l-3 16M50 40l-3 16M90 12l-3 16M30 80l-3 16M75 70l-3 16M110 95l-3 16'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 120px 120px;
+		animation: fall 0.6s linear infinite;
+	}
+	.snow {
+		opacity: 0.22;
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cg fill='%23000'%3E%3Ccircle cx='20' cy='30' r='2.5'/%3E%3Ccircle cx='90' cy='10' r='1.8'/%3E%3Ccircle cx='150' cy='60' r='2.2'/%3E%3Ccircle cx='60' cy='110' r='1.6'/%3E%3Ccircle cx='130' cy='150' r='2.6'/%3E%3Ccircle cx='180' cy='120' r='1.8'/%3E%3Ccircle cx='30' cy='170' r='2'/%3E%3C/g%3E%3C/svg%3E") 0 0 / 200px 200px;
+		animation: drift 8s linear infinite;
+	}
+	@keyframes fall {
+		to { mask-position: -22px 120px; }
+	}
+	@keyframes drift {
+		to { mask-position: 40px 200px; }
+	}
+</style>
