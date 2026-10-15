@@ -1,6 +1,6 @@
 # World Wide Hype (Astro blog)
 
-Deployed to GitHub Pages (https://edik-choi.github.io). Pushing to `main` triggers the GitHub Actions build and deploy.
+Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` triggers the GitHub Actions build and deploy.
 
 ## Auto-posting rules
 
