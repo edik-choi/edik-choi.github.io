@@ -41,9 +41,7 @@ const { place } = Astro.props;
 		const tick = () => {
 			span.textContent = `${Math.round(far).toLocaleString('en')} km from\n${el.dataset.name}`;
 			far += 20 + Math.random() * 40;
-			// Booster on (the header ship button, Warp.astro): same steps, ten times as often
-			const boost = document.getElementById('booster')?.getAttribute('aria-pressed') === 'true';
-			setTimeout(tick, boost ? 100 : 1000);
+			setTimeout(tick, 1000);
 		};
 		tick();
 		el.title = `How far your ship is from ${el.dataset.name}`;
