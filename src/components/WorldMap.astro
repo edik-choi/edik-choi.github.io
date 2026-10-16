@@ -144,8 +144,37 @@ for (const post of posts) {
 	backBtn.addEventListener('click', () => {
 		items.forEach((li) => li.classList.remove('lit'));
 		backBtn.hidden = true;
-		document.querySelector('figure svg.map')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		document.querySelector('figure')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
 	});
+
+	// Globe: its dots are <use> copies, which can't be clicked one by one. Find the map pin under the
+	// pointer through each copy's live (spinning) screen matrix, then hover/click the real pin instead.
+	const globe = document.querySelector<SVGSVGElement>('svg.globe')!;
+	const copies = [...globe.querySelectorAll<SVGUseElement>('use')];
+	const pinAt = (e: MouseEvent) => {
+		const box = globe.getBoundingClientRect();
+		const unit = box.width / 500; // screen px per globe unit
+		if (Math.hypot(e.clientX - box.left - box.width / 2, e.clientY - box.top - box.height / 2) > 200 * unit) return; // off the planet
+		let best: SVGAElement | undefined;
+		let bestD = Math.max(22 * 0.8 * unit, 16); // pin hit radius, at least a fingertip
+		for (const use of copies) {
+			const m = use.getScreenCTM()!;
+			pins.forEach((pin) => {
+				const dot = pin.querySelector('.dot')!;
+				const p = new DOMPoint(+dot.getAttribute('cx')!, +dot.getAttribute('cy')!).matrixTransform(m);
+				const d = Math.hypot(p.x - e.clientX, p.y - e.clientY);
+				if (d < bestD) [best, bestD] = [pin, d];
+			});
+		}
+		return best;
+	};
+	globe.addEventListener('mousemove', (e) => {
+		const hit = pinAt(e);
+		pins.forEach((pin) => pin.classList.toggle('active', pin === hit)); // the copies show the hover look
+		globe.style.cursor = hit ? 'pointer' : '';
+	});
+	globe.addEventListener('mouseleave', () => pins.forEach((pin) => pin.classList.remove('active')));
+	globe.addEventListener('click', (e) => pinAt(e)?.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })));
 </script>
 
 <style>
