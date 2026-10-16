@@ -25,11 +25,13 @@ const { place } = Astro.props;
 	const show = (date: string) => (stamp.querySelector('.date')!.textContent = date);
 
 	// Lift-off: the page shakes, sinks away under a rocket glow, the world flips to space while the
-	// screen is empty (stars burst past, Warp.astro), then the page settles back in
+	// screen is empty (stars burst past, Warp.astro), then the home page loads
 	const wait = (ms: number) => new Promise((r) => setTimeout(r, ms));
 	const launch = async () => {
 		const w = window as any;
-		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return w.wwhWorld();
+		// Space mode starts on the home page
+		const home = () => location.assign('/');
+		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return w.wwhWorld(), home();
 		await wait(700); // let the stamp land first
 		const parts = [...document.querySelectorAll<HTMLElement>('body > header, body > main, body > footer')];
 		const glow = document.createElement('div');
@@ -45,8 +47,7 @@ const { place } = Astro.props;
 		w.wwhWorld();
 		dispatchEvent(new Event('wwh-launch'));
 		await wait(1300);
-		sink.forEach((a) => a.cancel());
-		parts.forEach((el) => el.animate([{ transform: 'translateY(-60px)', opacity: 0 }, { transform: 'none', opacity: 1 }], { duration: 900, easing: 'ease-out' }));
+		home();
 	};
 
 	if (book[id]) {
