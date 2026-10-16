@@ -25,6 +25,7 @@ for (const post of posts) {
 
 <figure>
 	<svg class="map" viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
+		<g id="world">
 		<path d={land} />
 		{
 			pins.map(({ x: cx, y: cy, name, posts: group }) => {
@@ -42,6 +43,27 @@ for (const post of posts) {
 				);
 			})
 		}
+		</g>
+	</svg>
+	<!-- Space mode: the whole map (land, dots, constellation) wrapped on a spinning planet: two copies scroll inside a circle -->
+	<svg class="globe" viewBox="0 0 500 500" aria-hidden="true">
+		<defs>
+			<clipPath id="globe-clip"><circle cx="250" cy="250" r="200" /></clipPath>
+			<radialGradient id="globe-shade" cx="35%" cy="30%" r="75%">
+				<stop offset="0" stop-color="#fff" stop-opacity="0.25" />
+				<stop offset="0.45" stop-color="#fff" stop-opacity="0" />
+				<stop offset="1" stop-color="#000" stop-opacity="0.65" />
+			</radialGradient>
+		</defs>
+		<circle class="atmosphere" cx="250" cy="250" r="214" />
+		<circle class="ocean" cx="250" cy="250" r="200" />
+		<g clip-path="url(#globe-clip)">
+			<g class="spin">
+				<use href="#world" transform="translate(50 50) scale(0.8)" />
+				<use href="#world" transform="translate(-750 50) scale(0.8)" />
+			</g>
+		</g>
+		<circle cx="250" cy="250" r="200" fill="url(#globe-shade)" />
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
 </figure>
@@ -76,8 +98,8 @@ for (const post of posts) {
 			line.setAttribute('class', 'constellation');
 			line.setAttribute('points', pts.join(' '));
 			line.setAttribute('pathLength', '1');
-			const svg = document.querySelector('svg.map')!;
-			svg.insertBefore(line, svg.querySelector('a')); // under the dots
+			const svg = document.getElementById('world')!;
+			svg.insertBefore(line, svg.querySelector('a')); // under the dots; the globe shows it too
 		}
 	}
 	if (read.length) {
@@ -137,6 +159,39 @@ for (const post of posts) {
 	}
 	.map {
 		fill: rgb(var(--gray-light));
+	}
+	.globe,
+	:global([data-world='space']) .map {
+		display: none;
+	}
+	:global(:root[data-world='space']) {
+		--star: #fff8d8;
+		--star-glow: drop-shadow(0 0 6px #fff8d8);
+	}
+	:global([data-world='space']) .globe {
+		display: block;
+		max-width: 420px;
+		margin: 0 auto;
+	}
+	.ocean {
+		fill: #13235a;
+	}
+	.atmosphere {
+		fill: none;
+		stroke: #6f9dff;
+		stroke-width: 10;
+		stroke-opacity: 0.35;
+		filter: blur(6px);
+	}
+	.globe use {
+		fill: var(--accent);
+	}
+	/* 800 units = one full turn of the scaled map; eastward, like the real Earth */
+	.spin {
+		animation: spin 60s linear infinite;
+	}
+	@keyframes spin {
+		to { transform: translateX(800px); }
 	}
 	.hit {
 		fill: transparent;
@@ -203,18 +258,14 @@ for (const post of posts) {
 		to { stroke-dashoffset: 0; }
 	}
 	/* In space the dots become stars */
-	:global([data-world='space']) a .dot {
-		fill: #fff8d8;
-		filter: drop-shadow(0 0 6px #fff8d8);
-	}
-	:global([data-world='space']) a .ring {
-		stroke: #fff8d8;
-	}
+	/* --star is set on the root in space mode. A variable, not an ancestor selector, because the globe's
+	   <use> copies of the map only inherit from the page; selectors like [data-world] .dot don't reach them. */
 	.read .dot {
-		fill: var(--stamp);
+		fill: var(--star, var(--stamp));
+		filter: var(--star-glow, none);
 	}
 	.read .ring {
-		stroke: var(--stamp);
+		stroke: var(--star, var(--stamp));
 	}
 	.passport {
 		margin-top: 0.5em;
@@ -254,6 +305,7 @@ for (const post of posts) {
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.ring { animation: none; opacity: 0; }
+		.spin { animation: none; }
 		:global(.constellation) { animation: none; stroke-dasharray: none; }
 	}
 </style>
