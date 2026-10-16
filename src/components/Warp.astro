@@ -115,6 +115,10 @@
 		height: 100%;
 		pointer-events: none;
 	}
+	/* Fainter behind a post so the text stays easy to read */
+	:global(body:has(article) canvas.warp) {
+		opacity: 0.35;
+	}
 	:global(:root:not([data-world='space']) canvas.warp) {
 		display: none;
 	}
