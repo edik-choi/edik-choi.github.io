@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="70" font-size="40" font-weight="bold" fill="#1a1a1a">From first round to run-off</text>
+<line x1="100" y1="340" x2="1100" y2="340" stroke="#8a9560" stroke-width="4"/>
+<circle cx="140" cy="340" r="16" fill="#2f6b0f"/><circle cx="400" cy="340" r="16" fill="#2f6b0f"/><circle cx="660" cy="340" r="16" fill="#2f6b0f"/><circle cx="1060" cy="340" r="16" fill="#a14d12"/>
+<text x="140" y="270" font-size="32" font-weight="bold" fill="#1a1a1a" text-anchor="middle">25 Sep</text>
+<text x="140" y="410" font-size="28" fill="#4a4a3a" text-anchor="middle">Lula 47,</text><text x="140" y="446" font-size="28" fill="#4a4a3a" text-anchor="middle">Bolsonaro 45</text>
+<text x="400" y="270" font-size="32" font-weight="bold" fill="#1a1a1a" text-anchor="middle">4 Oct</text>
+<text x="400" y="410" font-size="28" fill="#4a4a3a" text-anchor="middle">First round:</text><text x="400" y="446" font-size="28" fill="#4a4a3a" text-anchor="middle">Bolsonaro 47,</text><text x="400" y="482" font-size="28" fill="#4a4a3a" text-anchor="middle">Lula 45</text>
+<text x="660" y="270" font-size="32" font-weight="bold" fill="#1a1a1a" text-anchor="middle">15 Oct</text>
+<text x="660" y="410" font-size="28" fill="#4a4a3a" text-anchor="middle">Datafolha 47-45,</text><text x="660" y="446" font-size="28" fill="#4a4a3a" text-anchor="middle">Quaest 46-44</text>
+<text x="1060" y="270" font-size="32" font-weight="bold" fill="#a14d12" text-anchor="middle">25 Oct</text>
+<text x="1060" y="410" font-size="28" fill="#a14d12" text-anchor="middle">Run-off</text><text x="1060" y="446" font-size="28" fill="#a14d12" text-anchor="middle">vote</text>
+<text x="60" y="625" font-size="28" fill="#5c6b40">Source: Al Jazeera, NPR (via WUNC)</text></svg>
