@@ -1,0 +1,145 @@
+---
+// Space mode only: stars stream out from the centre of the screen as if seen from a moving ship.
+// The ship button in the header fires the booster (faster stars); the choice is remembered.
+---
+
+<button id="booster" type="button" aria-label="Booster" aria-pressed="false">
+	<svg viewBox="0 0 40 24" width="40" height="24" aria-hidden="true">
+		<g class="flame">
+			<path d="M10 8 L1 12 L10 16 Z" fill="#ffa62b" />
+			<path d="M10 10 L5 12 L10 14 Z" fill="#fff1b8" />
+		</g>
+		<path d="M10 6 H26 C32 6 37 9 39 12 C37 15 32 18 26 18 H10 Z" fill="currentColor" />
+		<path d="M13 6 L9 1 H15 L19 6 Z M13 18 L9 23 H15 L19 18 Z" fill="currentColor" />
+		<circle cx="29" cy="12" r="2.6" fill="#6f9dff" />
+	</svg>
+</button>
+
+<script>
+	const root = document.documentElement;
+	const btn = document.getElementById('booster')!;
+	let boost = false;
+	try {
+		boost = localStorage.getItem('wwh-boost') === 'on';
+	} catch {}
+	const sync = () => btn.setAttribute('aria-pressed', String(boost));
+	sync();
+	btn.addEventListener('click', () => {
+		boost = !boost;
+		try {
+			localStorage.setItem('wwh-boost', boost ? 'on' : 'off');
+		} catch {}
+		sync();
+	});
+
+	const canvas = document.createElement('canvas');
+	canvas.className = 'warp';
+	canvas.setAttribute('aria-hidden', 'true');
+	document.body.prepend(canvas);
+	const ctx = canvas.getContext('2d')!;
+	const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+	const rand = () => Math.random() * 2 - 1;
+	// x, y: direction from the centre; z: distance (1 far, 0 at the viewer)
+	const stars = Array.from({ length: 450 }, () => ({ x: rand(), y: rand(), z: Math.random() }));
+	let w = 0, h = 0, speed = 0, last = 0, running = false;
+
+	const resize = () => {
+		const d = devicePixelRatio || 1;
+		w = innerWidth;
+		h = innerHeight;
+		canvas.width = w * d;
+		canvas.height = h * d;
+		ctx.setTransform(d, 0, 0, d, 0, 0);
+	};
+	const frame = (t: number) => {
+		if (root.dataset.world !== 'space') {
+			running = false;
+			return;
+		}
+		const dt = Math.min((t - last) / 1000, 0.05);
+		last = t;
+		// Ease toward the target speed so the booster spins up and down instead of jumping
+		speed += ((still ? 0 : boost ? 1.1 : 0.1) - speed) * Math.min(dt * 1.5, 1);
+		const cx = w / 2, cy = h / 2, f = Math.max(w, h) * 0.5;
+		ctx.clearRect(0, 0, w, h);
+		ctx.strokeStyle = '#fff';
+		ctx.lineCap = 'round';
+		for (const s of stars) {
+			s.z -= speed * dt * 0.5;
+			const sx = cx + (s.x / s.z) * f, sy = cy + (s.y / s.z) * f;
+			if (s.z <= 0.02 || sx < 0 || sx > w || sy < 0 || sy > h) {
+				Object.assign(s, { x: rand(), y: rand(), z: 1 });
+				continue;
+			}
+			// Tail: where the star was a moment ago, so streaks stretch with speed
+			const tz = s.z + speed * 0.06;
+			ctx.globalAlpha = Math.min(1, (1 - s.z) * 1.4);
+			ctx.lineWidth = 0.6 + (1 - s.z) * 2;
+			ctx.beginPath();
+			ctx.moveTo(cx + (s.x / tz) * f, cy + (s.y / tz) * f);
+			ctx.lineTo(sx + 0.1, sy);
+			ctx.stroke();
+		}
+		requestAnimationFrame(frame);
+	};
+	const start = () => {
+		if (running || root.dataset.world !== 'space') return;
+		running = true;
+		last = performance.now();
+		requestAnimationFrame(frame);
+	};
+	addEventListener('resize', resize);
+	resize();
+	start();
+	// The last passport stamp switches to space mid-page
+	new MutationObserver(start).observe(root, { attributes: true, attributeFilter: ['data-world'] });
+</script>
+
+<style>
+	button {
+		display: none;
+		padding: 0.4em;
+		border: 0;
+		background: none;
+		color: rgb(var(--black));
+		cursor: pointer;
+	}
+	:global([data-world='space']) button {
+		display: flex;
+	}
+	:global(canvas.warp) {
+		position: fixed;
+		inset: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	:global(:root:not([data-world='space']) canvas.warp) {
+		display: none;
+	}
+	.flame {
+		transform-origin: 10px 12px;
+		transform: scaleX(0);
+		transition: transform 0.4s cubic-bezier(0.3, 1.6, 0.6, 1);
+	}
+	[aria-pressed='true'] .flame {
+		transform: scaleX(1);
+		animation: thrust 0.15s ease-in-out infinite alternate;
+	}
+	[aria-pressed='true'] svg {
+		animation: shake 0.2s linear infinite;
+	}
+	@keyframes thrust {
+		from { transform: scaleX(0.8); }
+		to { transform: scaleX(1.15); }
+	}
+	@keyframes shake {
+		0%, 100% { transform: translate(0, 0); }
+		50% { transform: translate(0.5px, -0.5px); }
+	}
+	@media (prefers-reduced-motion: reduce) {
+		[aria-pressed='true'] .flame,
+		[aria-pressed='true'] svg { animation: none; }
+	}
+</style>

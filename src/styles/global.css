@@ -47,44 +47,6 @@
 [data-world='space'] .weather {
 	display: none;
 }
-/* Starfield: two tiled layers drifting at different speeds */
-[data-world='space'] body::before,
-[data-world='space'] body::after {
-	content: '';
-	position: fixed;
-	inset: -400px 0 0;
-	z-index: -1;
-	pointer-events: none;
-	background-image:
-		radial-gradient(1.5px 1.5px at 20px 30px, #fff, transparent),
-		radial-gradient(1px 1px at 150px 80px, #fff, transparent),
-		radial-gradient(1.5px 1.5px at 90px 160px, #dfe6ff, transparent),
-		radial-gradient(1px 1px at 230px 185px, #fff, transparent),
-		radial-gradient(2px 2px at 300px 120px, #fff8d8, transparent);
-	background-size: 340px 200px; /* heights divide the 400px drift, so the loop is seamless */
-	opacity: 0.7;
-	animation: drift 120s linear infinite;
-}
-[data-world='space'] body::after {
-	background-size: 520px 400px;
-	background-position: 170px 90px;
-	opacity: 0.45;
-	animation-duration: 200s, 4s;
-	animation-name: drift, twinkle;
-	animation-timing-function: linear, ease-in-out;
-	animation-direction: normal, alternate;
-}
-@keyframes drift {
-	to { transform: translateY(400px); }
-}
-@keyframes twinkle {
-	from { opacity: 0.2; }
-	to { opacity: 0.6; }
-}
-@media (prefers-reduced-motion: reduce) {
-	[data-world='space'] body::before,
-	[data-world='space'] body::after { animation: none; }
-}
 body {
 	font-family: var(--font-body);
 	margin: 0;

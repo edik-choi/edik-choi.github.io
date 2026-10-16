@@ -24,8 +24,8 @@ for (const post of posts) {
 ---
 
 <figure>
-	<svg viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
-		<path class="land" d={land} />
+	<svg class="map" viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
+		<path id="land" d={land} />
 		{
 			pins.map(({ x: cx, y: cy, name, posts: group }) => {
 				const many = group.length > 1;
@@ -42,6 +42,26 @@ for (const post of posts) {
 				);
 			})
 		}
+	</svg>
+	<!-- Space mode: the same land path wrapped on a spinning planet (two copies scroll inside a circle) -->
+	<svg class="globe" viewBox="0 0 500 500" aria-hidden="true">
+		<defs>
+			<clipPath id="globe-clip"><circle cx="250" cy="250" r="200" /></clipPath>
+			<radialGradient id="globe-shade" cx="35%" cy="30%" r="75%">
+				<stop offset="0" stop-color="#fff" stop-opacity="0.25" />
+				<stop offset="0.45" stop-color="#fff" stop-opacity="0" />
+				<stop offset="1" stop-color="#000" stop-opacity="0.65" />
+			</radialGradient>
+		</defs>
+		<circle class="atmosphere" cx="250" cy="250" r="214" />
+		<circle class="ocean" cx="250" cy="250" r="200" />
+		<g clip-path="url(#globe-clip)">
+			<g class="spin">
+				<use href="#land" transform="translate(50 50) scale(0.8)" />
+				<use href="#land" transform="translate(-750 50) scale(0.8)" />
+			</g>
+		</g>
+		<circle cx="250" cy="250" r="200" fill="url(#globe-shade)" />
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
 </figure>
@@ -105,7 +125,7 @@ for (const post of posts) {
 	backBtn.addEventListener('click', () => {
 		items.forEach((li) => li.classList.remove('lit'));
 		backBtn.hidden = true;
-		document.querySelector('figure svg')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
+		document.querySelector('figure svg.map')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
 	});
 </script>
 
@@ -118,8 +138,37 @@ for (const post of posts) {
 		width: 100%;
 		height: auto;
 	}
-	.land {
+	.map {
 		fill: rgb(var(--gray-light));
+	}
+	.globe,
+	:global([data-world='space']) .map {
+		display: none;
+	}
+	:global([data-world='space']) .globe {
+		display: block;
+		max-width: 420px;
+		margin: 0 auto;
+	}
+	.ocean {
+		fill: #13235a;
+	}
+	.atmosphere {
+		fill: none;
+		stroke: #6f9dff;
+		stroke-width: 10;
+		stroke-opacity: 0.35;
+		filter: blur(6px);
+	}
+	.globe use {
+		fill: var(--accent);
+	}
+	/* 800 units = one full turn of the scaled map; eastward, like the real Earth */
+	.spin {
+		animation: spin 60s linear infinite;
+	}
+	@keyframes spin {
+		to { transform: translateX(800px); }
 	}
 	.hit {
 		fill: transparent;
@@ -216,5 +265,6 @@ for (const post of posts) {
 	}
 	@media (prefers-reduced-motion: reduce) {
 		.ring { animation: none; opacity: 0; }
+		.spin { animation: none; }
 	}
 </style>
