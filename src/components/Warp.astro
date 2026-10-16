@@ -1,6 +1,6 @@
 ---
 // Space mode only: stars stream out from the centre of the screen as if seen from a moving ship.
-// The ship button in the header toggles the booster (faster stars, on by default); the choice is remembered.
+// The ship button in the header toggles the booster (faster stars, off by default); the choice is remembered.
 ---
 
 <button id="booster" type="button" aria-label="Booster" aria-pressed="false">
@@ -18,9 +18,9 @@
 <script>
 	const root = document.documentElement;
 	const btn = document.getElementById('booster')!;
-	let boost = true; // on unless the reader turned it off
+	let boost = false;
 	try {
-		boost = localStorage.getItem('wwh-boost') !== 'off';
+		boost = localStorage.getItem('wwh-boost') === 'on';
 	} catch {}
 	const sync = () => btn.setAttribute('aria-pressed', String(boost));
 	sync();
