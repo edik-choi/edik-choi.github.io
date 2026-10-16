@@ -114,9 +114,9 @@ for (const post of posts) {
 			if (pin.dataset.posts!.split(' ').some((id) => book[id])) pin.classList.add('read');
 		});
 		const places = new Set(read.map((id) => book[id].place)).size;
-		// Only name the places when they differ from the stamp count, so "1 stamp from 1 place" doesn't repeat itself
-		const stamps = `${read.length} ${read.length > 1 ? 'stamps' : 'stamp'}`;
-		if (caption.hidden) caption.textContent = `Your passport: ${places === read.length ? stamps : `${stamps} from ${places} ${places > 1 ? 'places' : 'place'}`}`;
+		// "Your passport stamp: 1"; places only named when they differ from the stamp count
+		const label = `Your passport ${read.length > 1 ? 'stamps' : 'stamp'}: ${read.length}`;
+		if (caption.hidden) caption.textContent = places === read.length ? label : `${label} from ${places} ${places > 1 ? 'places' : 'place'}`;
 		caption.hidden = false;
 	}
 
