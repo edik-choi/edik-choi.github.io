@@ -67,7 +67,7 @@ for (const post of posts) {
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
 	<p class="countdown" hidden></p>
-	<button class="return" type="button" hidden>Return to Earth now</button>
+	<button class="return" type="button" hidden>I’d still like to return to Earth now.</button>
 </figure>
 <button class="back" type="button" hidden>↑ Back to map</button>
 
@@ -293,21 +293,23 @@ for (const post of posts) {
 		text-align: center;
 		text-transform: uppercase;
 	}
+	/* Tucked away on purpose: a faint text link, not a call to action */
 	.return {
 		display: block;
-		margin: 0.8em auto 0;
-		padding: 0.4em 1.1em;
-		border: 1px solid var(--stamp);
-		border-radius: 999px;
-		background: transparent;
-		color: var(--stamp);
+		margin: 1.2em auto 0;
+		padding: 0.2em;
+		border: 0;
+		background: none;
+		color: rgb(var(--gray));
+		opacity: 0.55;
 		font: inherit;
-		font-size: 0.9rem;
+		font-size: 0.75rem;
 		cursor: pointer;
 	}
-	.return:hover {
-		background: var(--stamp);
-		color: var(--bg);
+	.return:hover,
+	.return:focus-visible {
+		opacity: 1;
+		text-decoration: underline;
 	}
 	.return[hidden] {
 		display: none;
