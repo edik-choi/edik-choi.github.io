@@ -89,6 +89,16 @@
 		requestAnimationFrame(frame);
 	};
 	addEventListener('wwh-launch', () => (speed = 3)); // lift-off (PassportStamp.astro): a burst that eases back to cruise
+	// Carry the speed across page loads, so the lift-off burst keeps going on the home page it lands on
+	addEventListener('pagehide', () => {
+		try {
+			sessionStorage.setItem('wwh-warp', String(speed));
+		} catch {}
+	});
+	try {
+		speed = +(sessionStorage.getItem('wwh-warp') || 0);
+		sessionStorage.removeItem('wwh-warp');
+	} catch {}
 	addEventListener('resize', resize);
 	resize();
 	start();
