@@ -23,14 +23,28 @@ const { place } = Astro.props;
 	const me = (zones as Record<string, number[]>)[tz];
 	// "America/Argentina/Buenos_Aires" → "Buenos Aires"
 	const city = tz.split('/').pop()!.replace(/_/g, ' ');
+	let km = 0;
 	if (el && me) {
 		const r = Math.PI / 180;
 		const [a, b] = me, c = +el.dataset.lat!, d = +el.dataset.lon!;
 		const h = Math.sin(((c - a) * r) / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(((d - b) * r) / 2) ** 2;
-		const km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
+		km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
 		const text = km < 100 ? '< 100 km' : `${km.toLocaleString('en')} km`;
 		el.querySelector('span')!.textContent = `${text} from ${city}`;
 		el.title = `${el.dataset.name} is about ${text} from ${city} (your time zone)`;
+		el.hidden = false;
+	}
+	// Space mode: the reader is out in space, a few hundred thousand km from the story and drifting further every second
+	if (el && document.documentElement.dataset.world === 'space') {
+		let far = 300000 + (km || Math.random() * 20000) * 10 + Math.random() * 1000;
+		const span = el.querySelector('span')!;
+		const tick = () => {
+			span.textContent = `${Math.round(far).toLocaleString('en')} km from ${el.dataset.name}`;
+			far += 20 + Math.random() * 40;
+		};
+		tick();
+		setInterval(tick, 1000);
+		el.title = `How far your ship is from ${el.dataset.name}`;
 		el.hidden = false;
 	}
 </script>
@@ -43,6 +57,7 @@ const { place } = Astro.props;
 		gap: 0.25em;
 		margin: -0.2em 0 1em;
 		color: rgb(var(--gray));
+		font-variant-numeric: tabular-nums;
 	}
 	.distance[hidden] {
 		display: none;
