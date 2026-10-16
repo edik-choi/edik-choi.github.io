@@ -91,6 +91,22 @@ const { title, description, image = '/og.png', imageAlt = SITE_TITLE, published 
 <meta property="og:image:alt" content={imageAlt} />
 <meta property="og:locale" content="en_US" />
 {published && <meta property="article:published_time" content={published.toISOString()} />}
+{published && (
+	<script
+		type="application/ld+json"
+		set:html={JSON.stringify({
+			'@context': 'https://schema.org',
+			'@type': 'NewsArticle',
+			headline: title,
+			description,
+			image: [new URL(image, Astro.site).href],
+			datePublished: published.toISOString(),
+			mainEntityOfPage: canonicalURL.href,
+			author: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.href },
+			publisher: { '@type': 'Organization', name: SITE_TITLE, url: Astro.site?.href },
+		})}
+	/>
+)}
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
 <meta name="twitter:description" content={description} />

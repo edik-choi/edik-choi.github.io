@@ -24,3 +24,17 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v5
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      # Ping Bing/Yandex etc. with posts added or changed in this push (key file lives in public/)
+      - run: |
+          urls=$(git diff --name-only --diff-filter=AM ${{ github.event.before }} ${{ github.sha }} -- src/content/blog 2>/dev/null \
+            | sed -E 's#src/content/blog/(.*)\.mdx?$#"https://worldwidehype.live/blog/\1/"#' | paste -sd, -)
+          [ -z "$urls" ] && exit 0
+          curl -sS -f -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json' \
+            -d "{\"host\":\"worldwidehype.live\",\"key\":\"a52546c244425a2ed9988f79a9d4f5d9\",\"urlList\":[\"https://worldwidehype.live/\",$urls]}"
