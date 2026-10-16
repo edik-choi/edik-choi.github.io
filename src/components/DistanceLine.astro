@@ -37,9 +37,11 @@ const { place } = Astro.props;
 	// Space mode: the reader is out in space, a few hundred thousand km from the story and drifting further every second
 	if (el && document.documentElement.dataset.world === 'space') {
 		let far = 300000 + (km || Math.random() * 20000) * 10 + Math.random() * 1000;
-		const span = el.querySelector('span')!;
+		// Pin moves into the text so it sits inline on the first line, not beside both lines
+		const text = document.createTextNode('');
+		el.querySelector('span')!.replaceChildren(el.querySelector('svg')!, text);
 		const tick = () => {
-			span.textContent = `${Math.round(far).toLocaleString('en')} km from\n${el.dataset.name}`;
+			text.data = ` ${Math.round(far).toLocaleString('en')} km from\n${el.dataset.name}`;
 			far += 20 + Math.random() * 40;
 			setTimeout(tick, 1000);
 		};
@@ -63,6 +65,9 @@ const { place } = Astro.props;
 	.distance span {
 		white-space: pre-line;
 		text-align: center;
+	}
+	.distance span svg {
+		vertical-align: -0.125em;
 	}
 	.distance[hidden] {
 		display: none;
