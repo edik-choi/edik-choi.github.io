@@ -218,7 +218,7 @@ for (const post of posts) {
 		if (dragX === undefined) return;
 		dragX = undefined;
 		if (moved < 5) {
-			if (spin.style.animation === 'none') resume(); // a tap during a coast: brake back to the auto spin
+			if (spin.style.transform) resume(); // a tap during a coast: brake back to the auto spin
 			return;
 		}
 		if (e.timeStamp - lastT > 100 || matchMedia('(prefers-reduced-motion: reduce)').matches) v = cruise; // held still before letting go
