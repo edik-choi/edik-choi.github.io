@@ -1,4 +1,9 @@
-import type { CollectionEntry } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
+
+export const newestFirst = async () =>
+	(await getCollection('blog')).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+// Stories on the home map; reading all of them takes the reader to space
+export const MAP_SIZE = 10;
 
 // Links listed under "## Sources" (the Verified bar)
 export const sourceCount = (body = '') => (body.split('## Sources')[1]?.match(/^- \[/gm) ?? []).length;

@@ -4,6 +4,7 @@
 import '../styles/global.css';
 import { SITE_TITLE } from '../consts';
 import { Font } from 'astro:assets';
+import { MAP_SIZE, newestFirst } from '../posts';
 
 interface Props {
 	title: string;
@@ -15,6 +16,8 @@ interface Props {
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const latestIds = (await newestFirst()).slice(0, MAP_SIZE).map((p) => p.id);
 
 const { title, description, image = '/og.png', imageAlt = SITE_TITLE, published } = Astro.props;
 ---
@@ -28,6 +31,25 @@ const { title, description, image = '/og.png', imageAlt = SITE_TITLE, published 
 		t = localStorage.getItem('theme');
 	} catch {}
 	document.documentElement.dataset.theme = t === 'light' ? 'light' : 'dark';
+</script>
+<script is:inline define:vars={{ latestIds }}>
+	// Space mode: every story on the home map is stamped in the passport (PassportStamp.astro).
+	// A new story pulls the reader back to Earth; wwhReentry is how many are waiting on that first visit back.
+	window.wwhWorld = () => {
+		let book = {}, was;
+		try {
+			book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
+			was = localStorage.getItem('wwh-world');
+		} catch {}
+		const unread = latestIds.filter((id) => !book[id]).length;
+		const world = unread ? 'earth' : 'space';
+		document.documentElement.dataset.world = world;
+		try {
+			localStorage.setItem('wwh-world', world);
+		} catch {}
+		return was === 'space' ? unread : 0;
+	};
+	window.wwhReentry = window.wwhWorld();
 </script>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="icon" href="/favicon.ico" />

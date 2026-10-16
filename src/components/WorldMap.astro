@@ -54,13 +54,21 @@ for (const post of posts) {
 		book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
 	} catch {}
 	const read = Object.keys(book);
+	const caption = document.querySelector<HTMLElement>('.passport')!;
+	const reentry = (window as any).wwhReentry as number;
+	if (reentry) {
+		caption.textContent = `Re-entry complete: ${reentry} new ${reentry > 1 ? 'stories' : 'story'} on Earth`;
+		caption.hidden = false;
+	} else if (document.documentElement.dataset.world === 'space') {
+		caption.textContent = 'All caught up. Welcome to Space Wide Hype';
+		caption.hidden = false;
+	}
 	if (read.length) {
 		document.querySelectorAll<SVGAElement>('svg a[data-posts]').forEach((pin) => {
 			if (pin.dataset.posts!.split(' ').some((id) => book[id])) pin.classList.add('read');
 		});
 		const places = new Set(read.map((id) => book[id].place)).size;
-		const caption = document.querySelector<HTMLElement>('.passport')!;
-		caption.textContent = `Your passport: ${read.length} ${read.length > 1 ? 'stamps' : 'stamp'} from ${places} ${places > 1 ? 'places' : 'place'}`;
+		if (caption.hidden) caption.textContent = `Your passport: ${read.length} ${read.length > 1 ? 'stamps' : 'stamp'} from ${places} ${places > 1 ? 'places' : 'place'}`;
 		caption.hidden = false;
 	}
 
@@ -82,7 +90,7 @@ for (const post of posts) {
 
 	// A dot with several stories scrolls to the list and marks them there instead of opening one
 	const items = [...document.querySelectorAll<HTMLElement>('li[data-post]')];
-	const back = document.querySelector<HTMLButtonElement>('button.back')!;
+	const backBtn = document.querySelector<HTMLButtonElement>('button.back')!;
 	pins.forEach((pin) => {
 		const ids = pin.dataset.posts!.split(' ');
 		if (ids.length < 2) return;
@@ -90,13 +98,13 @@ for (const post of posts) {
 			e.preventDefault();
 			items.forEach((li) => li.classList.toggle('lit', ids.includes(li.dataset.post!)));
 			items.find((li) => ids.includes(li.dataset.post!))?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-			back.hidden = false;
+			backBtn.hidden = false;
 		});
 	});
 	// Clears the marks and returns to the map
-	back.addEventListener('click', () => {
+	backBtn.addEventListener('click', () => {
 		items.forEach((li) => li.classList.remove('lit'));
-		back.hidden = true;
+		backBtn.hidden = true;
 		document.querySelector('figure svg')!.scrollIntoView({ behavior: 'smooth', block: 'center' });
 	});
 </script>

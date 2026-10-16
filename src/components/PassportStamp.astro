@@ -38,6 +38,7 @@ const { place } = Astro.props;
 			} catch {}
 			show(date);
 			stamp.classList.add('done', 'thud');
+			(window as any).wwhWorld(); // the last unread map story launches space mode
 		}, { threshold: 0.9 }).observe(stamp); // not 1: sub-pixel sizes can leave the ratio at 0.99999 forever
 	}
 </script>

@@ -1,16 +1,15 @@
 ---
-import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import PostList from '../components/PostList.astro';
 import WorldMap from '../components/WorldMap.astro';
+import SiteName from '../components/SiteName.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { MAP_SIZE, newestFirst } from '../posts';
 
-const allPosts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
-const posts = allPosts.slice(0, 10);
+const allPosts = await newestFirst();
+const posts = allPosts.slice(0, MAP_SIZE);
 // Ticker: everything from the 24 hours before the newest post, so it is never empty between builds
 const since = allPosts[0]?.data.pubDate.valueOf() - 24 * 60 * 60 * 1000;
 const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
@@ -46,7 +45,7 @@ const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
 					</div>
 				)
 			}
-			<h1>{SITE_TITLE}</h1>
+			<h1><SiteName /></h1>
 			<p>{SITE_DESCRIPTION}</p>
 			<WorldMap posts={posts} />
 			<h2>Latest posts</h2>

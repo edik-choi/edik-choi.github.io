@@ -1,0 +1,15 @@
+---
+// "World Wide Hype", or "Space Wide Hype" once the reader has read every story on the map (data-world, BaseHead)
+---
+
+<span class="earth">World</span><span class="space">Space</span> Wide Hype
+
+<style>
+	.space,
+	:global([data-world='space']) .earth {
+		display: none;
+	}
+	:global([data-world='space']) .space {
+		display: inline;
+	}
+</style>
