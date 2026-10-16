@@ -35,9 +35,10 @@
 		// Booster fades out over the first screen of scrolling; ease toward it so it never jumps
 		const boost = Math.max(0, 1 - scrollY / h);
 		speed += ((still ? 0 : 0.1 + boost) - speed) * Math.min(dt * 1.5, 1);
-		// Vanishing point: the globe's centre on the home page (scrolls with it), else the screen centre
+		// Vanishing point: the globe's centre on the home page (scrolls with it), else the screen centre.
+		// Once the globe scrolls past the upper third it stays there, so stars keep passing after the globe is gone.
 		const g = globe?.getBoundingClientRect();
-		const cx = g ? g.left + g.width / 2 : w / 2, cy = g ? g.top + g.height / 2 : h / 2, f = Math.max(w, h) * 0.5;
+		const cx = g ? g.left + g.width / 2 : w / 2, cy = g ? Math.max(g.top + g.height / 2, h * 0.3) : h / 2, f = Math.max(w, h) * 0.5;
 		ctx.clearRect(0, 0, w, h);
 		ctx.strokeStyle = '#fff';
 		ctx.lineCap = 'round';
