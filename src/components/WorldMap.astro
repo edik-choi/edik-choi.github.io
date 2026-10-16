@@ -67,6 +67,7 @@ for (const post of posts) {
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
 	<p class="countdown" hidden></p>
+	<button class="return" type="button" hidden>Return to Earth now</button>
 </figure>
 <button class="back" type="button" hidden>↑ Back to map</button>
 
@@ -96,6 +97,17 @@ for (const post of posts) {
 		tick();
 		setInterval(tick, 30000);
 		countdown.hidden = false;
+		// Starts over: wipes the passport (stamps and read dots); the booster setting stays
+		const home = document.querySelector<HTMLButtonElement>('.return')!;
+		home.hidden = false;
+		home.addEventListener('click', () => {
+			if (!confirm('Return to Earth? This clears all your passport stamps.')) return;
+			try {
+				localStorage.removeItem('wwh-passport');
+				localStorage.removeItem('wwh-world');
+			} catch {}
+			location.reload();
+		});
 	}
 	if (read.length) {
 		document.querySelectorAll<SVGAElement>('svg a[data-posts]').forEach((pin) => {
@@ -280,6 +292,25 @@ for (const post of posts) {
 		letter-spacing: 0.1em;
 		text-align: center;
 		text-transform: uppercase;
+	}
+	.return {
+		display: block;
+		margin: 0.8em auto 0;
+		padding: 0.4em 1.1em;
+		border: 1px solid var(--stamp);
+		border-radius: 999px;
+		background: transparent;
+		color: var(--stamp);
+		font: inherit;
+		font-size: 0.9rem;
+		cursor: pointer;
+	}
+	.return:hover {
+		background: var(--stamp);
+		color: var(--bg);
+	}
+	.return[hidden] {
+		display: none;
 	}
 	.countdown {
 		margin-bottom: 0;
