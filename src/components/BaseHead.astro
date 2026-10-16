@@ -35,13 +35,20 @@ const { title, description, image = '/og.png', imageAlt = SITE_TITLE, published 
 <script is:inline define:vars={{ latestIds }}>
 	// Space mode: every story on the home map is stamped in the passport (PassportStamp.astro).
 	// A new story pulls the reader back to Earth; wwhReentry is how many are waiting on that first visit back.
-	window.wwhWorld = () => {
-		let book = {}, was;
+	const unreadCount = () => {
+		let book = {};
 		try {
 			book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
+		} catch {}
+		return latestIds.filter((id) => !book[id]).length;
+	};
+	window.wwhAllRead = () => !unreadCount();
+	window.wwhWorld = () => {
+		let was;
+		try {
 			was = localStorage.getItem('wwh-world');
 		} catch {}
-		const unread = latestIds.filter((id) => !book[id]).length;
+		const unread = unreadCount();
 		const world = unread ? 'earth' : 'space';
 		document.documentElement.dataset.world = world;
 		try {
