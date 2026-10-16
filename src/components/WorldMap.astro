@@ -181,7 +181,28 @@ for (const post of posts) {
 		globe.style.cursor = hit ? 'pointer' : '';
 	});
 	globe.addEventListener('mouseleave', () => pins.forEach((pin) => pin.classList.remove('active')));
-	globe.addEventListener('click', (e) => pinAt(e)?.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })));
+	// Swipe spins the globe by hand; once touched it stays where it is left (no auto spin)
+	const spin = globe.querySelector<SVGGElement>('.spin')!;
+	let dragX: number | undefined, offset = 0, moved = 0;
+	globe.addEventListener('pointerdown', (e) => {
+		offset = new DOMMatrix(getComputedStyle(spin).transform).e; // where the CSS spin has got to
+		dragX = e.clientX;
+		moved = 0;
+		globe.setPointerCapture(e.pointerId);
+	});
+	globe.addEventListener('pointermove', (e) => {
+		if (dragX === undefined) return;
+		const dx = e.clientX - dragX;
+		moved = Math.max(moved, Math.abs(dx));
+		if (moved < 5) return; // a tap, not a swipe
+		spin.style.animation = 'none';
+		const x = offset + (dx * 500) / globe.getBoundingClientRect().width;
+		spin.style.transform = `translateX(${((x % 800) + 800) % 800}px)`; // 800: one map width on the globe
+	});
+	const drop = () => (dragX = undefined);
+	globe.addEventListener('pointerup', drop);
+	globe.addEventListener('pointercancel', drop);
+	globe.addEventListener('click', (e) => moved < 5 && pinAt(e)?.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })));
 </script>
 
 <style>
@@ -219,6 +240,9 @@ for (const post of posts) {
 		fill: var(--accent);
 	}
 	/* 800 units = one full turn of the scaled map; eastward, like the real Earth */
+	.globe {
+		touch-action: pan-y; /* horizontal swipes spin the globe, vertical ones still scroll the page */
+	}
 	.spin {
 		animation: spin 60s linear infinite;
 	}
