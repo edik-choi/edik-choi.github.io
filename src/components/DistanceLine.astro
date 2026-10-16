@@ -40,7 +40,9 @@ const { place } = Astro.props;
 		const span = el.querySelector('span')!;
 		const tick = () => {
 			span.textContent = `${Math.round(far).toLocaleString('en')} km from ${el.dataset.name}`;
-			far += 20 + Math.random() * 40;
+			// Booster on (the header ship button, Warp.astro): ten times faster
+			const boost = document.getElementById('booster')?.getAttribute('aria-pressed') === 'true';
+			far += (20 + Math.random() * 40) * (boost ? 10 : 1);
 		};
 		tick();
 		setInterval(tick, 1000);
