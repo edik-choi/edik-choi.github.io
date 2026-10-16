@@ -45,7 +45,7 @@ for (const post of posts) {
 		}
 		</g>
 	</svg>
-	<!-- Space mode: the whole map (land, dots, constellation) wrapped on a spinning planet: two copies scroll inside a circle -->
+	<!-- Space mode: the whole map (land and dots) wrapped on a spinning planet: two copies scroll inside a circle -->
 	<svg class="globe" viewBox="0 0 500 500" aria-hidden="true">
 		<defs>
 			<clipPath id="globe-clip"><circle cx="250" cy="250" r="200" /></clipPath>
@@ -84,23 +84,6 @@ for (const post of posts) {
 	} else if (document.documentElement.dataset.world === 'space') {
 		caption.textContent = 'All caught up. Welcome to Space Wide Hype';
 		caption.hidden = false;
-	}
-	// Space mode: join the read stories' dots in reading order, like a constellation
-	if (document.documentElement.dataset.world === 'space') {
-		const pts: string[] = [];
-		read.forEach((id) => {
-			const dot = document.querySelector<SVGCircleElement>(`svg a[data-posts~="${id}"] .dot`);
-			const pt = dot && `${dot.getAttribute('cx')},${dot.getAttribute('cy')}`;
-			if (pt && pt !== pts.at(-1)) pts.push(pt);
-		});
-		if (pts.length > 1) {
-			const line = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
-			line.setAttribute('class', 'constellation');
-			line.setAttribute('points', pts.join(' '));
-			line.setAttribute('pathLength', '1');
-			const svg = document.getElementById('world')!;
-			svg.insertBefore(line, svg.querySelector('a')); // under the dots; the globe shows it too
-		}
 	}
 	if (read.length) {
 		document.querySelectorAll<SVGAElement>('svg a[data-posts]').forEach((pin) => {
@@ -193,10 +176,6 @@ for (const post of posts) {
 	:global([data-world='space']) .map {
 		display: none;
 	}
-	:global(:root[data-world='space']) {
-		--star: #fff8d8;
-		--star-glow: drop-shadow(0 0 6px #fff8d8);
-	}
 	:global([data-world='space']) .globe {
 		display: block;
 		max-width: 420px;
@@ -273,28 +252,11 @@ for (const post of posts) {
 		opacity: 1;
 		transform: none;
 	}
-	:global(.constellation) {
-		fill: none;
-		stroke: rgb(var(--black));
-		stroke-width: 1.5;
-		stroke-opacity: 0.55;
-		stroke-linejoin: round;
-		stroke-dasharray: 1;
-		animation: trace 3s ease-in-out forwards;
-	}
-	@keyframes trace {
-		from { stroke-dashoffset: 1; }
-		to { stroke-dashoffset: 0; }
-	}
-	/* In space the dots become stars */
-	/* --star is set on the root in space mode. A variable, not an ancestor selector, because the globe's
-	   <use> copies of the map only inherit from the page; selectors like [data-world] .dot don't reach them. */
 	.read .dot {
-		fill: var(--star, var(--stamp));
-		filter: var(--star-glow, none);
+		fill: var(--stamp);
 	}
 	.read .ring {
-		stroke: var(--star, var(--stamp));
+		stroke: var(--stamp);
 	}
 	.passport {
 		margin-top: 0.5em;
@@ -335,6 +297,5 @@ for (const post of posts) {
 	@media (prefers-reduced-motion: reduce) {
 		.ring { animation: none; opacity: 0; }
 		.spin { animation: none; }
-		:global(.constellation) { animation: none; stroke-dasharray: none; }
 	}
 </style>
