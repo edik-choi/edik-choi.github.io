@@ -181,13 +181,25 @@ for (const post of posts) {
 		globe.style.cursor = hit ? 'pointer' : '';
 	});
 	globe.addEventListener('mouseleave', () => pins.forEach((pin) => pin.classList.remove('active')));
-	// Swipe spins the globe by hand; on release the auto spin carries on from there
+	// Swipe spins the globe by hand; a fast flick coasts faster and longer, easing back into the auto spin
 	const spin = globe.querySelector<SVGGElement>('.spin')!;
-	let dragX: number | undefined, offset = 0, moved = 0, at = 0;
+	const cruise = 800 / 60; // auto spin: one map width (800 globe units) per 60s
+	let dragX: number | undefined, offset = 0, moved = 0, at = 0, v = 0, lastX = 0, lastT = 0, coast = 0;
+	const place = (x: number) => {
+		at = ((x % 800) + 800) % 800;
+		spin.style.transform = `translateX(${at}px)`;
+	};
+	const resume = () => {
+		// Restart the 60s CSS spin part-way through, at the spot the globe has got to
+		spin.style.transform = spin.style.animation = '';
+		spin.style.animationDelay = `${-at / cruise}s`;
+	};
 	globe.addEventListener('pointerdown', (e) => {
-		offset = new DOMMatrix(getComputedStyle(spin).transform).e; // where the CSS spin has got to
-		dragX = e.clientX;
-		moved = 0;
+		cancelAnimationFrame(coast);
+		offset = new DOMMatrix(getComputedStyle(spin).transform).e; // where the spin has got to
+		dragX = lastX = e.clientX;
+		lastT = e.timeStamp;
+		moved = v = 0;
 		globe.setPointerCapture(e.pointerId);
 	});
 	globe.addEventListener('pointermove', (e) => {
@@ -195,18 +207,28 @@ for (const post of posts) {
 		const dx = e.clientX - dragX;
 		moved = Math.max(moved, Math.abs(dx));
 		if (moved < 5) return; // a tap, not a swipe
+		const unit = 500 / globe.getBoundingClientRect().width; // globe units per screen px
+		const dt = (e.timeStamp - lastT) / 1000;
+		if (dt > 0) v = 0.3 * v + 0.7 * (((e.clientX - lastX) * unit) / dt); // smoothed flick speed, units/s
+		[lastX, lastT] = [e.clientX, e.timeStamp];
 		spin.style.animation = 'none';
-		const x = offset + (dx * 500) / globe.getBoundingClientRect().width;
-		at = ((x % 800) + 800) % 800; // 800: one map width on the globe
-		spin.style.transform = `translateX(${at}px)`;
+		place(offset + dx * unit);
 	});
-	const drop = () => {
-		if (dragX !== undefined && moved >= 5) {
-			// Restart the 60s CSS spin part-way through, at the spot the swipe left it
-			spin.style.transform = spin.style.animation = '';
-			spin.style.animationDelay = `${(-at / 800) * 60}s`;
-		}
+	const drop = (e: PointerEvent) => {
+		if (dragX === undefined) return;
 		dragX = undefined;
+		if (moved < 5) return;
+		if (e.timeStamp - lastT > 100 || matchMedia('(prefers-reduced-motion: reduce)').matches) v = cruise; // held still before letting go
+		let t = performance.now();
+		const step = (now: number) => {
+			const dt = (now - t) / 1000;
+			t = now;
+			v = cruise + (v - cruise) * Math.exp(-0.7 * dt); // friction, toward the auto spin speed
+			place(at + v * dt);
+			if (Math.abs(v - cruise) < 1) resume();
+			else coast = requestAnimationFrame(step);
+		};
+		coast = requestAnimationFrame(step);
 	};
 	globe.addEventListener('pointerup', drop);
 	globe.addEventListener('pointercancel', drop);
