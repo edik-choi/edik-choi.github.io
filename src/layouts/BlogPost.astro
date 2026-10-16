@@ -119,7 +119,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
+							<FormattedDate date={pubDate} /><span class="views"></span>
 							{updatedDate && (
 								<div class="last-updated-on">
 									Last updated on <FormattedDate date={updatedDate} />
@@ -156,6 +156,14 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 				btn!.textContent = 'Link copied ✓';
 				setTimeout(() => (btn!.textContent = 'Share this story'), 2000);
 			});
+
+			// GoatCounter public counter; 404 (no views yet) or failure just leaves it blank
+			fetch(`https://worldwidehype.goatcounter.com/counter/${encodeURIComponent(location.pathname)}.json`)
+				.then((r) => (r.ok ? r.json() : null))
+				.then((d) => {
+					if (d) document.querySelector('.views')!.textContent = ` · ${d.count} views`;
+				})
+				.catch(() => {});
 		</script>
 	</body>
 </html>
