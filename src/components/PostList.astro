@@ -34,6 +34,15 @@ const { posts } = Astro.props;
 	}
 </ul>
 
+<script>
+	// Stories stamped in the reader's passport (PassportStamp.astro) get a faded title; the Earth reset clears it
+	let book: Record<string, unknown> = {};
+	try {
+		book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
+	} catch {}
+	document.querySelectorAll<HTMLElement>('li[data-post]').forEach((li) => li.classList.toggle('read', li.dataset.post! in book));
+</script>
+
 <style>
 	.post-list {
 		list-style: none;
@@ -88,6 +97,9 @@ const { posts } = Astro.props;
 	/* Set by the world map when a dot with several stories is clicked */
 	li.lit a {
 		background: linear-gradient(90deg, var(--highlight), transparent 80%);
+	}
+	li.read .title {
+		opacity: 0.5;
 	}
 	a:hover .title {
 		color: var(--accent);
