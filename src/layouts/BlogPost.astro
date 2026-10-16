@@ -10,10 +10,11 @@ import DistanceLine from '../components/DistanceLine.astro';
 import TrustBadge from '../components/TrustBadge.astro';
 import WeatherBackdrop from '../components/WeatherBackdrop.astro';
 import PassportStamp from '../components/PassportStamp.astro';
+import PostList from '../components/PostList.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string };
+type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string; newer?: CollectionEntry<'blog'>; older?: CollectionEntry<'blog'> };
 
-const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage, newer, older } = Astro.props;
 ---
 
 <html lang="en">
@@ -27,6 +28,11 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 			}
 			.hero-image {
 				width: 100%;
+			}
+			.more {
+				margin: 1.5em 0 0.2em;
+				font-size: 1em;
+				color: rgb(var(--gray));
 			}
 			.hero-image img {
 				display: block;
@@ -129,6 +135,8 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 					<PostMeters hype={hype} sources={sources} />
 					<slot />
 					{place && <PassportStamp place={place.name} />}
+					{newer && (<><h2 class="more">Next story</h2><PostList posts={[newer]} /></>)}
+					{older && (<><h2 class="more">Previous story</h2><PostList posts={[older]} /></>)}
 				</div>
 			</article>
 		</main>
