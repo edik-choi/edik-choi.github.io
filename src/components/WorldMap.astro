@@ -66,6 +66,7 @@ for (const post of posts) {
 		<circle cx="250" cy="250" r="200" fill="url(#globe-shade)" />
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
+	<p class="countdown" hidden></p>
 </figure>
 <button class="back" type="button" hidden>↑ Back to map</button>
 
@@ -84,6 +85,17 @@ for (const post of posts) {
 	} else if (document.documentElement.dataset.world === 'space') {
 		caption.textContent = 'All caught up. Welcome to Space Wide Hype';
 		caption.hidden = false;
+		// Next story (posts go out at 00:00 and 07:00 UTC) brings the reader back to Earth
+		const countdown = document.querySelector<HTMLElement>('.countdown')!;
+		const tick = () => {
+			const now = new Date();
+			const next = [0, 7, 24].map((h) => Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h)).find((t) => t > +now)!;
+			const min = Math.ceil((next - +now) / 60000);
+			countdown.textContent = `Return to Earth in ${Math.floor(min / 60)}h ${min % 60}m`;
+		};
+		tick();
+		setInterval(tick, 30000);
+		countdown.hidden = false;
 	}
 	if (read.length) {
 		document.querySelectorAll<SVGAElement>('svg a[data-posts]').forEach((pin) => {
@@ -258,7 +270,8 @@ for (const post of posts) {
 	.read .ring {
 		stroke: var(--stamp);
 	}
-	.passport {
+	.passport,
+	.countdown {
 		margin-top: 0.5em;
 		color: var(--stamp);
 		font-family: Helvetica, Arial, sans-serif;
@@ -267,6 +280,11 @@ for (const post of posts) {
 		letter-spacing: 0.1em;
 		text-align: center;
 		text-transform: uppercase;
+	}
+	.countdown {
+		margin-bottom: 0;
+		color: rgb(var(--gray));
+		font-weight: 400;
 	}
 	.active .ring {
 		animation-duration: 1s;
