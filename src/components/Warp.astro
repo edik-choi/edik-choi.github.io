@@ -16,6 +16,9 @@
 	const stars = Array.from({ length: 450 }, () => ({ x: rand(), y: rand(), z: Math.random() }));
 	let w = 0, h = 0, speed = 0, last = 0, running = false;
 	const globe = document.querySelector('.globe');
+	// All posts list (/blog/, its pages and categories): no booster and faint stars, like behind a post
+	const list = location.pathname.startsWith('/blog') && !document.querySelector('article');
+	if (list) canvas.classList.add('faint');
 
 	const resize = () => {
 		const d = devicePixelRatio || 1;
@@ -33,7 +36,7 @@
 		const dt = Math.min((t - last) / 1000, 0.05);
 		last = t;
 		// Booster fades out over the first screen of scrolling; ease toward it so it never jumps
-		const boost = Math.max(0, 1 - scrollY / h);
+		const boost = list ? 0 : Math.max(0, 1 - scrollY / h);
 		speed += ((still ? 0 : 0.1 + boost) - speed) * Math.min(dt * 1.5, 1);
 		// Vanishing point: the globe's centre on the home page (scrolls with it), else the screen centre.
 		// Once the globe scrolls past the upper third it stays there, so stars keep passing after the globe is gone.
@@ -94,7 +97,8 @@
 		pointer-events: none;
 	}
 	/* Fainter behind a post so the text stays easy to read */
-	:global(body:has(article) canvas.warp) {
+	:global(body:has(article) canvas.warp),
+	:global(canvas.warp.faint) {
 		opacity: 0.35;
 	}
 	:global(:root:not([data-world='space']) canvas.warp) {
