@@ -181,9 +181,9 @@ for (const post of posts) {
 		globe.style.cursor = hit ? 'pointer' : '';
 	});
 	globe.addEventListener('mouseleave', () => pins.forEach((pin) => pin.classList.remove('active')));
-	// Swipe spins the globe by hand; once touched it stays where it is left (no auto spin)
+	// Swipe spins the globe by hand; on release the auto spin carries on from there
 	const spin = globe.querySelector<SVGGElement>('.spin')!;
-	let dragX: number | undefined, offset = 0, moved = 0;
+	let dragX: number | undefined, offset = 0, moved = 0, at = 0;
 	globe.addEventListener('pointerdown', (e) => {
 		offset = new DOMMatrix(getComputedStyle(spin).transform).e; // where the CSS spin has got to
 		dragX = e.clientX;
@@ -197,9 +197,17 @@ for (const post of posts) {
 		if (moved < 5) return; // a tap, not a swipe
 		spin.style.animation = 'none';
 		const x = offset + (dx * 500) / globe.getBoundingClientRect().width;
-		spin.style.transform = `translateX(${((x % 800) + 800) % 800}px)`; // 800: one map width on the globe
+		at = ((x % 800) + 800) % 800; // 800: one map width on the globe
+		spin.style.transform = `translateX(${at}px)`;
 	});
-	const drop = () => (dragX = undefined);
+	const drop = () => {
+		if (dragX !== undefined && moved >= 5) {
+			// Restart the 60s CSS spin part-way through, at the spot the swipe left it
+			spin.style.transform = spin.style.animation = '';
+			spin.style.animationDelay = `${(-at / 800) * 60}s`;
+		}
+		dragX = undefined;
+	};
 	globe.addEventListener('pointerup', drop);
 	globe.addEventListener('pointercancel', drop);
 	globe.addEventListener('click', (e) => moved < 5 && pinAt(e)?.dispatchEvent(new MouseEvent('click', { bubbles: true, cancelable: true })));
