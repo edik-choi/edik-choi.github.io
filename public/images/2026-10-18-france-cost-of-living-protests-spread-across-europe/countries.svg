@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>Protests in four countries</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">Four countries, separate marches</text>
+<rect x="60" y="120" width="520" height="210" rx="20" fill="#eef6b0" stroke="#a14d12" stroke-width="4"/>
+<text x="320" y="185" font-size="38" font-weight="700" text-anchor="middle" fill="#a14d12">France</text>
+<text x="320" y="240" font-size="30" text-anchor="middle" fill="#1a1a1a">550,000+ marched</text><text x="320" y="285" font-size="30" text-anchor="middle" fill="#1a1a1a">(Interior Ministry)</text>
+<rect x="620" y="120" width="520" height="210" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="880" y="185" font-size="38" font-weight="700" text-anchor="middle" fill="#2f6b0f">Belgium</text>
+<text x="880" y="240" font-size="30" text-anchor="middle" fill="#1a1a1a">Tear gas, water cannon</text><text x="880" y="285" font-size="30" text-anchor="middle" fill="#1a1a1a">in Brussels</text>
+<rect x="60" y="360" width="520" height="210" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="320" y="425" font-size="38" font-weight="700" text-anchor="middle" fill="#2f6b0f">Italy</text>
+<text x="320" y="480" font-size="30" text-anchor="middle" fill="#1a1a1a">Rallies and clashes</text><text x="320" y="525" font-size="30" text-anchor="middle" fill="#1a1a1a">in Milan, Bologna</text>
+<rect x="620" y="360" width="520" height="210" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="880" y="425" font-size="38" font-weight="700" text-anchor="middle" fill="#2f6b0f">Portugal</text>
+<text x="880" y="480" font-size="30" text-anchor="middle" fill="#1a1a1a">Tens of thousands</text><text x="880" y="525" font-size="30" text-anchor="middle" fill="#1a1a1a">march in Lisbon</text>
+<text x="60" y="640" font-size="28" fill="#5c6b40">Source: Al Jazeera</text>
+</svg>
