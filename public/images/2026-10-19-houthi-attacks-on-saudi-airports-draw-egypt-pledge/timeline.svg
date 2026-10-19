@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>Timeline of the escalation</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">Escalation, July to October 2026</text>
+<line x1="130" y1="330" x2="1070" y2="330" stroke="#8a9560" stroke-width="4"/>
+<circle cx="130" cy="330" r="16" fill="#2f6b0f"/><circle cx="420" cy="330" r="16" fill="#2f6b0f"/><circle cx="720" cy="330" r="16" fill="#a14d12"/><circle cx="1070" cy="330" r="16" fill="#2f6b0f"/>
+<text x="130" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">July</text>
+<text x="130" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">Houthis resume</text><text x="130" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">attacks on Saudi</text>
+<text x="420" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">6-12 Oct</text>
+<text x="420" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">Airport strikes,</text><text x="420" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">20 killed</text>
+<text x="720" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#a14d12">13 Oct</text>
+<text x="720" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">Saudi-led strikes</text><text x="720" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">on Houthi oil sites</text>
+<text x="1070" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">18 Oct</text>
+<text x="1070" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">Egypt pledges</text><text x="1070" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">support</text>
+<text x="60" y="650" font-size="28" fill="#5c6b40">Source: AP/PBS; CBS News; UPI</text>
+</svg>
