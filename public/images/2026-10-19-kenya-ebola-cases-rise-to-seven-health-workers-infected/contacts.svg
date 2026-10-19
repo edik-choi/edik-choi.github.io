@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>Contact quarantine rate versus benchmark</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">Share of contacts quarantined</text>
+<text x="80" y="200" font-size="32" fill="#1a1a1a">Kenya: 128 of 130 contacts</text>
+<rect x="80" y="225" width="984" height="80" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<rect x="80" y="225" width="969" height="80" fill="#2f6b0f"/>
+<text x="1060" y="350" font-size="36" font-weight="700" text-anchor="end" fill="#2f6b0f">98.5%</text>
+<text x="80" y="420" font-size="32" fill="#1a1a1a">Global benchmark for breaking transmission</text>
+<rect x="80" y="445" width="984" height="80" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<rect x="80" y="445" width="837" height="80" fill="#a14d12"/>
+<text x="1060" y="570" font-size="36" font-weight="700" text-anchor="end" fill="#a14d12">85%</text>
+<text x="60" y="650" font-size="28" fill="#5c6b40">Source: Al Jazeera; ABC News (AP)</text>
+</svg>
