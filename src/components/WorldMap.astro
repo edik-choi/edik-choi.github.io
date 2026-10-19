@@ -77,7 +77,9 @@ for (const post of posts) {
 	try {
 		book = JSON.parse(localStorage.getItem('wwh-passport') || '{}');
 	} catch {}
-	const read = Object.keys(book);
+	// Only stories still on the map count: once a stamped story drops off, its stamp no longer shows here
+	const onMap = new Set([...document.querySelectorAll<SVGAElement>('svg a[data-posts]')].flatMap((pin) => pin.dataset.posts!.split(' ')));
+	const read = Object.keys(book).filter((id) => onMap.has(id));
 	const caption = document.querySelector<HTMLElement>('.passport')!;
 	const reentry = (window as any).wwhReentry as number;
 	if (reentry) {
