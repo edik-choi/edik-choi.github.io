@@ -71,6 +71,19 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 		display: flex;
 		align-items: center;
 	}
+	/* Language switch: a small badge filled with the highlighter colour */
+	nav a.lang {
+		margin: 0 0.4em;
+		padding: 0.15em 0.5em;
+		border: 0;
+		border-radius: 6px;
+		background: var(--highlight);
+		color: rgb(var(--black));
+		font-size: 0.8em;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		line-height: 1.4;
+	}
 	/* Korean labels are short but would otherwise break between syllables */
 	.lang,
 	nav a:lang(ko) {
