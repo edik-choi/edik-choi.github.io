@@ -71,7 +71,9 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 		display: flex;
 		align-items: center;
 	}
-	.lang {
+	/* Korean labels are short but would otherwise break between syllables */
+	.lang,
+	nav a:lang(ko) {
 		white-space: nowrap;
 	}
 	.social-links,

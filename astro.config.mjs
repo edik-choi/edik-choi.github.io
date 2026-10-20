@@ -16,7 +16,8 @@ export default defineConfig({
 			cssVariable: '--font-body',
 			weights: [400, 700],
 			styles: ['normal', 'italic'],
-			fallbacks: ['Georgia', 'AppleMyungjo', 'Noto Serif KR', 'serif'],
+			// Latin glyphs use Source Serif 4; Hangul falls through to Pretendard (loaded only on /ko/ pages, BaseHead)
+			fallbacks: ['Georgia', 'Pretendard Variable', 'Pretendard', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'serif'],
 		},
 	],
 });
