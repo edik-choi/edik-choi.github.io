@@ -30,7 +30,7 @@ const { place } = Astro.props;
 	const launch = async () => {
 		const w = window as any;
 		// Space mode starts on the home page
-		const home = () => location.assign('/');
+		const home = () => location.assign(document.documentElement.lang === 'ko' ? '/ko/' : '/');
 		if (matchMedia('(prefers-reduced-motion: reduce)').matches) return w.wwhWorld(), home();
 		await wait(700); // let the stamp land first
 		const parts = [...document.querySelectorAll<HTMLElement>('body > header, body > main, body > footer')];

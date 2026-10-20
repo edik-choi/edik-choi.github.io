@@ -3,17 +3,28 @@ import SiteName from './SiteName.astro';
 import HeaderLink from './HeaderLink.astro';
 import ThemeToggle from './ThemeToggle.astro';
 import Warp from './Warp.astro';
+import { langOf, localize, t, twinPath } from '../i18n';
+
+interface Props {
+	// false on a post with no translation: the language link goes to the other language's home page instead
+	translated?: boolean;
+}
+const { translated = true } = Astro.props;
+const lang = langOf(Astro.url);
+const ui = t(lang);
+const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' ? 'en' : 'ko', '/');
 ---
 
 <header>
 	<nav>
 		<h2>
-			<a href="/"><SiteName /></a>
+			<a href={localize(lang, '/')}><SiteName /></a>
 		</h2>
 		<div class="internal-links">
-			<HeaderLink href="/">Home</HeaderLink>
-			<HeaderLink href="/blog">All posts</HeaderLink>
-			<HeaderLink href="/about">About</HeaderLink>
+			<HeaderLink href={localize(lang, '/')}>{ui.home}</HeaderLink>
+			<HeaderLink href={localize(lang, '/blog')}>{ui.allPosts}</HeaderLink>
+			<HeaderLink href={localize(lang, '/about')}>{ui.about}</HeaderLink>
+			<a href={twin} hreflang={lang === 'ko' ? 'en' : 'ko'} lang={lang === 'ko' ? 'en' : 'ko'}>{ui.switchLang}</a>
 			<ThemeToggle />
 			<Warp />
 		</div>

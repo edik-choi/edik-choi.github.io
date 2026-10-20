@@ -1,0 +1,27 @@
+---
+import { render } from 'astro:content';
+import BlogPost from '../../../layouts/BlogPost.astro';
+import { type Post, LANGS, firstImage, isTrusted, newestFirst, sourceCount } from '../../../posts';
+
+export async function getStaticPaths() {
+	const [en, ko] = await Promise.all(LANGS.map(({ lang }) => newestFirst(lang)));
+	const ids = { en: new Set(en.map((p) => p.id)), ko: new Set(ko.map((p) => p.id)) };
+	return LANGS.flatMap(({ lang, param }) => {
+		const posts = lang === 'ko' ? ko : en;
+		return posts.map((post, i) => ({
+			params: { lang: param, slug: post.id },
+			// translated: the other language has this post too (hreflang, language switch)
+			props: { ...post, newer: posts[i - 1], older: posts[i + 1], translated: ids[lang === 'ko' ? 'en' : 'ko'].has(post.id) },
+		}));
+	});
+}
+type Props = Post & { newer?: Post; older?: Post; translated: boolean };
+
+const post = Astro.props;
+const { Content } = await render(post);
+const sources = sourceCount(post.body);
+---
+
+<BlogPost {...post.data} sources={sources} trusted={isTrusted(post)} newer={post.newer} older={post.older} translated={post.translated} ogImage={firstImage(post.body)?.endsWith('.svg') ? `/og/${post.id}.png` : undefined}>
+	<Content />
+</BlogPost>

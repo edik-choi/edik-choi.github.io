@@ -17,7 +17,7 @@
 	let w = 0, h = 0, speed = 0, last = 0, running = false;
 	const globe = document.querySelector('.globe');
 	// All posts list (/blog/, its pages and categories): faint stars, like behind a post
-	if (location.pathname.startsWith('/blog') && !document.querySelector('article')) canvas.classList.add('faint');
+	if (/^(\/ko)?\/blog/.test(location.pathname) && !document.querySelector('article')) canvas.classList.add('faint');
 
 	const resize = () => {
 		const d = devicePixelRatio || 1;

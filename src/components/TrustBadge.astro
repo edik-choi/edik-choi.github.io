@@ -1,14 +1,17 @@
 ---
+import { langOf, t } from '../i18n';
+
 // Shown above a post title when isTrusted() in src/posts.ts passes
 interface Props {
 	large?: boolean;
 }
 const { large = false } = Astro.props;
+const ui = t(langOf(Astro.url));
 ---
 
-<span class:list={["badge", { large }]} title="Cross-checked against 3+ sources and covered by 6+ news outlets">
+<span class:list={["badge", { large }]} title={ui.trustedTitle}>
 	<svg viewBox="0 0 16 16" width="1em" height="1em" aria-hidden="true"><path d="M3 8.5l3 3 7-7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" /></svg>
-	Well-sourced
+	{ui.trusted}
 </span>
 
 <style>

@@ -4,9 +4,11 @@ import type { HTMLAttributes } from 'astro/types';
 type Props = HTMLAttributes<'a'>;
 
 const { href, class: className, ...props } = Astro.props;
-const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, '');
+// Korean pages: compare without the /ko prefix
+const strip = (p = '') => p.replace(/^\/ko(?=\/|$)/, '') || '/';
+const pathname = strip(Astro.url.pathname.replace(import.meta.env.BASE_URL, ''));
 const subpath = pathname.match(/[^\/]+/g);
-const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
+const isActive = strip(String(href)) === pathname || strip(String(href)) === '/' + (subpath?.[0] || '');
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>

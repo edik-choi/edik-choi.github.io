@@ -1,18 +1,21 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import land from '../assets/world-land.txt?raw';
+import { langOf, localize, t } from '../i18n';
+import type { Post } from '../posts';
 
 interface Props {
-	posts: CollectionEntry<'blog'>[];
+	posts: Post[];
 }
 
 const { posts } = Astro.props;
+const lang = langOf(Astro.url);
+const ui = t(lang);
 // Equirectangular, same projection the land path was generated with (1000x500 = whole globe)
 const x = (lon: number) => ((lon + 180) / 360) * 1000;
 const y = (lat: number) => ((90 - lat) / 180) * 500;
 // Posts closer than this (map units, ~9 degrees) share one dot. Posts come newest first, so the newest names the dot.
 const NEAR = 25;
-const pins: { x: number; y: number; name: string; posts: CollectionEntry<'blog'>[] }[] = [];
+const pins: { x: number; y: number; name: string; posts: Post[] }[] = [];
 for (const post of posts) {
 	const { name, lat, lon } = post.data.location ?? {};
 	if (name === undefined) continue;
@@ -24,15 +27,15 @@ for (const post of posts) {
 ---
 
 <figure>
-	<svg class="map" viewBox="0 17 1000 395" role="img" aria-label="Map of where recent stories happened">
+	<svg class="map" viewBox="0 17 1000 395" role="img" aria-label={ui.mapLabel}>
 		<g id="world">
 		<path d={land} />
 		{
 			pins.map(({ x: cx, y: cy, name, posts: group }) => {
 				const many = group.length > 1;
-				const label = many ? `${name} · ${group.length} stories` : name;
+				const label = many ? `${name} · ${ui.stories(group.length)}` : name;
 				return (
-					<a href={`/blog/${group[0].id}/`} data-posts={group.map((p) => p.id).join(' ')} aria-label={many ? `${label}: show them in the list` : `${group[0].data.title} (${name})`}>
+					<a href={localize(lang, `/blog/${group[0].id}/`)} data-posts={group.map((p) => p.id).join(' ')} aria-label={many ? `${label}: ${ui.showInList}` : `${group[0].data.title} (${name})`}>
 						<title>{many ? `${label}\n${group.map((p) => p.data.title).join('\n')}` : `${name}: ${group[0].data.title}`}</title>
 						<circle class="hit" cx={cx} cy={cy} r="22" />
 						<circle class="ring" cx={cx} cy={cy} r="9" />
@@ -67,9 +70,9 @@ for (const post of posts) {
 	</svg>
 	<figcaption class="passport" hidden></figcaption>
 	<p class="countdown" hidden></p>
-	<button class="return" type="button" hidden>I’d still like to return to Earth now.</button>
+	<button class="return" type="button" hidden>{ui.returnNow}</button>
 </figure>
-<button class="back" type="button" hidden>↑ Back to map</button>
+<button class="back" type="button" hidden>{ui.backToMap}</button>
 
 <script>
 	// Passport: pins with a story the reader finished get a stamp mark (see PassportStamp.astro)
@@ -81,12 +84,13 @@ for (const post of posts) {
 	const onMap = new Set([...document.querySelectorAll<SVGAElement>('svg a[data-posts]')].flatMap((pin) => pin.dataset.posts!.split(' ')));
 	const read = Object.keys(book).filter((id) => onMap.has(id));
 	const caption = document.querySelector<HTMLElement>('.passport')!;
+	const ko = document.documentElement.lang === 'ko';
 	const reentry = (window as any).wwhReentry as number;
 	if (reentry) {
-		caption.textContent = `Re-entry complete: ${reentry} new ${reentry > 1 ? 'stories' : 'story'} on Earth`;
+		caption.textContent = ko ? `지구 귀환 완료: 새 기사 ${reentry}개` : `Re-entry complete: ${reentry} new ${reentry > 1 ? 'stories' : 'story'} on Earth`;
 		caption.hidden = false;
 	} else if (document.documentElement.dataset.world === 'space') {
-		caption.textContent = 'All caught up. Welcome to Space Wide Hype';
+		caption.textContent = ko ? '모두 읽었습니다. Space Wide Hype에 오신 것을 환영합니다' : 'All caught up. Welcome to Space Wide Hype';
 		caption.hidden = false;
 		// Next story (posts go out at 00:00 and 07:00 UTC) brings the reader back to Earth
 		const countdown = document.querySelector<HTMLElement>('.countdown')!;
@@ -94,7 +98,7 @@ for (const post of posts) {
 			const now = new Date();
 			const next = [0, 7, 24].map((h) => Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate(), h)).find((t) => t > +now)!;
 			const min = Math.ceil((next - +now) / 60000);
-			countdown.textContent = `Return to Earth in ${Math.floor(min / 60)}h ${min % 60}m`;
+			countdown.textContent = ko ? `지구 귀환까지 ${Math.floor(min / 60)}시간 ${min % 60}분` : `Return to Earth in ${Math.floor(min / 60)}h ${min % 60}m`;
 		};
 		tick();
 		setInterval(tick, 30000);
@@ -103,7 +107,7 @@ for (const post of posts) {
 		const home = document.querySelector<HTMLButtonElement>('.return')!;
 		home.hidden = false;
 		home.addEventListener('click', () => {
-			if (!confirm('Return to Earth? This clears all your passport stamps.')) return;
+			if (!confirm(ko ? '지구로 돌아갈까요? 여권 도장이 모두 지워집니다.' : 'Return to Earth? This clears all your passport stamps.')) return;
 			try {
 				localStorage.removeItem('wwh-passport');
 				localStorage.removeItem('wwh-world');
@@ -117,8 +121,9 @@ for (const post of posts) {
 		});
 		const places = new Set(read.map((id) => book[id].place)).size;
 		// "Your passport stamp: 1"; places only named when they differ from the stamp count
-		const label = `Your passport ${read.length > 1 ? 'stamps' : 'stamp'}: ${read.length}`;
-		if (caption.hidden) caption.textContent = places === read.length ? label : `${label} from ${places} ${places > 1 ? 'places' : 'place'}`;
+		const label = ko ? `여권 도장 ${read.length}개` : `Your passport ${read.length > 1 ? 'stamps' : 'stamp'}: ${read.length}`;
+		const from = ko ? ` · ${places}곳` : ` from ${places} ${places > 1 ? 'places' : 'place'}`;
+		if (caption.hidden) caption.textContent = places === read.length ? label : label + from;
 		caption.hidden = false;
 	}
 

@@ -23,6 +23,7 @@ const { place } = Astro.props;
 	const me = (zones as Record<string, number[]>)[tz];
 	// "America/Argentina/Buenos_Aires" → "Buenos Aires"
 	const city = tz.split('/').pop()!.replace(/_/g, ' ');
+	const ko = document.documentElement.lang === 'ko';
 	let km = 0;
 	if (el && me) {
 		const r = Math.PI / 180;
@@ -30,8 +31,8 @@ const { place } = Astro.props;
 		const h = Math.sin(((c - a) * r) / 2) ** 2 + Math.cos(a * r) * Math.cos(c * r) * Math.sin(((d - b) * r) / 2) ** 2;
 		km = Math.round((2 * 6371 * Math.asin(Math.sqrt(h))) / 100) * 100;
 		const text = km < 100 ? '< 100 km' : `${km.toLocaleString('en')} km`;
-		el.querySelector('span')!.textContent = `${text} from ${city}`;
-		el.title = `${el.dataset.name} is about ${text} from ${city} (your time zone)`;
+		el.querySelector('span')!.textContent = ko ? `${city}에서 ${text}` : `${text} from ${city}`;
+		el.title = ko ? `${el.dataset.name}은(는) ${city}(내 시간대)에서 약 ${text}` : `${el.dataset.name} is about ${text} from ${city} (your time zone)`;
 		el.hidden = false;
 	}
 	// Space mode: the reader is out in space, a few hundred thousand km from the story and drifting further every second
@@ -41,12 +42,13 @@ const { place } = Astro.props;
 		const text = document.createTextNode('');
 		el.querySelector('span')!.replaceChildren(el.querySelector('svg')!, text);
 		const tick = () => {
-			text.data = ` ${Math.round(far).toLocaleString('en')} km from\n${el.dataset.name}`;
+			const dist = `${Math.round(far).toLocaleString('en')} km`;
+			text.data = ko ? ` ${el.dataset.name}까지\n${dist}` : ` ${dist} from\n${el.dataset.name}`;
 			far += 20 + Math.random() * 40;
 			setTimeout(tick, 1000);
 		};
 		tick();
-		el.title = `How far your ship is from ${el.dataset.name}`;
+		el.title = ko ? `우주선과 ${el.dataset.name} 사이의 거리` : `How far your ship is from ${el.dataset.name}`;
 		el.hidden = false;
 	}
 </script>

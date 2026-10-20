@@ -7,7 +7,8 @@ import { defineConfig, fontProviders } from 'astro/config';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://worldwidehype.live',
-	integrations: [mdx(), sitemap()],
+	// i18n: adds hreflang alternates between /x/ and /ko/x/ to the sitemap
+	integrations: [mdx(), sitemap({ i18n: { defaultLocale: 'en', locales: { en: 'en', ko: 'ko' } } })],
 	fonts: [
 		{
 			provider: fontProviders.google(),

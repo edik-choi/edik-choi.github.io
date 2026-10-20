@@ -11,15 +11,19 @@ import TrustBadge from '../components/TrustBadge.astro';
 import WeatherBackdrop from '../components/WeatherBackdrop.astro';
 import PassportStamp from '../components/PassportStamp.astro';
 import PostList from '../components/PostList.astro';
+import { langOf, t } from '../i18n';
+import type { Post } from '../posts';
 
-type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string; newer?: CollectionEntry<'blog'>; older?: CollectionEntry<'blog'> };
+type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string; newer?: Post; older?: Post; translated?: boolean };
 
-const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage, newer, older } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage, newer, older, translated } = Astro.props;
+const lang = langOf(Astro.url);
+const ui = t(lang);
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>
-		<BaseHead title={title} description={description} image={ogImage} imageAlt={ogImage && `Infographic: ${title}`} published={pubDate} />
+		<BaseHead title={title} description={description} image={ogImage} imageAlt={ogImage && `${ui.infographic}: ${title}`} published={pubDate} translated={translated} />
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -110,7 +114,7 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 	<body>
 		<div class="progress" aria-hidden="true"></div>
 		<WeatherBackdrop />
-		<Header />
+		<Header translated={translated} />
 		<main>
 			<article>
 				<div class="hero-image">
@@ -122,21 +126,21 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 							<FormattedDate date={pubDate} />
 							{updatedDate && (
 								<div class="last-updated-on">
-									Last updated on <FormattedDate date={updatedDate} />
+									{ui.lastUpdated} <FormattedDate date={updatedDate} />
 								</div>
 							)}
 						</div>
 						{trusted && <TrustBadge large />}
 						<h1>{title}</h1>
 						{place && <DistanceLine place={place} />}
-						{category && <button type="button" class="share" data-title={title}>Share this story</button>}
+						{category && <button type="button" class="share" data-title={title} data-copied={ui.copied}>{ui.share}</button>}
 						<hr />
 					</div>
 					<PostMeters hype={hype} sources={sources} />
 					<slot />
 					{place && <PassportStamp place={place.name} />}
-					{newer && (<><h2 class="more">Next story</h2><PostList posts={[newer]} /></>)}
-					{older && (<><h2 class="more">Previous story</h2><PostList posts={[older]} /></>)}
+					{newer && (<><h2 class="more">{ui.next}</h2><PostList posts={[newer]} /></>)}
+					{older && (<><h2 class="more">{ui.previous}</h2><PostList posts={[older]} /></>)}
 				</div>
 			</article>
 		</main>
@@ -153,8 +157,9 @@ const { title, description, pubDate, updatedDate, heroImage, category, hype, loc
 					return;
 				}
 				await navigator.clipboard.writeText(url);
-				btn!.textContent = 'Link copied ✓';
-				setTimeout(() => (btn!.textContent = 'Share this story'), 2000);
+				const label = btn!.textContent;
+				btn!.textContent = btn!.dataset.copied!;
+				setTimeout(() => (btn!.textContent = label), 2000);
 			});
 		</script>
 	</body>

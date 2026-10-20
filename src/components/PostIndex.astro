@@ -1,48 +1,51 @@
 ---
 import type { Page } from 'astro';
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from './BaseHead.astro';
 import Footer from './Footer.astro';
 import Header from './Header.astro';
 import PostList from './PostList.astro';
-import { CATEGORIES, SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+import { CATEGORIES, SITE_TITLE } from '../consts';
+import { langOf, localize, t } from '../i18n';
+import type { Post } from '../posts';
 
 interface Props {
-	page: Page<CollectionEntry<'blog'>>;
+	page: Page<Post>;
 	category?: string;
 }
 
 const { page, category } = Astro.props;
+const lang = langOf(Astro.url);
+const ui = t(lang);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE} description={ui.description} />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>All posts</h1>
-			<nav class="chips" aria-label="Categories">
-				<a href="/blog/" aria-current={!category ? 'page' : undefined}>All</a>
+			<h1>{ui.allPosts}</h1>
+			<nav class="chips" aria-label={ui.categories}>
+				<a href={localize(lang, '/blog/')} aria-current={!category ? 'page' : undefined}>{ui.all}</a>
 				{
 					CATEGORIES.map((c) => (
-						<a href={`/blog/category/${c}/`} aria-current={c === category ? 'page' : undefined}>
-							{c}
+						<a href={localize(lang, `/blog/category/${c}/`)} aria-current={c === category ? 'page' : undefined}>
+							{ui.category[c]}
 						</a>
 					))
 				}
 			</nav>
-			{page.data.length ? <PostList posts={page.data} /> : <p>No posts in this category yet.</p>}
+			{page.data.length ? <PostList posts={page.data} /> : <p>{ui.empty}</p>}
 			{
 				page.lastPage > 1 && (
 					<nav class="pager">
-						{page.url.prev ? <a href={page.url.prev}>← Newer</a> : <span />}
+						{page.url.prev ? <a href={page.url.prev}>{ui.newer}</a> : <span />}
 						<span>
 							{page.currentPage} / {page.lastPage}
 						</span>
-						{page.url.next ? <a href={page.url.next}>Older →</a> : <span />}
+						{page.url.next ? <a href={page.url.next}>{ui.older}</a> : <span />}
 					</nav>
 				)
 			}

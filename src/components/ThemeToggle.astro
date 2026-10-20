@@ -1,4 +1,8 @@
-<button id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">
+---
+import { langOf, t } from '../i18n';
+---
+
+<button id="theme-toggle" type="button" aria-label={t(langOf(Astro.url)).darkMode} aria-pressed="false">
 	<svg viewBox="0 0 24 32" width="22" height="30" aria-hidden="true">
 		<defs>
 			<radialGradient id="lantern-glow">

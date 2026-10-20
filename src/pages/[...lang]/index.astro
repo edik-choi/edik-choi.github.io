@@ -1,14 +1,18 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Footer from '../components/Footer.astro';
-import Header from '../components/Header.astro';
-import PostList from '../components/PostList.astro';
-import WorldMap from '../components/WorldMap.astro';
-import SiteName from '../components/SiteName.astro';
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import { MAP_SIZE, newestFirst } from '../posts';
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import PostList from '../../components/PostList.astro';
+import WorldMap from '../../components/WorldMap.astro';
+import SiteName from '../../components/SiteName.astro';
+import { SITE_TITLE } from '../../consts';
+import { langOf, localize, t } from '../../i18n';
+import { LANGS, MAP_SIZE, newestFirst } from '../../posts';
 
-const allPosts = await newestFirst();
+export const getStaticPaths = () => LANGS.map(({ param }) => ({ params: { lang: param } }));
+
+const lang = langOf(Astro.url);
+const allPosts = await newestFirst(lang);
 const posts = allPosts.slice(0, MAP_SIZE);
 // Ticker: everything from the 24 hours before the newest post, so it is never empty between builds
 const since = allPosts[0]?.data.pubDate.valueOf() - 24 * 60 * 60 * 1000;
@@ -16,9 +20,9 @@ const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<BaseHead title={SITE_TITLE} description={t(lang).description} />
 	</head>
 	<body>
 		<Header />
@@ -26,14 +30,14 @@ const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
 			{
 				today.length > 0 && (
 					<div class="ticker">
-						<span class="label">Today in the world</span>
+						<span class="label">{t(lang).today}</span>
 						<div class="track">
 							<div class="belt">
 								{[0, 1].map((copy) => (
 									<ul aria-hidden={copy ? 'true' : undefined}>
 										{today.map((p) => (
 											<li>
-												<a href={`/blog/${p.id}/`} tabindex={copy ? -1 : undefined}>
+												<a href={localize(lang, `/blog/${p.id}/`)} tabindex={copy ? -1 : undefined}>
 													{p.data.title}
 												</a>
 											</li>
@@ -46,11 +50,11 @@ const today = allPosts.filter((p) => p.data.pubDate.valueOf() >= since);
 				)
 			}
 			<h1><SiteName /></h1>
-			<p>{SITE_DESCRIPTION}</p>
+			<p>{t(lang).description}</p>
 			<WorldMap posts={posts} />
-			<h2>Latest posts</h2>
+			<h2>{t(lang).latest}</h2>
 			<PostList posts={posts} />
-			<p><a href="/blog/">See all posts →</a></p>
+			<p><a href={localize(lang, '/blog/')}>{t(lang).seeAll}</a></p>
 		</main>
 		<Footer />
 	</body>

@@ -45,7 +45,12 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
 8. Highlights: mark 5–7 key facts per post with `<mark>...</mark>` (rendered bold with a highlighter-pen effect). Each is a short phrase or one clause (a number, a decision, the core claim), never a whole sentence. Spread them across sections; never inside headings, links, image alt text or the Sources list. Keep using `**Label:**` only for list labels.
 9. Internal links: if an earlier post covers the same story or a closely related one, link to it once or twice in the body with a natural anchor phrase, as `[phrase](/blog/<post-slug>/)` (no `.md`). Only link posts that exist in `src/content/blog/`; never in headings or the Sources list. Skip it when nothing related exists.
 10. Tone: neutral and explanatory. No sensational headlines, partisan opinion or unsupported speculation; analysis belongs only in `## Editor's Insight`, under the rules above. Handle deaths and casualties with restraint.
-11. When `npm run build` passes, commit and push to `main`. Commit message: `글 추가: <title>`.
+11. Korean translation: every post also gets a Korean version at `src/content/blog/ko/<same filename>.md` (served at `/ko/blog/<slug>/`, linked to the English page with hreflang). Translate the finished English post faithfully; add or drop nothing.
+   - Frontmatter: translate `title` (natural Korean headline, under 40 characters), `description` and `location.name`. Copy `pubDate`, `category`, `lat`/`lon` and `hype` unchanged.
+   - H2 names, in this order: `## 무슨 일이 있었나`, `## 배경`, `## 왜 중요한가`, `## 주목할 점`, `## 에디터 인사이트`, `## 출처`. Translate `###` subheadings too, keeping the long-tail search phrasing in Korean (e.g. `### 일본은 왜 금리를 올렸나`).
+   - Keep the same `<mark>` highlights (on the matching Korean phrase), the same images in the same places with translated alt text, and the same numbers. Internal links point to `/ko/blog/<post-slug>/`.
+   - Leave the `## 출처` list as in English (outlet names and article titles untranslated). Write names of people and places the way Korean news media usually do.
+12. When `npm run build` passes, commit and push to `main` (English post, Korean post and SVGs together). Commit message: `글 추가: <title>`.
 
 ## Commits
 

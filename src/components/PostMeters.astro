@@ -1,4 +1,6 @@
 ---
+import { langOf, t } from '../i18n';
+
 // Indicators shown under a post's title. Scoring rules live in AGENTS.md (Auto-posting rules).
 interface Props {
 	hype?: { attention: number; impact: number };
@@ -6,15 +8,16 @@ interface Props {
 }
 
 const { hype, sources } = Astro.props;
+const ui = t(langOf(Astro.url));
 const bars = [
-	hype && { label: 'Attention', value: hype.attention, max: 10, title: 'News outlets found covering this story (capped at 10)' },
-	hype && { label: 'Impact', value: hype.impact, max: 10, title: 'Scored on people, countries, economy, safety and duration' },
-	sources > 0 && { label: 'Verified', value: Math.min(sources, 5), max: 5, text: `${sources} source${sources > 1 ? 's' : ''}`, title: 'Independent sources this post was cross-checked against' },
+	hype && { label: ui.attention, value: hype.attention, max: 10, title: ui.attentionTitle },
+	hype && { label: ui.impact, value: hype.impact, max: 10, title: ui.impactTitle },
+	sources > 0 && { label: ui.verified, value: Math.min(sources, 5), max: 5, text: ui.sources(sources), title: ui.verifiedTitle },
 ].filter((b) => !!b);
 ---
 
 {bars.length > 0 && (
-	<section class="meters" aria-label="Story indicators">
+	<section class="meters" aria-label={ui.indicators}>
 		{bars.map((b) => (
 			<div class="row" title={b.title}>
 				<span class="label">{b.label}</span>

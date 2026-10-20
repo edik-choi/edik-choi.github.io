@@ -1,14 +1,15 @@
 ---
-import type { CollectionEntry } from 'astro:content';
-import { firstImage, isTrusted } from '../posts';
+import { type Post, firstImage, isTrusted } from '../posts';
+import { langOf, localize, t } from '../i18n';
 import FormattedDate from './FormattedDate.astro';
 import TrustBadge from './TrustBadge.astro';
 
 interface Props {
-	posts: CollectionEntry<'blog'>[];
+	posts: Post[];
 }
 
 const { posts } = Astro.props;
+const lang = langOf(Astro.url);
 ---
 
 <ul class="post-list">
@@ -17,13 +18,13 @@ const { posts } = Astro.props;
 			const thumb = firstImage(post.body);
 			return (
 				<li data-post={post.id}>
-					<a href={`/blog/${post.id}/`}>
+					<a href={localize(lang, `/blog/${post.id}/`)}>
 						<div class="text">
 							{isTrusted(post) && <TrustBadge />}
 							<h3 class="title">{post.data.title}</h3>
 							<p class="desc">{post.data.description}</p>
 							<p class="date">
-								<FormattedDate date={post.data.pubDate} /> · <span class="cat">{post.data.category}</span>
+								<FormattedDate date={post.data.pubDate} /> · <span class="cat">{t(lang).category[post.data.category]}</span>
 							</p>
 						</div>
 						{thumb && <img src={thumb} alt="" loading="lazy" width="1200" height="675" />}

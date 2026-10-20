@@ -1,0 +1,26 @@
+---
+import type { GetStaticPaths } from 'astro';
+import PostIndex from '../../../../../components/PostIndex.astro';
+import { CATEGORIES } from '../../../../../consts';
+import { LANGS, newestFirst } from '../../../../../posts';
+
+export const getStaticPaths = (async ({ paginate }) =>
+	(
+		await Promise.all(
+			LANGS.map(async ({ lang, param }) => {
+				const posts = await newestFirst(lang);
+				return CATEGORIES.flatMap((category) =>
+					paginate(
+						posts.filter((p) => p.data.category === category),
+						{ params: { lang: param, category }, pageSize: 10 },
+					),
+				);
+			}),
+		)
+	).flat()) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+const { category } = Astro.params;
+---
+
+<PostIndex page={page} category={category} />

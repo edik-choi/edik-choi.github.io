@@ -1,0 +1,12 @@
+---
+import type { GetStaticPaths } from 'astro';
+import PostIndex from '../../../components/PostIndex.astro';
+import { LANGS, newestFirst } from '../../../posts';
+
+export const getStaticPaths = (async ({ paginate }) =>
+	(await Promise.all(LANGS.map(async ({ lang, param }) => paginate(await newestFirst(lang), { params: { lang: param }, pageSize: 10 })))).flat()) satisfies GetStaticPaths;
+
+const { page } = Astro.props;
+---
+
+<PostIndex page={page} />
