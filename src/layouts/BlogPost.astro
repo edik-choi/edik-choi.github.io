@@ -47,7 +47,9 @@ const ui = t(lang);
 			}
 			.prose {
 				width: 720px;
-				max-width: calc(100% - 2em);
+				/* Full width of main on phones: main and prose padding give the side inset */
+				max-width: 100%;
+				box-sizing: border-box;
 				margin: auto;
 				padding: 1em;
 				color: rgb(var(--gray-dark));
