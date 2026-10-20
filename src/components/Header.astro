@@ -21,7 +21,7 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 			<a href={localize(lang, '/')}><SiteName /></a>
 		</h2>
 		<div class="internal-links">
-			<HeaderLink href={localize(lang, '/')}>{ui.home}</HeaderLink>
+			<HeaderLink class="home" href={localize(lang, '/')}>{ui.home}</HeaderLink>
 			<HeaderLink href={localize(lang, '/blog')}>{ui.allPosts}</HeaderLink>
 			<HeaderLink href={localize(lang, '/about')}>{ui.about}</HeaderLink>
 			<a class="lang" href={twin} aria-label={lang === 'ko' ? 'English' : '한국어'} hreflang={lang === 'ko' ? 'en' : 'ko'} lang={lang === 'ko' ? 'en' : 'ko'}>{ui.switchLang}</a>
@@ -84,9 +84,8 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 		letter-spacing: 0.05em;
 		line-height: 1.4;
 	}
-	/* Korean labels are short but would otherwise break between syllables */
-	.lang,
-	nav a:lang(ko) {
+	/* Every label stays on one line; on phones the Home link gives way instead (the site name links home) */
+	nav a {
 		white-space: nowrap;
 	}
 	.social-links,
@@ -100,6 +99,21 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 		nav a {
 			padding: 1em 0.35em;
 			font-size: 0.85em;
+		}
+		nav a.home {
+			display: none;
+		}
+	}
+	@media (max-width: 400px) {
+		h2 {
+			font-size: 0.85em;
+		}
+		nav a {
+			padding: 1em 0.25em;
+			font-size: 0.8em;
+		}
+		nav a.lang {
+			margin: 0 0.25em;
 		}
 	}
 </style>
