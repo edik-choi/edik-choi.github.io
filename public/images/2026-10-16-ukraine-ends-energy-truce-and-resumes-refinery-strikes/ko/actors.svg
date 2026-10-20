@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" role="img" aria-label="Diagram of the pressure between Washington, Kyiv and Moscow">
+<defs>
+<marker id="g" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2f6b0f"/></marker>
+<marker id="r" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#a14d12"/></marker>
+<marker id="m" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a9560"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="70" font-size="44" font-weight="bold" fill="#1a1a1a">누가 누구를 압박하나</text>
+<rect x="400" y="110" width="400" height="90" rx="14" fill="#eef6b0" stroke="#8a9560" stroke-width="3"/>
+<text x="600" y="168" font-size="40" font-weight="bold" fill="#1a1a1a" text-anchor="middle">워싱턴</text>
+<rect x="60" y="400" width="340" height="90" rx="14" fill="#eef6b0" stroke="#8a9560" stroke-width="3"/>
+<text x="230" y="458" font-size="40" font-weight="bold" fill="#1a1a1a" text-anchor="middle">키이우</text>
+<rect x="800" y="400" width="340" height="90" rx="14" fill="#eef6b0" stroke="#8a9560" stroke-width="3"/>
+<text x="970" y="458" font-size="40" font-weight="bold" fill="#1a1a1a" text-anchor="middle">모스크바</text>
+<line x1="480" y1="204" x2="270" y2="394" stroke="#8a9560" stroke-width="4" marker-end="url(#m)"/>
+<text x="345" y="285" font-size="30" fill="#1a1a1a" text-anchor="end">공격 중단 압박</text>
+<line x1="720" y1="204" x2="930" y2="394" stroke="#8a9560" stroke-width="4" marker-end="url(#m)"/>
+<text x="855" y="285" font-size="30" fill="#1a1a1a">경유 거래</text>
+<line x1="404" y1="425" x2="794" y2="425" stroke="#2f6b0f" stroke-width="5" marker-end="url(#g)"/>
+<text x="600" y="405" font-size="30" fill="#2f6b0f" text-anchor="middle">정유시설 공격</text>
+<line x1="796" y1="470" x2="406" y2="470" stroke="#a14d12" stroke-width="5" marker-end="url(#r)"/>
+<text x="600" y="520" font-size="30" fill="#a14d12" text-anchor="middle">발전소 공격</text>
+<text x="60" y="640" font-size="28" fill="#5c6b40">출처: Reuters, NBC News</text>
+</svg>

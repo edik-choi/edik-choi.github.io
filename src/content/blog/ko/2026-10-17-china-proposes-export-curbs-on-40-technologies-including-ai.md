@@ -9,7 +9,7 @@ hype: { attention: 9, impact: 4 }
 
 2026년 10월 16일 금요일, 중국은 인공지능, 반도체, 태양광에 걸친 <mark>40개 기술의 수출을 제한하거나 금지할 계획</mark>이라고 밝혔습니다. 상무부와 과학기술부는 수출통제 기술 목록 개정 초안을 공동으로 공개했습니다. 상무부 대변인은 이번 조치가 "필요하다"며 국가안보를 이유로 들었습니다.
 
-![중국 수출통제 초안에 오른 40개 기술을 보여 주는 핵심 수치 카드](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/key-figure.svg)
+![중국 수출통제 초안에 오른 40개 기술을 보여 주는 핵심 수치 카드](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/ko/key-figure.svg)
 
 ## 무슨 일이 있었나
 
@@ -19,7 +19,7 @@ AI 분야에서 초안은 민감한 국가 데이터로 학습한 대형 모델�
 
 태양광 기술 12개에는 태양광 공급망의 핵심 원료인 폴리실리콘 제조 기술이 포함됩니다. 바이오의약 5개 항목에는 세포·유전자 치료 관련 기술이 들어 있습니다.
 
-![40개 기술 구성 막대그래프: AI 23개, 태양광 12개, 바이오의약 5개](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/breakdown.svg)
+![40개 기술 구성 막대그래프: AI 23개, 태양광 12개, 바이오의약 5개](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/ko/breakdown.svg)
 
 상무부는 이번 조치가 "안보 마지노선"을 강화하고, 오용과 남용을 막으며, AI를 인간의 통제 아래 두기 위한 것이라고 밝혔습니다. 보도에는 시행일이나 초안 확정 시점이 나오지 않습니다.
 
@@ -29,7 +29,7 @@ AI 분야에서 초안은 민감한 국가 데이터로 학습한 대형 모델�
 
 이번 조치는 더 긴 기술 경쟁의 흐름 속에 있습니다. <mark>미국 주도의 규제</mark>로 중국은 최첨단 AI 칩과 이를 만드는 장비에 접근하기 어려워졌습니다. 6월 미국 상무부는 국가안보를 이유로 앤트로픽에 가장 강력한 모델인 페이블 5와 미토스 5를 외국인이 쓰지 못하도록 요청했으며, AP에 따르면 이 제한은 나중에 해제됐습니다.
 
-![타임라인: 6월 미국의 앤트로픽 요청, 7월 FT 보도, 10월 초안](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/timeline.svg)
+![타임라인: 6월 미국의 앤트로픽 요청, 7월 FT 보도, 10월 초안](/images/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/ko/timeline.svg)
 
 AP는 이번 초안이 양국이 AI 안전·거버넌스 대화와, 국가안보를 위협할 수 있는 AI 사고에 대한 통보 체계에서 진전을 이루고 있는 가운데 나왔다고 보도했습니다.
 

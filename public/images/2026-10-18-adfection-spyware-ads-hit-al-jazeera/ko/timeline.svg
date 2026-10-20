@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" role="img" aria-label="Timeline from 2021 to October 2026"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="600" y="75" text-anchor="middle" font-size="40" font-weight="bold" fill="#1a1a1a">타임라인</text>
+<line x1="100" y1="330" x2="1100" y2="330" stroke="#8a9560" stroke-width="4"/>
+<circle cx="150" cy="330" r="16" fill="#2f6b0f"/><circle cx="400" cy="330" r="16" fill="#2f6b0f"/><circle cx="650" cy="330" r="16" fill="#2f6b0f"/><circle cx="900" cy="330" r="16" fill="#2f6b0f"/><circle cx="1070" cy="330" r="18" fill="#a14d12"/>
+<text x="150" y="260" text-anchor="middle" font-size="34" font-weight="bold" fill="#1a1a1a">2021년</text>
+<text x="150" y="400" text-anchor="middle" font-size="28" fill="#4a4a3a">미국, 칸디루</text><text x="150" y="436" text-anchor="middle" font-size="28" fill="#4a4a3a">블랙리스트 지정</text>
+<text x="400" y="260" text-anchor="middle" font-size="34" font-weight="bold" fill="#1a1a1a">2024년</text>
+<text x="400" y="400" text-anchor="middle" font-size="28" fill="#4a4a3a">기기 이상 징후</text><text x="400" y="436" text-anchor="middle" font-size="28" fill="#4a4a3a">발견</text>
+<text x="650" y="260" text-anchor="middle" font-size="34" font-weight="bold" fill="#1a1a1a">2025년</text>
+<text x="650" y="400" text-anchor="middle" font-size="28" fill="#4a4a3a">시티즌랩에</text><text x="650" y="436" text-anchor="middle" font-size="28" fill="#4a4a3a">로그 전달</text>
+<text x="900" y="260" text-anchor="middle" font-size="34" font-weight="bold" fill="#1a1a1a">2026년 3~6월</text>
+<text x="900" y="400" text-anchor="middle" font-size="28" fill="#4a4a3a">광고 입찰</text><text x="900" y="436" text-anchor="middle" font-size="28" fill="#4a4a3a">37억 7,000만 건</text>
+<text x="1060" y="520" text-anchor="end" font-size="34" font-weight="bold" fill="#a14d12">2026년 10월 15일: 보고서 공개</text>
+<text x="40" y="645" font-size="28" fill="#5c6b40">출처: Al Jazeera, BleepingComputer</text></svg>

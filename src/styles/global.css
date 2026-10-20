@@ -60,6 +60,10 @@ body {
 	font-size: 20px;
 	line-height: 1.7;
 }
+/* Korean pages: Pretendard (loaded in BaseHead only for /ko/) */
+:lang(ko) body {
+	font-family: 'Pretendard Variable', Pretendard, -apple-system, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+}
 main {
 	width: 720px;
 	max-width: calc(100% - 2em);

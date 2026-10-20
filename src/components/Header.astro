@@ -24,7 +24,7 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 			<HeaderLink href={localize(lang, '/')}>{ui.home}</HeaderLink>
 			<HeaderLink href={localize(lang, '/blog')}>{ui.allPosts}</HeaderLink>
 			<HeaderLink href={localize(lang, '/about')}>{ui.about}</HeaderLink>
-			<a href={twin} hreflang={lang === 'ko' ? 'en' : 'ko'} lang={lang === 'ko' ? 'en' : 'ko'}>{ui.switchLang}</a>
+			<a class="lang" href={twin} hreflang={lang === 'ko' ? 'en' : 'ko'} lang={lang === 'ko' ? 'en' : 'ko'}>{ui.switchLang}</a>
 			<ThemeToggle />
 			<Warp />
 		</div>
@@ -70,6 +70,9 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 	.internal-links {
 		display: flex;
 		align-items: center;
+	}
+	.lang {
+		white-space: nowrap;
 	}
 	.social-links,
 	.social-links a {

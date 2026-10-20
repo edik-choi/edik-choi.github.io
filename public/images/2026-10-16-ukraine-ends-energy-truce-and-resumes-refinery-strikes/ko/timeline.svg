@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" role="img" aria-label="Timeline of the energy ceasefire, 9 to 15 October 2026">
+<rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="75" font-size="44" font-weight="bold" fill="#1a1a1a">합의에서 붕괴까지 6일</text>
+<line x1="250" y1="150" x2="250" y2="560" stroke="#8a9560" stroke-width="4"/>
+<circle cx="250" cy="170" r="14" fill="#2f6b0f"/><circle cx="250" cy="295" r="14" fill="#2f6b0f"/><circle cx="250" cy="420" r="14" fill="#2f6b0f"/><circle cx="250" cy="545" r="14" fill="#a14d12"/>
+<text x="60" y="182" font-size="36" font-weight="bold" fill="#2f6b0f">10월 9일</text>
+<text x="290" y="170" font-size="30" fill="#1a1a1a">트럼프, 러시아와 경유 거래 발표:</text>
+<text x="290" y="210" font-size="30" fill="#4a4a3a">경유 30만 톤 이상</text>
+<text x="60" y="307" font-size="36" font-weight="bold" fill="#2f6b0f">10월 10일</text>
+<text x="290" y="295" font-size="30" fill="#1a1a1a">트럼프, 정유시설 공격 중단 경고</text>
+<text x="290" y="335" font-size="30" fill="#4a4a3a">우크라이나에 지도자 교체 촉구</text>
+<text x="60" y="432" font-size="36" font-weight="bold" fill="#2f6b0f">10월 11일</text>
+<text x="290" y="420" font-size="30" fill="#1a1a1a">트럼프, 에너지 휴전 발표.</text>
+<text x="290" y="460" font-size="30" fill="#4a4a3a">우크라이나, 정유시설 공격 중단</text>
+<text x="60" y="557" font-size="36" font-weight="bold" fill="#a14d12">10월 15일</text>
+<text x="290" y="545" font-size="30" fill="#1a1a1a">젤렌스키: "제약은 풀렸다. 우리는 끝났다"</text>
+<text x="290" y="585" font-size="30" fill="#a14d12">랴잔 정유시설 화재 보고</text>
+<text x="60" y="645" font-size="28" fill="#5c6b40">출처: Reuters, NBC News</text>
+</svg>

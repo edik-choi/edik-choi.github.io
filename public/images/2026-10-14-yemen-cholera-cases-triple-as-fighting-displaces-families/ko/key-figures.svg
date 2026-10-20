@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" role="img" aria-label="Key figures of the 2026 cholera outbreak in Yemen"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="80" font-size="44" fill="#1a1a1a" font-weight="bold" text-anchor="start">2026년 예멘 콜레라 핵심 수치</text>
+<rect x="60" y="160" width="340" height="400" rx="16" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="230" y="330" font-size="90" fill="#2f6b0f" font-weight="bold" text-anchor="middle">8,034</text>
+<text x="230" y="410" font-size="30" fill="#1a1a1a" font-weight="normal" text-anchor="middle">의심 환자</text>
+<text x="230" y="450" font-size="30" fill="#4a4a3a" font-weight="normal" text-anchor="middle">올해 누적</text>
+<rect x="440" y="160" width="340" height="400" rx="16" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="610" y="330" font-size="90" fill="#a14d12" font-weight="bold" text-anchor="middle">27</text>
+<text x="610" y="410" font-size="30" fill="#1a1a1a" font-weight="normal" text-anchor="middle">사망</text>
+<text x="610" y="450" font-size="30" fill="#4a4a3a" font-weight="normal" text-anchor="middle">올해 기록</text>
+<rect x="820" y="160" width="340" height="400" rx="16" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="990" y="330" font-size="90" fill="#2f6b0f" font-weight="bold" text-anchor="middle">92%</text>
+<text x="990" y="410" font-size="30" fill="#1a1a1a" font-weight="normal" text-anchor="middle">환자 중 남서부</text>
+<text x="990" y="450" font-size="30" fill="#4a4a3a" font-weight="normal" text-anchor="middle">5개 주 비중</text>
+<text x="60" y="640" font-size="28" fill="#5c6b40" font-weight="normal" text-anchor="start">출처: Al Jazeera, The New Arab (WHO 인용)</text>
+</svg>

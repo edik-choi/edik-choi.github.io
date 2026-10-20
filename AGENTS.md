@@ -49,6 +49,7 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    - Frontmatter: translate `title` (natural Korean headline, under 40 characters), `description` and `location.name`. Copy `pubDate`, `category`, `lat`/`lon` and `hype` unchanged.
    - H2 names, in this order: `## 무슨 일이 있었나`, `## 배경`, `## 왜 중요한가`, `## 주목할 점`, `## 에디터 인사이트`, `## 출처`. Translate `###` subheadings too, keeping the long-tail search phrasing in Korean (e.g. `### 일본은 왜 금리를 올렸나`).
    - Keep the same `<mark>` highlights (on the matching Korean phrase), the same images in the same places with translated alt text, and the same numbers. Internal links point to `/ko/blog/<post-slug>/`.
+   - Images: make a Korean copy of every infographic at `public/images/<post-slug>/ko/<name>.svg` and embed that one. Same layout, numbers and colours; translate all text (keep outlet names in the source line, e.g. `출처: Al Jazeera`) and set `font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"`. Korean is wider per character, so keep labels short and check that no text overflows or overlaps.
    - Leave the `## 출처` list as in English (outlet names and article titles untranslated). Write names of people and places the way Korean news media usually do.
 12. When `npm run build` passes, commit and push to `main` (English post, Korean post and SVGs together). Commit message: `글 추가: <title>`.
 

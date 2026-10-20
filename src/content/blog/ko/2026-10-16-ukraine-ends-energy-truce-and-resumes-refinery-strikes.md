@@ -17,11 +17,11 @@ hype: { attention: 10, impact: 7 }
 
 10월 15일 우크라이나는 모스크바 남동쪽 랴잔에 있는 로스네프트 소유 정유시설을 공격했습니다. 로이터에 따르면 이 시설은 <mark>러시아 정유 처리량의 5% 가까이</mark>를 담당합니다. 파벨 말코프 주지사는 드론 공격으로 화재가 났다고 밝혔고, 러시아 국방부는 우크라이나가 이 시설에 대규모 공격을 시도했다고 발표했습니다.
 
-![2026년 10월 9일부터 15일까지 에너지 휴전의 경과를 보여 주는 타임라인](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/timeline.svg)
+![2026년 10월 9일부터 15일까지 에너지 휴전의 경과를 보여 주는 타임라인](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/ko/timeline.svg)
 
 NBC뉴스에 따르면 젤렌스키는 목요일 새벽부터 러시아 드론 850대 이상이 우크라이나 상공을 뒤덮었다고도 말했습니다.
 
-![핵심 수치 카드: 목요일 새벽 이후 러시아 드론 850대 이상](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/drones.svg)
+![핵심 수치 카드: 목요일 새벽 이후 러시아 드론 850대 이상](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/ko/drones.svg)
 
 ## 배경
 
@@ -29,7 +29,7 @@ NBC뉴스에 따르면 젤렌스키는 목요일 새벽부터 러시아 드론 8
 
 10월 9일 금요일 트럼프는 러시아가 <mark>30만 톤 이상(약 225만 배럴)의 경유</mark>를 공급하는 경유 거래를 발표했습니다. 로이터는 분석가들이 이 물량으로는 가격을 지속적으로 낮추기에 부족하다고 본다고 전했으며, 공화당 돈 베이컨 하원의원은 대신 제재를 강화하라고 촉구했습니다. 토요일 트럼프는 젤렌스키에게 정유시설 공격을 멈추라고 경고하며 우크라이나 국민에게 새 지도자를 뽑으라고 촉구했습니다. 젤렌스키는 푸틴이 60일간의 전면 휴전에 동의하면 선거를 치르겠다고 답하면서, 우크라이나 법은 계엄 상황에서 선거를 금지한다고 지적했습니다.
 
-![워싱턴, 키이우, 모스크바 사이의 압박 관계도](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/actors.svg)
+![워싱턴, 키이우, 모스크바 사이의 압박 관계도](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/ko/actors.svg)
 
 젤렌스키는 러시아가 우크라이나 전력 시설 공격을 멈춰야만 정유시설 공격을 중단하겠다고 밝혀 왔습니다. 그는 파이낸셜타임스에 에너지 공격을 중단하려면 미국산 패트리엇 요격미사일을 더 받아야 하며, 이것이 "최소한"이라고도 말했습니다. 로이터에 따르면 미국은 우크라이나에 대한 무기 공급을 중단했지만, 유럽 동맹국들은 여전히 우크라이나를 위해 미국 무기를 사들일 수 있습니다.
 
@@ -41,7 +41,7 @@ NBC뉴스에 따르면 젤렌스키는 목요일 새벽부터 러시아 드론 8
 
 에너지 공방은 인명 피해도 낳고 있습니다. 로이터에 따르면 10월 10일 러시아의 자포리자 공격으로 6세 여아가 숨졌고, 루마니아 흑해 연안 인근에서 드론이 화학물질 운반선 두 척을 공격해 선원 7명이 실종됐습니다. 한 나토 소식통은 로이터에 드론이 러시아에서 날아왔다고 말했으며, 루마니아 대통령은 책임 주체를 밝히지 않았습니다.
 
-![핵심 수치 카드: 랴잔 정유시설은 러시아 정유 처리량의 5% 가까이 담당](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/ryazan-share.svg)
+![핵심 수치 카드: 랴잔 정유시설은 러시아 정유 처리량의 5% 가까이 담당](/images/2026-10-16-ukraine-ends-energy-truce-and-resumes-refinery-strikes/ko/ryazan-share.svg)
 
 ## 주목할 점
 

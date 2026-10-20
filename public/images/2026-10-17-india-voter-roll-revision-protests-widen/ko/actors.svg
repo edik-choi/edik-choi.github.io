@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>갈등의 당사자들</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">누가 무엇을 말하나</text>
+<rect x="60" y="130" width="460" height="300" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="290" y="190" font-size="36" font-weight="700" text-anchor="middle" fill="#2f6b0f">야당·청년 운동</text>
+<text x="290" y="245" font-size="30" text-anchor="middle" fill="#1a1a1a">갸네시 쿠마르</text><text x="290" y="285" font-size="30" text-anchor="middle" fill="#1a1a1a">사퇴와 재정비</text><text x="290" y="325" font-size="30" text-anchor="middle" fill="#1a1a1a">중단 요구</text>
+<rect x="680" y="130" width="460" height="300" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="910" y="190" font-size="36" font-weight="700" text-anchor="middle" fill="#a14d12">선관위·BJP</text>
+<text x="910" y="245" font-size="30" text-anchor="middle" fill="#1a1a1a">부정 부인. 중복·</text><text x="910" y="285" font-size="30" text-anchor="middle" fill="#1a1a1a">자격 없는 항목을</text><text x="910" y="325" font-size="30" text-anchor="middle" fill="#1a1a1a">정리하는 것</text>
+<line x1="520" y1="280" x2="680" y2="280" stroke="#a14d12" stroke-width="4" stroke-dasharray="12 8"/>
+<text x="600" y="262" font-size="30" text-anchor="middle" fill="#a14d12">쟁점</text>
+<rect x="360" y="490" width="480" height="90" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+<text x="600" y="548" font-size="32" font-weight="700" text-anchor="middle" fill="#1a1a1a">대법원</text>
+<line x1="290" y1="430" x2="440" y2="490" stroke="#8a9560" stroke-width="3"/><line x1="910" y1="430" x2="760" y2="490" stroke="#8a9560" stroke-width="3"/>
+<text x="60" y="640" font-size="28" fill="#5c6b40">출처: NBC News; TIME</text>
+</svg>

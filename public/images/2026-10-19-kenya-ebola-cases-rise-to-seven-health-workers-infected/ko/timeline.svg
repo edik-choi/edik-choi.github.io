@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>케냐 에볼라 확진 타임라인</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">확진 1명에서 7명까지 2주</text>
+<line x1="130" y1="330" x2="1070" y2="330" stroke="#8a9560" stroke-width="4"/>
+<circle cx="130" cy="330" r="16" fill="#2f6b0f"/><circle cx="400" cy="330" r="16" fill="#2f6b0f"/><circle cx="670" cy="330" r="16" fill="#2f6b0f"/><circle cx="870" cy="330" r="16" fill="#2f6b0f"/><circle cx="1070" cy="330" r="16" fill="#a14d12"/>
+<text x="130" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">10월 3일</text>
+<text x="130" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">첫 환자</text><text x="130" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">나이로비 도착</text>
+<text x="400" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">10월 5일</text>
+<text x="400" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">첫 환자</text><text x="400" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">사망</text>
+<text x="670" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">10월 6일</text>
+<text x="670" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">친척</text><text x="670" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">격리</text>
+<text x="870" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#2f6b0f">10월 16일</text>
+<text x="870" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">세 번째</text><text x="870" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">확진</text>
+<text x="1070" y="270" font-size="34" font-weight="700" text-anchor="middle" fill="#a14d12">10월 17일</text>
+<text x="1070" y="400" font-size="30" text-anchor="middle" fill="#1a1a1a">4명 추가:</text><text x="1070" y="440" font-size="30" text-anchor="middle" fill="#1a1a1a">총 7명</text>
+<text x="60" y="650" font-size="28" fill="#5c6b40">출처: Al Jazeera</text>
+</svg>

@@ -17,7 +17,7 @@ hype: { attention: 6, impact: 4 }
 
 투표일 전 투표율이 이례적으로 높았습니다. 글로벌뉴스에 따르면 앨버타 선거관리청은 10월 13~17일 사전투표와 특별투표로 <mark>잠정 135만 6,873표</mark>가 들어왔다고 밝혔습니다. 2023년 주 선거 같은 시점의 80만 9,988표보다 크게 많습니다. 선거인 314만 8,343명 가운데 약 43%가 사전투표 기간에 투표했으며, 2023년에는 27.5%였습니다. 선거관리청은 전체 투표율을 80~85%로 예상합니다.
 
-![앨버타의 2026년과 2023년 사전투표 수 비교 차트](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/advance-voting.svg)
+![앨버타의 2026년과 2023년 사전투표 수 비교 차트](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/ko/advance-voting.svg)
 
 글로벌뉴스에 따르면 일부 투표소는 늦게 문을 열어 운영 시간을 연장했고, 이 때문에 결과 발표가 늦어졌습니다. 개표는 수작업으로 진행됩니다.
 
@@ -33,13 +33,13 @@ hype: { attention: 6, impact: 4 }
 
 2026년 5월 13일 앨버타 법원의 셰이나 레너드 판사는 여러 원주민(퍼스트 네이션) 측의 손을 들어, 원주민과 협의하지 않았다는 이유로 주민투표 절차가 위헌이라고 판결했습니다. CBC와 폴리티코 보도를 정리한 위키백과에 따르면, 이후 '영원한 캐나다 앨버타(Alberta Forever Canada)' 청원을 반영한 문항이 5월 21일 투표용지에 추가됐습니다.
 
-![2026년 5월 법원 판결부터 10월 19일 투표까지 앨버타 주민투표 타임라인](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/timeline.svg)
+![2026년 5월 법원 판결부터 10월 19일 투표까지 앨버타 주민투표 타임라인](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/ko/timeline.svg)
 
 ### 투표 전 여론조사는 어땠나
 
 여론조사 기관들은 일관되게 앨버타 주민 다수가 잔류를 선호한다고 봤습니다. 폭스뉴스에 따르면 아바쿠스데이터 조사에서 <mark>지지 후보를 정한 유권자의 74%가 잔류를 지지</mark>했고, 26%가 절차 시작을 원했습니다. 글로벌뉴스에 따르면 입소스 조사에서는 잔류가 약 70%, 절차 시작 지지가 23%로 9월보다 3%포인트 올랐습니다. 10월 16일 발표된 앵거스리드연구소 조사에서는 잔류 66%, 향후 구속력 있는 주민투표 지지 34%였습니다.
 
-![투표 전 여론조사 3건에서 캐나다 잔류 지지가 과반임을 보여 주는 막대그래프](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/poll-comparison.svg)
+![투표 전 여론조사 3건에서 캐나다 잔류 지지가 과반임을 보여 주는 막대그래프](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/ko/poll-comparison.svg)
 
 ## 왜 중요한가
 
@@ -49,7 +49,7 @@ hype: { attention: 6, impact: 4 }
 
 앵거스리드 조사에서 향후 구속력 있는 주민투표를 지지하는 사람 가운데 60%는 연방정부에 메시지를 보내기 위해서라고, 37%는 분리를 위해서라고 답했습니다. 분리주의 운동을 조직한 코리 모건은 폭스뉴스에 앨버타 주민 3명 중 1명 정도가 분리를 원한다고 보며, 자신들은 퀘벡의 협상력을 본보기로 삼고 있다고 말했습니다.
 
-![연방정부에 메시지 60% 대 분리 37%를 보여 주는 막대그래프](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/message-to-ottawa.svg)
+![연방정부에 메시지 60% 대 분리 37%를 보여 주는 막대그래프](/images/2026-10-20-alberta-votes-on-separation-referendum-results-pending/ko/message-to-ottawa.svg)
 
 ### 연방정부와 외부의 압력
 

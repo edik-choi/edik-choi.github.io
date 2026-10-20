@@ -13,7 +13,7 @@ hype: { attention: 3, impact: 6 }
 
 1차 투표 이후 첫 조사를 낸 크아에스트는 보우소나루 46%, 룰라 44%로 집계했습니다. 다타폴랴 조사에서는 보우소나루 47%, 룰라 45%였습니다. 다타폴랴의 직전 조사에서 보우소나루는 49%였으므로 <mark>격차가 4%포인트에서 2%포인트로 줄었습니다</mark>. 알자지라에 따르면 두 조사 모두 격차가 오차범위 ±2%포인트 안에 있습니다.
 
-![9월 25일, 10월 6~7일, 10월 15일 다타폴랴 결선 여론조사 막대그래프. 우위가 룰라에서 보우소나루로 넘어간 뒤 좁혀지는 흐름](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/runoff-polls.svg)
+![9월 25일, 10월 6~7일, 10월 15일 다타폴랴 결선 여론조사 막대그래프. 우위가 룰라에서 보우소나루로 넘어간 뒤 좁혀지는 흐름](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/ko/runoff-polls.svg)
 
 1차 투표는 10월 4일 치러졌습니다. 두 후보 모두 당선에 필요한 유효표 과반을 얻지 못했습니다. 알자지라에 따르면 개표율 약 99% 시점에서 <mark>보우소나루가 유효표의 약 47%, 룰라가 44.9%</mark>를 얻었습니다. 선거법원 집계로는 보우소나루 약 5,600만 표, 룰라 약 5,300만 표입니다. NPR은 개표율 99% 이상 기준으로 약 47%와 약 45%라고 보도했습니다.
 
@@ -21,7 +21,7 @@ hype: { attention: 3, impact: 6 }
 
 알자지라에 따르면 이후 룰라는 수백만 명이 모인 대규모 유세를 벌였습니다. 분석가들은 다른 보수 후보들이 탈락한 데서 보우소나루가 기대만큼 표를 얻지 못했다고 말합니다. 합쳐서 약 530만 표를 얻은 호나우두 카이아두와 헤난 산투스는 결선에서 어느 후보도 지지하지 않겠다고 밝혔습니다.
 
-![1차 투표 득표 막대그래프(백만 표): 보우소나루 약 56, 룰라 약 53, 카이아두와 산투스 합계 약 5.3](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/first-round-votes.svg)
+![1차 투표 득표 막대그래프(백만 표): 보우소나루 약 56, 룰라 약 53, 카이아두와 산투스 합계 약 5.3](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/ko/first-round-votes.svg)
 
 ## 배경
 
@@ -29,7 +29,7 @@ hype: { attention: 3, impact: 6 }
 
 1차 투표 결과는 여론조사 기관들을 놀라게 했습니다. 알자지라가 인용한 로이터 인터뷰에서 분석가들은 보우소나루가 "항의 투표"의 덕을 봤을 수 있으며, 이 때문에 결선에서 지지율을 더 끌어올리기는 어려울 수 있다고 말했습니다. 룰라는 결과를 "예상 밖"이라고 하면서 "경기는 이제 시작이다. 우리는 연장전에 들어섰다"고 말했습니다.
 
-![9월 25일 여론조사부터 10월 4일 1차 투표, 10월 15일 여론조사, 10월 25일 결선까지의 타임라인](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/campaign-timeline.svg)
+![9월 25일 여론조사부터 10월 4일 1차 투표, 10월 15일 여론조사, 10월 25일 결선까지의 타임라인](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/ko/campaign-timeline.svg)
 
 유권자들은 범죄와 생활비를 걱정하고 있으며, 브라질과 미국의 관계는 긴장돼 있습니다. NPR에 따르면 룰라는 미국이 선거에 개입하려 한다고 비난했고, 미국 국무부는 이를 부인했습니다. NPR은 보우소나루 유세장에 미국 국기가 등장했다고 전했습니다.
 
@@ -45,7 +45,7 @@ hype: { attention: 3, impact: 6 }
 
 알자지라는 우파가 강해진 의회 때문에 룰라가 재선되더라도 국정 과제를 추진하기 어려워질 수 있다고 지적했습니다. 반대도 성립합니다. NPR은 의회 약진이 플라비우 보우소나루가 당선될 경우 그의 지지 기반을 강화할 수 있다고 짚었습니다.
 
-![10월 15일 두 여론조사 모두 보우소나루가 2%포인트 앞서고 오차범위도 ±2%포인트임을 보여 주는 핵심 수치 카드](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/two-point-gap.svg)
+![10월 15일 두 여론조사 모두 보우소나루가 2%포인트 앞서고 오차범위도 ±2%포인트임을 보여 주는 핵심 수치 카드](/images/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/ko/two-point-gap.svg)
 
 ## 주목할 점
 

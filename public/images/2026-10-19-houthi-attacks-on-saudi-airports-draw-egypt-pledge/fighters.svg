@@ -2,10 +2,10 @@
 <title>Houthi fighters</title>
 <text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">Houthi fighters: 2015 vs 2024</text>
 <line x1="120" y1="560" x2="1100" y2="560" stroke="#8a9560" stroke-width="3"/>
-<rect x="280" y="502" width="240" height="58" fill="#2f6b0f"/>
-<rect x="680" y="120" width="240" height="440" fill="#a14d12"/>
-<text x="400" y="482" font-size="44" font-weight="700" text-anchor="middle" fill="#1a1a1a">~30,000</text>
-<text x="800" y="100" font-size="44" font-weight="700" text-anchor="middle" fill="#1a1a1a">up to 350,000</text>
+<rect x="280" y="526" width="240" height="34" fill="#2f6b0f"/>
+<rect x="680" y="160" width="240" height="400" fill="#a14d12"/>
+<text x="400" y="506" font-size="44" font-weight="700" text-anchor="middle" fill="#1a1a1a">~30,000</text>
+<text x="800" y="140" font-size="44" font-weight="700" text-anchor="middle" fill="#1a1a1a">up to 350,000</text>
 <text x="400" y="610" font-size="32" text-anchor="middle" fill="#1a1a1a">2015</text>
 <text x="800" y="610" font-size="32" text-anchor="middle" fill="#1a1a1a">2024</text>
 <text x="60" y="655" font-size="28" fill="#5c6b40">Source: AP/PBS</text>

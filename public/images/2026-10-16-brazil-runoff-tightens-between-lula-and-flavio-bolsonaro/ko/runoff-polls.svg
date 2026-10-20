@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<text x="60" y="70" font-size="40" font-weight="bold" fill="#1a1a1a">결선 여론조사: 플라비우 보우소나루 대 룰라 (%)</text>
+<text x="60" y="112" font-size="28" fill="#4a4a3a">모든 격차가 오차범위 ±2%포인트 이내</text>
+<line x1="60" y1="150" x2="60" y2="560" stroke="#8a9560" stroke-width="2"/>
+<text x="80" y="200" font-size="30" fill="#1a1a1a">다타폴랴, 9월 25일</text>
+<rect x="420" y="170" width="658" height="40" fill="#2f6b0f"/><text x="1064" y="201" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">룰라 47</text>
+<rect x="420" y="215" width="630" height="40" fill="#a14d12"/><text x="1036" y="246" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">보우소나루 45</text>
+<text x="80" y="340" font-size="30" fill="#1a1a1a">다타폴랴, 10월 6~7일</text>
+<rect x="420" y="310" width="630" height="40" fill="#2f6b0f"/><text x="1036" y="341" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">룰라 45</text>
+<rect x="420" y="355" width="686" height="40" fill="#a14d12"/><text x="1092" y="386" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">보우소나루 49</text>
+<text x="80" y="480" font-size="30" fill="#1a1a1a">다타폴랴, 10월 15일</text>
+<rect x="420" y="450" width="630" height="40" fill="#2f6b0f"/><text x="1036" y="481" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">룰라 45</text>
+<rect x="420" y="495" width="658" height="40" fill="#a14d12"/><text x="1064" y="526" font-size="30" font-weight="bold" text-anchor="end" fill="#f6fcbb">보우소나루 47</text>
+<text x="60" y="625" font-size="28" fill="#5c6b40">출처: Al Jazeera</text></svg>

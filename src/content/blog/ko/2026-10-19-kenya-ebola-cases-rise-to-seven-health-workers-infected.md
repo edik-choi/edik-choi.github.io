@@ -9,7 +9,7 @@ hype: { attention: 6, impact: 5 }
 
 케냐 보건부는 2026년 10월 17일 토요일 <mark>4명이 추가로 에볼라 양성 판정을 받았다</mark>고 발표했습니다. 이로써 케냐의 확진자는 7명이 됐습니다. 알자지라와 AP에 따르면 새 확진자 가운데 3명은 콩고민주공화국(DRC)에서 온 첫 환자를 치료한 의료진입니다.
 
-![2026년 10월 17일 기준 케냐 에볼라 확진자 7명을 보여 주는 핵심 수치 카드](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/cases.svg)
+![2026년 10월 17일 기준 케냐 에볼라 확진자 7명을 보여 주는 핵심 수치 카드](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/ko/cases.svg)
 
 ## 무슨 일이 있었나
 
@@ -21,7 +21,7 @@ hype: { attention: 6, impact: 5 }
 
 AP에 따르면 지표 환자는 40세 케냐 남성으로, 콩고민주공화국에서 약 한 달간 앓다가 <mark>10월 3일 나이로비행 비행기를 탔습니다</mark>. 그는 <mark>10월 5일 숨졌습니다</mark>. 알자지라는 이번 7명이 <mark>케냐 안에서 전파된 첫 감염 사례</mark>라고 보도했습니다.
 
-![10월 3일 첫 환자 입국부터 10월 17일 확진자 7명까지 케냐 에볼라 사례 타임라인](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/timeline.svg)
+![10월 3일 첫 환자 입국부터 10월 17일 확진자 7명까지 케냐 에볼라 사례 타임라인](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/ko/timeline.svg)
 
 보건부 발표는 토요일 X에 게시됐습니다. 첫 환자와 연결된 확진자 가운데 의료진은 병원 체계가 이미 파악하고 있어 감시와 격리가 가장 쉬운 집단입니다. 양성 판정을 받은 친척은 이미 격리 중이었으므로 발병 전부터 관찰 대상이었다는 뜻이며, 이는 접촉자 추적 체계가 목표로 하는 결과입니다.
 
@@ -35,13 +35,13 @@ AP에 따르면 지표 환자는 40세 케냐 남성으로, 콩고민주공화�
 
 이번 유행에서는 분디부교형이 주를 이룹니다. 알자지라에 따르면 일부 백신 후보가 초기 임상시험 중이지만, 현재 이 유형에 대해 <mark>승인된 백신이나 치료제는 없습니다</mark>. 따라서 확산 억제는 환자 격리와 접촉자 추적·격리에 달려 있습니다.
 
-![콩고민주공화국 유행 핵심 수치: 5월 이후 환자 9,000명 이상, 사망 4,300명 이상](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/outbreak.svg)
+![콩고민주공화국 유행 핵심 수치: 5월 이후 환자 9,000명 이상, 사망 4,300명 이상](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/ko/outbreak.svg)
 
 ### 케냐는 접촉자를 어떻게 추적하고 있나
 
 케냐는 첫 환자에 대해서도 같은 방식으로 대응했습니다. AP에 따르면 보건부는 첫 환자의 접촉자가 약 130명이며, 이 가운데 <mark>128명이 격리 중</mark>이고 2명은 추적 중이라고 밝혔습니다. 알자지라는 격리 비율을 98.5%로 전했는데, 이는 보건부가 전파 고리를 끊는 기준으로 제시한 국제 기준 85%를 웃돕니다.
 
-![케냐 접촉자 격리 비율 98.5%와 국제 기준 85%를 비교한 막대그래프](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/contacts.svg)
+![케냐 접촉자 격리 비율 98.5%와 국제 기준 85%를 비교한 막대그래프](/images/2026-10-19-kenya-ebola-cases-rise-to-seven-health-workers-infected/ko/contacts.svg)
 
 ## 왜 중요한가
 
