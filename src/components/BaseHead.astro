@@ -72,7 +72,7 @@ const alternates = translated ? { [lang]: canonicalURL, [lang === 'ko' ? 'en' : 
 	rel="alternate"
 	type="application/rss+xml"
 	title={SITE_TITLE}
-	href={new URL('rss.xml', Astro.site)}
+	href={new URL(lang === 'ko' ? 'ko/rss.xml' : 'rss.xml', Astro.site)}
 />
 <meta name="generator" content={Astro.generator} />
 
