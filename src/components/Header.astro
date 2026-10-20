@@ -60,6 +60,8 @@ const twin = translated ? twinPath(Astro.url.pathname) : localize(lang === 'ko' 
 	nav a {
 		padding: 1em 0.5em;
 		color: var(--black);
+		/* Transparent top border balances the underline's bottom border, so text sits in the vertical centre */
+		border-top: 4px solid transparent;
 		border-bottom: 4px solid transparent;
 		text-decoration: none;
 	}
