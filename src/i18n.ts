@@ -54,7 +54,7 @@ const ui = {
 		category: { politics: 'politics', economy: 'economy', conflict: 'conflict', climate: 'climate', technology: 'technology', society: 'society' } as Record<string, string>,
 	},
 	ko: {
-		description: '세계가 주목해야 할 이슈를 하루 두 번, 맥락과 함께 설명합니다.',
+		description: '세계가 주목해야 할 이슈를 하루 두 번, 맥락과 함께 포스팅합니다.',
 		home: '홈',
 		allPosts: '전체 글',
 		about: '소개',
@@ -74,7 +74,7 @@ const ui = {
 		previous: '이전 기사',
 		infographic: '인포그래픽',
 		footer: 'AI가 작성하고 출처를 밝힙니다.',
-		trusted: '출처 검증됨',
+		trusted: '신뢰도 높음',
 		trustedTitle: '3개 이상의 출처로 교차 확인했고 6곳 이상의 언론이 보도한 기사',
 		indicators: '기사 지표',
 		attention: '관심도',
