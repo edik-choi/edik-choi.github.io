@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>나흘간의 드론 공격</title>
+<text x="600" y="70" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">나흘간의 드론 공격</text>
+<text x="600" y="115" font-size="30" text-anchor="middle" fill="#4a4a3a">현지 소식통이 전한 사망자</text>
+<line x1="150" y1="330" x2="1050" y2="330" stroke="#8a9560" stroke-width="4"/>
+<circle cx="150" cy="330" r="16" fill="#2f6b0f"/>
+<text x="150" y="270" font-size="32" font-weight="700" text-anchor="middle" fill="#2f6b0f">10/16(금)</text>
+<text x="150" y="400" font-size="32" text-anchor="middle" fill="#1a1a1a">블루나일:</text>
+<text x="150" y="442" font-size="32" text-anchor="middle" fill="#1a1a1a">41명 사망</text>
+<circle cx="450" cy="330" r="16" fill="#a14d12"/>
+<text x="450" y="270" font-size="32" font-weight="700" text-anchor="middle" fill="#a14d12">10/18(일)</text>
+<text x="450" y="400" font-size="32" text-anchor="middle" fill="#1a1a1a">알디밥:</text>
+<text x="450" y="442" font-size="32" text-anchor="middle" fill="#1a1a1a">80명 사망</text>
+<circle cx="750" cy="330" r="16" fill="#2f6b0f"/>
+<text x="750" y="270" font-size="32" font-weight="700" text-anchor="middle" fill="#2f6b0f">10/19(월)</text>
+<text x="750" y="400" font-size="32" text-anchor="middle" fill="#1a1a1a">니알라:</text>
+<text x="750" y="442" font-size="32" text-anchor="middle" fill="#1a1a1a">17명 사망</text>
+<circle cx="1050" cy="330" r="16" fill="#2f6b0f"/>
+<text x="1050" y="270" font-size="32" font-weight="700" text-anchor="middle" fill="#2f6b0f">10/19(월)</text>
+<text x="1050" y="400" font-size="32" text-anchor="middle" fill="#1a1a1a">유엔, 공격</text>
+<text x="1050" y="442" font-size="32" text-anchor="middle" fill="#1a1a1a">규탄</text>
+<text x="60" y="640" font-size="28" text-anchor="start" fill="#5c6b40">출처: Al Jazeera; UN News</text>
+</svg>
