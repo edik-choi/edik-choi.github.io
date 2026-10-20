@@ -14,7 +14,8 @@ import PostList from '../components/PostList.astro';
 import { langOf, t } from '../i18n';
 import type { Post } from '../posts';
 
-type Props = CollectionEntry<'blog'>['data'] & { sources?: number; trusted?: boolean; ogImage?: string; newer?: Post; older?: Post; translated?: boolean };
+// pubDate is optional so pages like About can use this layout without a date
+type Props = Omit<CollectionEntry<'blog'>['data'], 'pubDate'> & { pubDate?: Date; sources?: number; trusted?: boolean; ogImage?: string; newer?: Post; older?: Post; translated?: boolean };
 
 const { title, description, pubDate, updatedDate, heroImage, category, hype, location: place, sources = 0, trusted = false, ogImage, newer, older, translated } = Astro.props;
 const lang = langOf(Astro.url);
@@ -123,7 +124,7 @@ const ui = t(lang);
 				<div class="prose">
 					<div class="title">
 						<div class="date">
-							<FormattedDate date={pubDate} />
+							{pubDate && <FormattedDate date={pubDate} />}
 							{updatedDate && (
 								<div class="last-updated-on">
 									{ui.lastUpdated} <FormattedDate date={updatedDate} />
