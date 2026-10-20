@@ -54,7 +54,7 @@ const ui = {
 		category: { politics: 'politics', economy: 'economy', conflict: 'conflict', climate: 'climate', technology: 'technology', society: 'society' } as Record<string, string>,
 	},
 	ko: {
-		description: '세계가 주목해야 할 이슈를 하루 두 번, 맥락과 함께 포스팅합니다.',
+		description: '세계가 주목해야 할 이슈를 하루 두 번 포스팅합니다.',
 		home: '홈',
 		allPosts: '전체 글',
 		about: '소개',
