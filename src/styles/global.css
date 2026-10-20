@@ -54,6 +54,8 @@ body {
 	text-align: left;
 	-webkit-tap-highlight-color: transparent;
 	background: var(--bg);
+	/* Korean: break lines between words, not mid-word (no effect on English) */
+	word-break: keep-all;
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: rgb(var(--gray-dark));
