@@ -1,7 +1,7 @@
 ---
 title: 'Heat Storms Now Cover More of Earth, Reuters Finds'
 description: 'A Reuters analysis finds that vast, prolonged heat waves have become far more common. Here is what its “heat storm” findings mean for health, food, ecosystems and climate policy.'
-pubDate: '2026-10-21T05:13:00Z'
+pubDate: '2026-10-21T05:15:00Z'
 category: 'climate'
 location: { name: 'Global', lat: 0.0, lon: 0.0 }
 hype: { attention: 6, impact: 10 }
