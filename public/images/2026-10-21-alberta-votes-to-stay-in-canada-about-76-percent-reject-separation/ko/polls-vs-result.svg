@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>‘잔류’ 지지 비율</title>
+<text x="600" y="75" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">‘잔류’ 지지 비율</text>
+<line x1="380" y1="150" x2="380" y2="470" stroke="#8a9560" stroke-width="3"/>
+<text x="360" y="225" font-size="30" text-anchor="end" fill="#1a1a1a">2026년 1월 이후 여론조사</text>
+<text x="360" y="365" font-size="30" text-anchor="end" fill="#1a1a1a">초기 결과</text>
+<rect x="380" y="180" width="490" height="80" fill="#8a9560"/>
+<rect x="380" y="320" width="532" height="80" fill="#2f6b0f"/>
+<text x="890" y="238" font-size="44" font-weight="700" text-anchor="start" fill="#4a4a3a">약 70%</text>
+<text x="930" y="378" font-size="44" font-weight="700" text-anchor="start" fill="#2f6b0f">약 76%</text>
+<text x="600" y="550" font-size="32" text-anchor="middle" fill="#4a4a3a">결과는 비공식 잠정 집계</text>
+<text x="60" y="640" font-size="28" text-anchor="start" fill="#5c6b40">출처: Global News, NBC News</text>
+</svg>
