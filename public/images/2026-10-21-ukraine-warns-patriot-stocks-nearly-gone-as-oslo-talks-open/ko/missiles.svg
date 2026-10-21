@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>러시아 하룻밤 공습의 미사일 수</title>
+<text x="600" y="75" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">러시아 하룻밤 공습의 미사일 수</text>
+<line x1="300" y1="150" x2="300" y2="470" stroke="#8a9560" stroke-width="3"/>
+<text x="280" y="235" font-size="32"  text-anchor="end" fill="#1a1a1a">탄도미사일</text>
+<text x="280" y="375" font-size="32"  text-anchor="end" fill="#1a1a1a">순항미사일</text>
+<rect x="300" y="180" width="700" height="80" fill="#a14d12"/>
+<rect x="300" y="320" width="262" height="80" fill="#2f6b0f"/>
+<text x="1020" y="238" font-size="48" font-weight="700" text-anchor="start" fill="#a14d12">16</text>
+<text x="582" y="378" font-size="48" font-weight="700" text-anchor="start" fill="#2f6b0f">6</text>
+<text x="600" y="550" font-size="32"  text-anchor="middle" fill="#4a4a3a">젤렌스키 발표, 10월 18~19일 밤</text>
+<text x="60" y="640" font-size="28"  text-anchor="start" fill="#5c6b40">출처: Kyiv Post</text>
+</svg>

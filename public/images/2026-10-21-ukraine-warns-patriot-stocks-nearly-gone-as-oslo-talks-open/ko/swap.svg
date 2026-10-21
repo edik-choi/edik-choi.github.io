@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"><rect width="100%" height="100%" fill="#f6fcbb"/>
+<title>제안된 맞교환</title>
+<text x="600" y="75" font-size="40" font-weight="700" text-anchor="middle" fill="#1a1a1a">제안된 맞교환</text>
+<rect x="90" y="150" width="400" height="260" rx="24" fill="#eef6b0" stroke="#8a9560" stroke-width="3"/>
+<rect x="710" y="150" width="400" height="260" rx="24" fill="#eef6b0" stroke="#8a9560" stroke-width="3"/>
+<text x="290" y="225" font-size="40" font-weight="700" text-anchor="middle" fill="#2f6b0f">우크라이나</text>
+<text x="290" y="300" font-size="32"  text-anchor="middle" fill="#1a1a1a">정유시설 공격</text>
+<text x="290" y="345" font-size="32"  text-anchor="middle" fill="#1a1a1a">30일 중단</text>
+<text x="910" y="225" font-size="40" font-weight="700" text-anchor="middle" fill="#2f6b0f">미국</text>
+<text x="910" y="300" font-size="32"  text-anchor="middle" fill="#1a1a1a">패트리엇</text>
+<text x="910" y="345" font-size="32"  text-anchor="middle" fill="#1a1a1a">요격미사일 공급</text>
+<line x1="520" y1="250" x2="680" y2="250" stroke="#a14d12" stroke-width="6"/><polygon points="690,250 665,235 665,265" fill="#a14d12"/>
+<line x1="680" y1="310" x2="520" y2="310" stroke="#a14d12" stroke-width="6"/><polygon points="510,310 535,295 535,325" fill="#a14d12"/>
+<text x="600" y="500" font-size="32"  text-anchor="middle" fill="#a14d12">워싱턴은 호응하지 않았다고 젤렌스키 주장</text>
+<text x="60" y="640" font-size="28"  text-anchor="start" fill="#5c6b40">출처: Kyiv Post</text>
+</svg>
