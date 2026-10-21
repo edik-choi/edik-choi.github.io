@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">열 폭풍 베라</title>
+  <desc id="desc">367일 지속: 2023.7.29 – 2024.7.29 최대 범위: 지구 표면의 약 85% 6개 대륙에서 영향 확인</desc>
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <text x="70" y="95" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#1a1a1a">열 폭풍 베라</text>
+  <line x1="70" y1="125" x2="1130" y2="125" stroke="#8a9560" stroke-width="2"/>
+  <text x="70" y="190" font-size="38" fill="#1a1a1a">367일 지속: 2023.7.29 – 2024.7.29</text>
+  <text x="70" y="285" font-size="38" fill="#1a1a1a">최대 범위: 지구 표면의 약 85%</text>
+  <text x="70" y="380" font-size="38" fill="#1a1a1a">6개 대륙에서 영향 확인</text>
+  <rect x="65" y="520" width="1070" height="1" fill="#8a9560"/>
+  <text x="70" y="570" font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" font-size="28" fill="#5c6b40">Source: Reuters</text>
+</svg>

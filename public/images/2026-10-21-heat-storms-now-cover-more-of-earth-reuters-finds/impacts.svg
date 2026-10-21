@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">How prolonged heat spreads</title>
+  <desc id="desc">HEALTH  →  illness and heat-related deaths FOOD  →  crop stress, drought and price risks ECOSYSTEMS  →  wildlife and habitat losses INFRASTRUCTURE  →  power and water pressure</desc>
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <text x="70" y="95" font-family="Helvetica, Arial, sans-serif" font-size="44" font-weight="700" fill="#1a1a1a">How prolonged heat spreads</text>
+  <line x1="70" y1="125" x2="1130" y2="125" stroke="#8a9560" stroke-width="2"/>
+  <text x="70" y="190" font-size="38" fill="#1a1a1a">HEALTH  →  illness and heat-related deaths</text>
+  <text x="70" y="285" font-size="38" fill="#1a1a1a">FOOD  →  crop stress, drought and price risks</text>
+  <text x="70" y="380" font-size="38" fill="#1a1a1a">ECOSYSTEMS  →  wildlife and habitat losses</text>
+  <text x="70" y="475" font-size="38" fill="#1a1a1a">INFRASTRUCTURE  →  power and water pressure</text>
+  <rect x="65" y="520" width="1070" height="1" fill="#8a9560"/>
+  <text x="70" y="570" font-family="Helvetica, Arial, sans-serif" font-size="28" fill="#5c6b40">Source: Reuters; UNEP</text>
+</svg>
