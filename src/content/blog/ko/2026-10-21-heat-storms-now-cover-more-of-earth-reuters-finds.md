@@ -1,7 +1,7 @@
 ---
 title: '지구를 뒤덮는 ‘열 폭풍’이 급증한다'
 description: '로이터 분석에 따르면 광범위하고 오래 지속되는 폭염이 크게 늘었다. ‘열 폭풍’이 건강, 식량, 생태계와 기후 정책에 의미하는 바를 살펴본다.'
-pubDate: '2026-10-21T05:13:00Z'
+pubDate: '2026-10-21T05:15:00Z'
 category: 'climate'
 location: { name: '전 세계', lat: 0.0, lon: 0.0 }
 hype: { attention: 6, impact: 10 }
