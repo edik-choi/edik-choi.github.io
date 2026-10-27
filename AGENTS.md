@@ -5,7 +5,7 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
 ## Auto-posting rules
 
 1. Check titles and dates of existing posts in `src/content/blog/` and avoid topics covered in the last 7 days. A meaningful new development in the same story is fine.
-2. Use web search to find world issues from the last 24–48 hours and pick the one with the biggest global impact (judge candidates by the `impact` criteria in rule 5). Rotate category (politics, economy, conflict, climate, technology, society) and region so recent posts aren't lopsided.
+2. On Sundays (UTC), write a weekly explainer instead (rule 13). On other days, use web search to find world issues from the last 24–48 hours and pick the one with the biggest global impact (judge candidates by the `impact` criteria in rule 5). Rotate category (politics, economy, conflict, climate, technology, society) and region so recent posts aren't lopsided.
 3. Cross-check facts against at least 2 reputable sources (Reuters, AP, BBC, Al Jazeera, government or international-organization releases, etc.). Leave out anything unverified, or attribute it explicitly ("according to ..."). Copy numbers, dates and names exactly as the sources give them.
 4. File: `src/content/blog/YYYY-MM-DD-english-slug.md` (UTC date, lowercase, hyphens).
    `pubDate` must be the actual current time: run `date -u +%Y-%m-%dT%H:%M:00Z` and paste the output as-is. Never round or guess a time, and never use a future time.
@@ -32,7 +32,7 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    - `## Background`: why it happened
    - `## Why it matters`: the impact on the world
    - `## What to watch`
-   - `## Editor's Insight`: original analysis of what the story means for geopolitics, the economy or tech trends (2–3 paragraphs). Every claim builds on facts in the post or on analysts named in the sources; label forecasts as possibilities, not facts.
+   - `## Editor's Insight`: original analysis of what the story means for geopolitics, the economy or tech trends (3–4 paragraphs). Add what a news report alone doesn't give: compare with a past case or an earlier post on this site, connect it to other stories, and name who gains and who loses. Every claim builds on facts in the post or on analysts named in the sources; label forecasts as possibilities, not facts. Never restate the summary.
    - `## Sources`: `- [Outlet: Article title](URL)`, listing only URLs you actually opened
    - Keep the H2 names above as they are. Inside a long section, split it with `###` subheadings that name the specific point (e.g. `### How the tariff hits EU carmakers`), not generic labels.
    - SEO: work the long-tail phrases a reader would search for (e.g. "why did Japan raise interest rates", "Sudan ceasefire talks 2026") naturally into the title, description, lead and `###` subheadings. Never stuff keywords or repeat a phrase unnaturally.
@@ -52,6 +52,10 @@ Deployed to GitHub Pages (https://worldwidehype.live). Pushing to `main` trigger
    - Images: make a Korean copy of every infographic at `public/images/<post-slug>/ko/<name>.svg` and embed that one. Same layout, numbers and colours; translate all text (keep outlet names in the source line, e.g. `출처: Al Jazeera`) and set `font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif"`. Korean is wider per character, so keep labels short and check that no text overflows or overlaps.
    - Leave the `## 출처` list as in English (outlet names and article titles untranslated). Write names of people and places the way Korean news media usually do.
 12. When `npm run build` passes, commit and push to `main` (English post, Korean post and SVGs together). Commit message: `글 추가: <title>`.
+13. Weekly explainer (Sundays UTC): an evergreen post that answers one question readers search for about a concept, institution or process behind recent news (e.g. "how do central banks set interest rates", "how does a UN Security Council veto work"). Pick it from stories posted in the last 7 days and link 2–3 of those posts (rule 9). Avoid questions already answered by an earlier explainer.
+   - Everything in rules 3–5 and 7–12 applies. `location` is where the institution sits or the clearest example happens; score `hype` from the example story.
+   - Body (1000–1500 words) uses these H2s instead of rule 6's: `## The short answer` (2–3 sentences), `## How it works`, `## A recent example` (the news story it explains), `## Common misconceptions`, `## What to watch`, `## Editor's Insight`, `## Sources`. Korean: `## 짧은 답`, `## 어떻게 작동하나`, `## 최근 사례`, `## 흔한 오해`, `## 주목할 점`, `## 에디터 인사이트`, `## 출처`.
+   - Prefer official explanations (central banks, UN, government sites, international organizations) and established reference reporting as sources.
 
 ## Commits
 

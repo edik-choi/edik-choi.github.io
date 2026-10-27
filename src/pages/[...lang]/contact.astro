@@ -1,0 +1,39 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+import { langOf } from '../../i18n';
+import { LANGS } from '../../posts';
+
+export const getStaticPaths = () => LANGS.map(({ param }) => ({ params: { lang: param } }));
+
+const ko = langOf(Astro.url) === 'ko';
+---
+
+{ko ? (
+<Layout title="문의" description="World Wide Hype에 정정 요청, 제보, 광고·개인정보 문의를 보내는 방법입니다.">
+	<p>모든 문의는 이메일 <a href="mailto:edik.choi@gmail.com">edik.choi@gmail.com</a>으로 받습니다. 보통 3영업일 안에 답장합니다.</p>
+
+	<h2>이런 내용을 보내주세요</h2>
+	<ul>
+		<li><strong>정정 요청:</strong> 글 주소와 틀린 부분, 근거가 되는 자료를 함께 보내주시면 확인 후 고칩니다. 자세한 절차는 <a href="/ko/editorial/">편집 원칙</a>에 있습니다.</li>
+		<li><strong>제보와 주제 제안:</strong> 다뤄주었으면 하는 국제 이슈나 해설 주제를 알려주세요.</li>
+		<li><strong>개인정보:</strong> 수집하는 정보와 외부 서비스는 <a href="/ko/privacy/">개인정보처리방침</a>에서 확인할 수 있습니다.</li>
+		<li><strong>저작권과 기타 문의:</strong> 이용 조건은 <a href="/ko/terms/">이용약관</a>을 참고하세요.</li>
+	</ul>
+
+	<p>협찬 글이나 유료 게재 요청은 받지 않습니다.</p>
+</Layout>
+) : (
+<Layout title="Contact" description="How to send World Wide Hype corrections, tips, and privacy or other questions.">
+	<p>All messages go to <a href="mailto:edik.choi@gmail.com">edik.choi@gmail.com</a>. Replies usually arrive within three business days.</p>
+
+	<h2>What to send</h2>
+	<ul>
+		<li><strong>Corrections:</strong> include the post's address, what is wrong and any supporting source; confirmed errors are fixed. The process is described in the <a href="/editorial/">Editorial Policy</a>.</li>
+		<li><strong>Tips and topic ideas:</strong> tell us about global stories or concepts you would like explained.</li>
+		<li><strong>Privacy:</strong> what the site collects and which services it uses is set out in the <a href="/privacy/">Privacy Policy</a>.</li>
+		<li><strong>Copyright and other questions:</strong> see the <a href="/terms/">Terms of Use</a>.</li>
+	</ul>
+
+	<p>The site does not accept sponsored posts or paid placements.</p>
+</Layout>
+)}

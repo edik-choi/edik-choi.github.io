@@ -1,0 +1,57 @@
+---
+import Layout from '../../layouts/BlogPost.astro';
+import { langOf } from '../../i18n';
+import { LANGS } from '../../posts';
+
+export const getStaticPaths = () => LANGS.map(({ param }) => ({ params: { lang: param } }));
+
+const ko = langOf(Astro.url) === 'ko';
+---
+
+{ko ? (
+<Layout title="이용약관" description="World Wide Hype의 콘텐츠 이용 조건, 저작권, 외부 링크와 책임 범위입니다.">
+	<p>시행일: 2026년 10월 28일</p>
+	<p>World Wide Hype(worldwidehype.live)를 이용하면 아래 약관에 동의하는 것으로 봅니다.</p>
+
+	<h2>콘텐츠의 성격</h2>
+	<p>이 사이트의 글은 공개 보도와 공식 자료를 바탕으로 국제 이슈를 설명하는 정보 제공 목적의 콘텐츠입니다. 투자, 법률, 의료, 여행 안전 등에 관한 전문적인 조언이 아니며, 중요한 결정을 내리기 전에는 원문 출처와 전문가의 의견을 확인하세요.</p>
+
+	<h2>저작권</h2>
+	<p>글과 인포그래픽의 저작권은 World Wide Hype에 있습니다. 출처(World Wide Hype와 글 주소)를 밝히면 짧게 인용하거나 링크로 공유할 수 있습니다. 글이나 인포그래픽 전체를 복제·재배포하려면 먼저 <a href="/ko/contact/">문의</a>해 주세요. 인용한 보도 내용의 권리는 각 출처에 있습니다.</p>
+
+	<h2>외부 링크</h2>
+	<p>글에는 출처 확인을 위한 외부 사이트 링크가 있습니다. 외부 사이트의 내용과 개인정보 처리에 대해서는 책임지지 않습니다.</p>
+
+	<h2>정확성과 책임</h2>
+	<p>정확한 정보를 싣기 위해 <a href="/ko/editorial/">편집 원칙</a>에 따라 사실을 확인하지만, 내용의 완전성이나 최신성을 보장하지는 않습니다. 사이트 이용으로 생긴 손해에 대해 법이 허용하는 범위에서 책임을 지지 않습니다.</p>
+
+	<h2>광고</h2>
+	<p>사이트에는 Google AdSense 광고가 게재됩니다. 광고 내용은 광고주의 책임이며, 광고 쿠키에 관한 내용은 <a href="/ko/privacy/">개인정보처리방침</a>에 있습니다.</p>
+
+	<h2>약관 변경</h2>
+	<p>약관이 바뀌면 이 페이지의 시행일을 고칩니다. 문의는 <a href="mailto:edik.choi@gmail.com">edik.choi@gmail.com</a>으로 보내주세요.</p>
+</Layout>
+) : (
+<Layout title="Terms of Use" description="Conditions for using World Wide Hype's content: copyright, external links and limits of liability.">
+	<p>Effective date: October 28, 2026</p>
+	<p>By using World Wide Hype (worldwidehype.live) you agree to these terms.</p>
+
+	<h2>Nature of the content</h2>
+	<p>Posts explain global stories for general information, based on published reporting and official releases. They are not professional advice on investment, legal, medical, travel-safety or other matters; check the original sources and consult a professional before making important decisions.</p>
+
+	<h2>Copyright</h2>
+	<p>Posts and infographics are copyright World Wide Hype. You may quote short excerpts or share links with attribution (World Wide Hype and the post's address). To reproduce or redistribute a full post or infographic, please <a href="/contact/">get in touch</a> first. Rights in the reporting we cite belong to each source.</p>
+
+	<h2>External links</h2>
+	<p>Posts link to external sites so readers can check sources. We are not responsible for their content or privacy practices.</p>
+
+	<h2>Accuracy and liability</h2>
+	<p>Facts are checked under the <a href="/editorial/">Editorial Policy</a>, but we do not guarantee that content is complete or current. To the extent permitted by law, we are not liable for any loss arising from use of the site.</p>
+
+	<h2>Advertising</h2>
+	<p>The site shows Google AdSense ads. Advertisers are responsible for their ads; advertising cookies are covered in the <a href="/privacy/">Privacy Policy</a>.</p>
+
+	<h2>Changes</h2>
+	<p>If these terms change, the effective date above is updated. Questions go to <a href="mailto:edik.choi@gmail.com">edik.choi@gmail.com</a>.</p>
+</Layout>
+)}

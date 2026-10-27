@@ -11,7 +11,7 @@ import TrustBadge from '../components/TrustBadge.astro';
 import WeatherBackdrop from '../components/WeatherBackdrop.astro';
 import PassportStamp from '../components/PassportStamp.astro';
 import PostList from '../components/PostList.astro';
-import { langOf, t } from '../i18n';
+import { langOf, localize, t } from '../i18n';
 import type { Post } from '../posts';
 
 // pubDate is optional so pages like About can use this layout without a date
@@ -66,6 +66,10 @@ const ui = t(lang);
 			.date {
 				margin-bottom: 0.5em;
 				color: rgb(var(--gray));
+			}
+			.byline a {
+				color: inherit;
+				font-size: 0.9em;
 			}
 			.last-updated-on {
 				font-style: italic;
@@ -127,6 +131,7 @@ const ui = t(lang);
 					<div class="title">
 						<div class="date">
 							{pubDate && <FormattedDate date={pubDate} />}
+							{pubDate && <div class="byline"><a href={localize(lang, '/editorial/')}>{ui.byline}</a></div>}
 							{updatedDate && (
 								<div class="last-updated-on">
 									{ui.lastUpdated} <FormattedDate date={updatedDate} />

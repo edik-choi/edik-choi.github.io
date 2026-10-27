@@ -6,7 +6,7 @@ const lang = langOf(Astro.url);
 ---
 
 <footer>
-	&copy; {today.getFullYear()} World Wide Hype · {t(lang).footer} · <a href={localize(lang, '/privacy/')}>{t(lang).privacy}</a>
+	&copy; {today.getFullYear()} World Wide Hype · {t(lang).footer} · <a href={localize(lang, '/editorial/')}>{t(lang).editorial}</a> · <a href={localize(lang, '/contact/')}>{t(lang).contact}</a> · <a href={localize(lang, '/terms/')}>{t(lang).terms}</a> · <a href={localize(lang, '/privacy/')}>{t(lang).privacy}</a>
 </footer>
 <style>
 	footer {
