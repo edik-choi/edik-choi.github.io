@@ -2,6 +2,7 @@
 title: 'Vucic Concedes as Serbia''s Student List Wins Election'
 description: 'Who won Serbia''s 2026 election? Aleksandar Vucic conceded defeat on 25 October as the student-led Student List headed for a parliamentary majority after 14 years of SNS rule.'
 pubDate: '2026-10-27T07:15:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Belgrade, Serbia', lat: 44.79, lon: 20.45 }
 hype: { attention: 7, impact: 3 }
@@ -73,6 +74,8 @@ The most notable feature of the result is the gap between the two accounts of th
 The turnout figure suggests the contest mobilised voters far beyond 2023, when turnout at the same hour was nearly 13 percentage points lower, according to Balkan Insight. High turnout is consistent with a movement that began in a disaster and kept organising for nearly two years, though the sources do not say which groups drove the increase.
 
 The harder test comes after the vote. The Student List has no single leader, and the sources do not describe its programme on the EU, Russia or Kosovo. Von der Leyen's offer of support on rule of law and media freedom shows Brussels will engage, but how a new government would balance the EU against Serbia's other partners is unknown. Analysts may read the result alongside other long-ruling parties facing voters, but each country's political system differs.
+
+The contrast with Brazil on the same weekend is striking. There, the losing camp is [seeking to annul Lula's win](/blog/2026-10-27-lula-wins-fourth-term-as-bolsonaro-seeks-annulment/); in Serbia, a long-dominant leader conceded on election night. The Student List and Brussels are the immediate winners, and the SNS the clear loser. Moscow and Beijing face uncertainty about a partner that Vucic had kept close.
 
 ## Sources
 

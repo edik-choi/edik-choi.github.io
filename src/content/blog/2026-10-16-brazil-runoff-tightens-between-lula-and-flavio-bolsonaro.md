@@ -2,6 +2,7 @@
 title: 'Brazil run-off tightens as two polls give Bolsonaro a thin lead'
 description: 'Two polls released on 15 October put Flavio Bolsonaro two points ahead of President Lula ahead of Brazil''s 25 October presidential run-off, inside the margin of error.'
 pubDate: '2026-10-16T07:19:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Brasília, Brazil', lat: -15.79, lon: -47.88 }
 hype: { attention: 3, impact: 6 }
@@ -54,6 +55,16 @@ A stronger right-wing Congress could make it harder for Lula to advance his agen
 - **Campaign security:** NPR noted that the 2022 run-off saw a sharp rise in political violence, citing the Brazilian news site Pública.
 - **US-Brazil relations:** Accusations of foreign interference and the candidates' differing stances toward Washington may shape the closing days.
 - **Result and transition:** The run-off is on 25 October, and the winner takes over a Congress where the right made gains.
+
+## Editor's Insight
+
+The first round is the best reason to treat these polls with caution. Most pre-election surveys expected Lula to finish first; a Datafolha poll on 25 September had him ahead 40% to 36%, yet Flavio Bolsonaro came out on top. Both run-off leads now sit inside the margin of error, so the published numbers say little more than that the race is close.
+
+The arithmetic of the eliminated candidates matters more than the polls. Bolsonaro finished the first round about 3 million votes ahead, with roughly 56 million to Lula's almost 53 million. Ronaldo Caiado and Renan Santos, who together won about 5.3 million votes, have declined to endorse anyone. That uncommitted bloc is larger than the gap between the two leaders, and analysts' suggestion that part of Bolsonaro's vote was a protest vote points to why it may not move to him automatically.
+
+Whoever wins, the Bolsonaro family has already gained. The Liberal Party is on track to be the largest force in the Chamber of Deputies, and Michelle and Carlos Bolsonaro won Senate seats. A Lula victory would therefore mean governing against a stronger right-wing Congress, while a Flavio Bolsonaro victory would give the right both branches. The congressional result has reduced the room for Lula's agenda even before the run-off is decided.
+
+The vote is also a verdict on 2022. Lula narrowly beat Jair Bolsonaro that year, and the former president is now serving 27 years for plotting to overturn the result. A close outcome would test again whether the losing side accepts the count. Abroad, the stakes are about alignment: a Flavio Bolsonaro government has pledged to realign with Washington, while Lula has accused the United States of meddling, so the result will shape how Latin America's largest country positions itself.
 
 ## Sources
 

@@ -2,6 +2,7 @@
 title: 'Houthi attacks on Saudi airports prompt Egypt pledge of support'
 description: 'Why are the Houthis attacking Saudi Arabia in October 2026? At least 19 people have died in strikes on Saudi airports, and Egypt, Britain and France are offering help.'
 pubDate: '2026-10-19T07:17:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'conflict'
 location: { name: 'Riyadh, Saudi Arabia', lat: 24.71, lon: 46.68 }
 hype: { attention: 6, impact: 8 }
@@ -63,6 +64,8 @@ The cost asymmetry AP describes is the core problem: cheap, domestically made Ho
 AP's analysis also notes that air power rarely succeeds without ground troops, and that anti-Houthi ground forces are divided. Combined with the Houthi demand that Riyadh lift its blockade, which AP says would be seen as a defeat, diplomatic options look limited. Egypt's involvement could widen the conflict, but its stated defensive framing suggests caution.
 
 Finally, the attacks tie Yemen to the Iran war and Gulf energy security. A senior Saudi diplomat told AP that Iran is encouraging the escalation; Iran denies arming the Houthis.
+
+The balance of costs is uneven. Saudi Arabia pays twice, in interceptors and in disrupted airports, while Egypt gains standing with Riyadh at the risk of being drawn in. If the Saudi diplomat's account is right, Iran benefits from pressure on a rival at little cost to itself. The heaviest burden falls on Yemenis: the renewed fighting this site covered on 14 October had already displaced more than 217,000 people before the strikes on Saudi airports widened the war.
 
 ## Sources
 

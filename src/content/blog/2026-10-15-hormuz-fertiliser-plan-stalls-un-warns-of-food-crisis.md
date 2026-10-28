@@ -2,6 +2,7 @@
 title: 'UN Warns of Food Crisis as Hormuz Fertiliser Plan Stalls'
 description: 'A UN official says Asia and Africa could face a food security crisis unless Iran and the US agree within weeks to a plan to move fertiliser through the Strait of Hormuz.'
 pubDate: '2026-10-15T00:18:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'economy'
 location: { name: 'Strait of Hormuz', lat: 26.57, lon: 56.25 }
 hype: { attention: 6, impact: 7 }
@@ -45,6 +46,16 @@ Al Jazeera notes that in South Asia, where most farmers rely on imported fertili
 - Whether the number of fertiliser-carrying vessels using the strait rises from the "very negligible" level reported by IFPRI.
 - Progress in the wider US-Iran talks on freedom of navigation, which have stalled over Iran's conditions and the nuclear question.
 - Planting-season outcomes and food price data in South Asia and Africa, and further FAO price index readings.
+
+## Editor's Insight
+
+The striking feature of this plan is how small the ask is. Before the crisis, about 130 ships a day passed through the strait; the UN says five vessels a day carrying fertiliser would be enough to keep supplies flowing to countries in critical need. The plan could be running within seven to 10 days of agreement. The obstacle is not logistics but linkage: talks have stalled over Tehran's conditions and Washington's insistence on addressing the nuclear programme first, so a narrow humanitarian channel is being held inside the larger dispute.
+
+The timing mismatch is the core risk. Diplomacy moves in months; crop calendars do not wait. The FAO said in May that a full-blown global food crisis could arrive within six to 12 months, which places the end of that window between November 2026 and May 2027. A planting season missed now would show up as lower yields and higher food prices only later, after the point at which a deal could have prevented it.
+
+The food channel also adds to a macroeconomic picture that is already fragile. The IMF's latest outlook, covered in our report on its [2026 growth forecast and warnings on AI and debt](/blog/2026-10-14-imf-raises-2026-growth-forecast-warns-on-ai-and-debt/), assumes Hormuz shipments resume by March and puts global inflation at 4.7% this year. If fertiliser stays stuck, the FAO's chain from energy to fertiliser to yields to food inflation would add pressure that the baseline does not fully capture.
+
+The losers are clear: farmers in South Asia who rely on imported fertiliser, and least developed economies with the least capacity to absorb the shock. Even farmers in Spain are protesting higher input costs. The possible winners are more diplomatic than economic. Oman, as the proposed host of the coordination centre, would gain a central role, and whichever side agrees first could present itself as the one that put food ahead of leverage.
 
 ## Sources
 

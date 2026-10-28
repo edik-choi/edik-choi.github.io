@@ -2,6 +2,7 @@
 title: 'Lula Pulls Ahead in Brazil Runoff Count'
 description: 'Who won Brazil''s 2026 presidential runoff? Lula overtook Flávio Bolsonaro as votes were counted on 25 October, but the electoral court had not yet declared a winner.'
 pubDate: '2026-10-26T00:12:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Brasília, Brazil', lat: -15.79, lon: -47.88 }
 hype: { attention: 10, impact: 6 }
@@ -67,6 +68,8 @@ If the count holds, the outcome would be a reversal of the first round. The firs
 The larger question may be legitimacy rather than the margin. With both campaigns alleging obstacles to voting and a Supreme Court justice with a past link to one candidate deciding on extensions, a loser could challenge the result even if the numbers are clear. Past practice, such as the 2022 refusal to concede, makes that a possibility worth watching, not a prediction.
 
 For markets, a Lula win would likely mean continuity in the fiscal framework that he says he supports, while a Flávio win would have meant a stronger push for spending cuts and privatisation. Congress, where Flávio's allies hold 259 of 513 seats, may limit either president's room to move. These are possibilities, not forecasts.
+
+Ten days ago, two polls had Flávio Bolsonaro two points ahead, and our earlier report noted that about 5.3 million first-round votes for eliminated conservatives were left without an endorsement. The count suggests that bloc did not move to him in large numbers. If the result holds, Lula is the clear winner, while the Bolsonaro family keeps its hold on Congress.
 
 ## Sources
 

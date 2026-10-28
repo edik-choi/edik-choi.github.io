@@ -2,6 +2,7 @@
 title: 'Storm Adam floods eastern Spain; disaster zone planned'
 description: 'Storm Adam, a DANA system, flooded Valencia and Alicante, killing at least five. What happened, why Spain is so exposed to DANA storms, and what the disaster-zone plan means.'
 pubDate: '2026-10-24T00:10:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'climate'
 location: { name: 'Oliva, Valencia, Spain', lat: 38.92, lon: -0.12 }
 hype: { attention: 10, impact: 3 }
@@ -72,6 +73,8 @@ Storm Adam is a useful comparison case for 2024. The rainfall totals reported by
 Politically, the response shows how a past disaster reshapes behaviour. Regional authorities that faced criticism in 2024 acted earlier and communicated more directly, and the central government moved quickly to announce disaster-zone status. A possible next test is the "great national agreement" Sánchez proposed: climate adaptation involves regions, municipalities and farmers, and agreeing on shared responsibilities could prove harder than agreeing on the need.
 
 For the wider economy, the immediate costs appear concentrated in housing, transport and agriculture in a few districts rather than in national output. Still, repeated events could raise insurance and reconstruction costs for Mediterranean regions. That is a forecast, not an established fact, and would depend on how often such storms occur and on how much is spent on prevention.
+
+The losses fall on households and farmers in the flooded districts, while the regional authorities that acted early have gained credibility they lacked in 2024. How quickly aid follows the disaster-zone declaration is the next test.
 
 ## Sources
 

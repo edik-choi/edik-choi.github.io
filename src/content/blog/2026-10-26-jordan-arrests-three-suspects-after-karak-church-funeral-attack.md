@@ -2,6 +2,7 @@
 title: 'Jordan arrests three suspects over deadly Karak church attack'
 description: 'Jordanian forces arrested three wounded gunmen on 26 October, three days after an attack on a funeral at a Greek Orthodox church in Karak left eight or nine dead.'
 pubDate: '2026-10-26T07:23:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'conflict'
 location: { name: 'Karak, Jordan', lat: 31.18, lon: 35.7 }
 hype: { attention: 7, impact: 3 }
@@ -67,6 +68,8 @@ The speed of the arrests, within three days, suggests that Jordan's security ser
 The government's language is notable. By ordering a review of security procedures and by the interior minister's focus on what draws young people to violence, officials are framing the attack as both a policing problem and a social one. If that framing holds, it could mean policy attention on youth radicalisation, though that is a possibility rather than a stated programme.
 
 Finally, the gap between eight and nine deaths is a small but real example of how early casualty counts shift. Readers should treat the figures as provisional until Jordan's health ministry publishes a final number.
+
+The heaviest cost falls on Jordan's Christians, about 2.6% of the population, for whom funerals and churches now come with armed patrols. For the state, the loss is to an image of stability in a region with wars on several borders. Until the suspects' motives and any outside links are established, it remains unclear who, if anyone, the attackers sought to serve.
 
 ## Sources
 

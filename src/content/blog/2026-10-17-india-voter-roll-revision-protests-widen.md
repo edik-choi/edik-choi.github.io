@@ -2,6 +2,7 @@
 title: 'India Voter Roll Revision Sparks Nationwide Protests'
 description: 'Protests over India''s Special Intensive Revision of voter lists have spread, and the Election Commission has announced two concessions.'
 pubDate: '2026-10-17T07:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'New Delhi', lat: 28.61, lon: 77.21 }
 hype: { attention: 8, impact: 4 }
@@ -56,6 +57,14 @@ The dispute has also become a test of how India handles street protest. TIME's o
 - Whether the Supreme Court takes up the pending issues again, and how the appeals tribunals perform.
 - Whether the Commission responds to the call to change how commissioners are appointed, or to reports of disagreement among its members.
 - Further demonstrations and the government's response to them.
+
+## Editor's Insight
+
+The appeal figures are the most revealing number in the dispute. If, as Bhatia writes, about 90% of decided appeals in West Bengal ended with voters restored to the rolls, the initial removals swept up many eligible people. The design also places the burden on the voter: those with older records can prove eligibility, while poorer voters without documents must appeal, and those whose appeals were still pending could not vote in the state election. The cost of an error falls on the voter, not on the Commission.
+
+West Bengal is why the opposition sees so much at stake. The revision removed about 12% of the electorate there before the state election, and the BJP then won the state for the first time. That sequence does not prove one caused the other, but it explains the protests. The Commission's 16 October changes are partial concessions: searchable rolls give parties a better tool to check removals, and the summary revision lets new voters register, but neither restores names already cut.
+
+The longer-term risk is to trust in the referee. Two of the three commissioners reportedly objected to key decisions, the Supreme Court upheld the exercise, and protesters now want a more independent appointment process. The "Cockroach" movement has already forced an education minister to resign in July, so the street has recent proof that pressure can work. If the rolls remain contested, future election results could be disputed before a single vote is cast.
 
 ## Sources
 

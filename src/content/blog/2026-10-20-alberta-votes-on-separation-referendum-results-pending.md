@@ -2,6 +2,7 @@
 title: 'Alberta Votes on Separation: What the Referendum Decides'
 description: 'Albertans voted on October 19 on whether to start a legal process toward a binding separation referendum. Results were still pending; here is what the vote means and why it matters for Canada.'
 pubDate: '2026-10-20T00:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Alberta, Canada', lat: 53.93, lon: -116.58 }
 hype: { attention: 6, impact: 4 }
@@ -74,6 +75,8 @@ The pre-vote data points to a result that is clear on the headline question but 
 The sharp rise in early voting is a second signal. A turnout of 43% before election day, against 27.5% in 2023, indicates unusual engagement; whether that benefits either side cannot be inferred from the numbers alone. It does mean a result will carry more legitimacy than a low-turnout vote would.
 
 Finally, the political risk may sit inside Alberta's governing party rather than in the ballot count. If Morgan's estimate of UCP sympathy is even partly right, a lopsided "remain" result might not end pressure on Smith. A possibility, not a certainty, is that the question returns through party politics ahead of the 2027 election. Readers should treat this article as a pre-result snapshot and check Elections Alberta for the official figures.
+
+Whatever the count, the separatist side has already won something: a province-wide vote that puts its question on the official agenda. Ottawa stands to gain most from a large "remain" margin, which would weaken separation as a bargaining threat. Smith is the most exposed. A big win for remaining would anger the separatists in her party, while a narrow one would invite them to push for another vote. In either case, the referendum shifts pressure from the federation to the premier.
 
 ## Sources
 

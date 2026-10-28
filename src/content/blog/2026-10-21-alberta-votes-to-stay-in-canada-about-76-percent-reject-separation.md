@@ -2,6 +2,7 @@
 title: 'Alberta Votes to Stay in Canada: What the Result Means'
 description: 'About 76% of Albertans chose to remain in Canada in the October 19 referendum. Here is what the Alberta separation referendum result means for Smith, Carney and the separatist movement.'
 pubDate: '2026-10-21T07:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Alberta, Canada', lat: 53.93, lon: -116.58 }
 hype: { attention: 10, impact: 4 }
@@ -66,6 +67,8 @@ The margin is clear, and the most reliable reading is that a large majority of v
 The more consequential question may be inside the governing party. Smith called the vote under pressure from separatists in her own party, and the people who wanted a different outcome are now looking at her leadership rather than at the ballot. Whether that produces a challenge, a party split or nothing at all is a possibility rather than a certainty. A lopsided result gives Smith an argument that the issue has been settled; it does not remove the pressure that brought the question to the ballot.
 
 For Carney, the result is a political gain, but one tied to conditions. He framed it as a chance to speed up trade diversification, infrastructure and energy development, and the grievances behind the "quarter" are likely to be tested against how quickly those promises show results. The final figures, and the other nine answers due this week, will show how much of the vote was about independence and how much was about the way Alberta is governed from Ottawa.
+
+Compared with the polls in our pre-vote report, which ranged from about 66% to 74% for remaining, the result came in higher, so the separatist camp ended with less than even its weaker polling suggested. Carney is the clearest winner, and the separatists the clearest losers on the ballot. Smith sits in between: she can say the question has been answered, but she now leads a party in which the losing side is still organised.
 
 ## Sources
 

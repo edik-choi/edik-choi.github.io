@@ -2,6 +2,7 @@
 title: 'Ads Used to Deliver Spyware to Al Jazeera Devices'
 description: 'Citizen Lab says an Israeli ad firm helped deliver Candiru spyware through online ads, targeting at least 45 Al Jazeera devices without a single click.'
 pubDate: '2026-10-18T07:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'technology'
 location: { name: 'Toronto', lat: 43.65, lon: -79.38 }
 hype: { attention: 8, impact: 6 }
@@ -49,6 +50,16 @@ Platforms have started to respond. Following Citizen Lab's reports, <mark>Google
 - **Ad industry rules:** Whether exchanges begin vetting ad buyers more closely and limit the personal data sent to unknown bidders, as O'Shaughnessy urged.
 - **Attribution:** The government or governments behind the Al Jazeera operation have not been named. Discover-Tech, Candiru and Al Jazeera did not respond to requests for comment in at least one report.
 - **Further victims:** Citizen Lab found Discover-Tech ads far beyond Al Jazeera, but an ad appearing on a device does not mean the device was hacked.
+
+## Editor's Insight
+
+The case changes the threat model more than the tools. Spyware has always needed a way in, and Candiru's earlier operations against at least 100 activists, journalists and politicians relied on other routes. AdFection uses the data that online advertising already collects for marketing, a device ID, an IP address, a rough location, as the targeting system for surveillance. The feature the ad industry sells is the same feature the attackers exploited.
+
+The speed from theory to practice is striking. Amnesty International described a similar method, "Aladdin", in late 2025 from leaked Intellexa marketing files. Citizen Lab now says AdFection was used against real targets between 2024 and 2025. The case also shows the limits of blacklisting. The United States put Candiru on its blacklist in 2021, yet its infrastructure was reached through an intermediary that appeared on vendor lists kept by Google and IAB Europe. Sanctioning a vendor does little if a front company can buy its way into the auction.
+
+The losers extend beyond Al Jazeera. Journalists and officials face the highest risk, and the appearance of Discover-Tech's ads on networks used by the Pentagon, the IAEA and the International Criminal Court, where only profiling was observed, shows how far the reach could extend. The advertising industry also loses trust: platforms removed Discover-Tech's accounts only after Citizen Lab's reports, which suggests vetting was reactive rather than preventive.
+
+A possible consequence is that regulators begin to treat the data shared in ad auctions as a security problem, not only a privacy one. For now, the practical defences fall to individuals, through ad blockers, disabled advertising IDs and hardened phone modes, which leaves the most exposed people to protect themselves against a weakness built into the system.
 
 ## Sources
 

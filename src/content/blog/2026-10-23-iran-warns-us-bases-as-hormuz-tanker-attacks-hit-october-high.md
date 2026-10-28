@@ -2,6 +2,7 @@
 title: 'Iran Warns It Could Hit US Bases as Hormuz Ship Attacks Rise'
 description: 'Iran’s Revolutionary Guards say the war will reach US bases if Washington keeps escorting tankers through the Strait of Hormuz. Here is what is happening and why oil markets are watching.'
 pubDate: '2026-10-23T00:10:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'conflict'
 location: { name: 'Strait of Hormuz', lat: 26.57, lon: 56.25 }
 hype: { attention: 10, impact: 9 }
@@ -74,6 +75,8 @@ The notable shift is in the logic of the standoff. For months the escorts and th
 The economic picture is more fragile than the headline flow numbers suggest. If flows are near pre-war levels, as AP reports, the cost has moved into insurance, freight rates and risk: tanker rates in the hundreds of thousands of dollars a day, ships going dark, and shippers reluctant to report incidents. Saudi Arabia's growing pipeline route reduces its exposure but shifts risk to the Red Sea side, where the Houthi-Saudi fighting is now escalating. These are possible readings of reported facts, not forecasts.
 
 Politics is a visible overlay. Trump has tied Iran's actions to the midterms, while the New York Times report cited by Fox News places planning for new strikes in the period after 3 November. Whether any side chooses de-escalation before then will depend on decisions not yet reported, and readers should treat claims from the parties, including those on oil volumes, as unverified until confirmed by independent data.
+
+The gains and losses are spread unevenly. Saudi Arabia gains resilience through its pipeline but takes on Red Sea risk. Shipowners can earn very high day rates, while importers and their consumers pay for them through freight and insurance. The IMF's latest outlook assumed Hormuz traffic would return to normal by March, and threats against US bases make that assumption harder to rely on.
 
 ## Sources
 

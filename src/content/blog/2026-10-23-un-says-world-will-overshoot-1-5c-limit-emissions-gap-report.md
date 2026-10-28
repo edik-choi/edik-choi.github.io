@@ -2,6 +2,7 @@
 title: 'UN report: world will overshoot the 1.5°C warming limit'
 description: 'The UN Environment Programme says limiting warming to 1.5°C with little or no overshoot is no longer possible. What the Emissions Gap Report 2026 means ahead of COP31.'
 pubDate: '2026-10-23T07:13:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'climate'
 location: { name: 'Nairobi, Kenya', lat: -1.29, lon: 36.82 }
 hype: { attention: 6, impact: 8 }
@@ -70,6 +71,8 @@ The report's most important shift is one of framing. For a decade, 1.5°C was a 
 The gap between the required cuts and the pledged ones is the story's core tension. A 45% cut by 2035 against pledges of 11–15% is not a gap that incremental tightening of existing plans is likely to close, and the EU's own draft concedes there is no new money on offer. A possible consequence, which is analysis rather than fact, is that COP31 turns into a debate about implementation and finance rather than fresh targets, with the EU's mitigation work programme extension as the main concrete deliverable.
 
 The renewable growth figures offer a counterweight. Technology deployment has outrun forecasts, and PBL says policy support could triple capacity by 2030. If that holds, the main variable may be less technology than whether the largest emitters, including those that have not yet peaked, align policy with it. That is a forecast, not a certainty.
+
+That counterweight depends on supply chains that are becoming contested. China's [draft export curbs on 40 technologies](/blog/2026-10-17-china-proposes-export-curbs-on-40-technologies-including-ai/) include know-how for making polysilicon, a core solar input, so the fastest route to more renewable capacity also runs through a geopolitical chokepoint. The countries with the least finance and the most exposure to warming lose most if overshoot lasts longer. Producers that control clean-energy inputs gain leverage.
 
 ## Sources
 

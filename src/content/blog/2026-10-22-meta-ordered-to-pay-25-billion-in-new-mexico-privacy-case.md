@@ -2,6 +2,7 @@
 title: 'Meta Ordered to Pay $25 Billion in New Mexico Privacy Case'
 description: 'A New Mexico judge ordered Meta to pay $25 billion after a jury found it misled users about their data. Here is what the Meta New Mexico penalty means and what happens on appeal.'
 pubDate: '2026-10-22T00:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'technology'
 location: { name: 'Santa Fe, New Mexico, USA', lat: 35.69, lon: -105.94 }
 hype: { attention: 7, impact: 4 }
@@ -71,6 +72,8 @@ The headline figure matters less than the method. The judge did not set the pena
 The size of the reduction, from more than $219 billion to $25 billion, also suggests that courts are wary of treating the statutory maximum as the right answer. Meta's argument that no individual was shown to be misled is the kind of point appellate courts often weigh. It is possible, though not certain, that the amount will change on appeal; the experts quoted by NBC News expect the process to be long.
 
 For the wider technology industry, the case sits alongside the earlier New Mexico youth-safety verdicts and the multistate settlement in August. Taken together, they point to US states, not just federal regulators, becoming the main source of financial risk for platforms over what they tell users about data and safety. Whether that trend continues will depend on how higher courts treat per-violation penalties of this scale.
+
+The winners are state prosecutors, who now have a tested way to put a price on platform disclosures, and Meta is the loser unless the appeal succeeds. The case also connects to the [AdFection spyware report](/blog/2026-10-18-adfection-spyware-ads-hit-al-jazeera/), which showed how data collected for advertising can be turned against users. Courts and researchers are approaching the same weakness from different sides: what platforms collect, and what they say about it.
 
 ## Sources
 

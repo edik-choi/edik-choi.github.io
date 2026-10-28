@@ -2,6 +2,7 @@
 title: 'Sudan drone strikes kill 160 as both sides escalate'
 description: 'More than 160 people were reported killed in drone attacks across Sudan since 16 October, including 80 at a transport hub in West Kordofan. Here is what is known and why the Sudan war is widening.'
 pubDate: '2026-10-20T07:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'conflict'
 location: { name: 'Kordofan, Sudan', lat: 12.2, lon: 29.5 }
 hype: { attention: 4, impact: 5 }
@@ -72,6 +73,8 @@ The pattern in this week's reports is that drones have become the main way both 
 The diplomatic picture points the same way. A US push for a truce and arms embargo, and China's and Russia's opposition to widening the embargo, is a split that could keep the Security Council from acting. This is an analytical reading, not a reported outcome, and the council could still agree narrower steps such as humanitarian access.
 
 For civilians, the combination of a 43 per cent funded response plan and strikes on markets and displaced communities suggests the humanitarian situation could worsen even without a change in front lines. That is a possibility rather than a forecast: aid delivery and famine risk depend on access, funding and the course of fighting in Darfur and Kordofan.
+
+The funding gap links Sudan to other crises on this site. Like the [underfunded cholera response in Yemen](/blog/2026-10-14-yemen-cholera-cases-triple-as-fighting-displaces-families/), aid here is competing for donor money while the fighting continues. The losers are civilians in markets and displacement sites. The armed sides, by contrast, pay little for a tactic that reaches far behind the front lines, which is why the incentive to keep using drones is likely to persist.
 
 ## Sources
 

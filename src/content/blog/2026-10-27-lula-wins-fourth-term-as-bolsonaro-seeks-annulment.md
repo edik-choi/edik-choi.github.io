@@ -2,6 +2,7 @@
 title: 'Lula Wins Fourth Term as Bolsonaro Seeks Annulment'
 description: 'Who won Brazil''s 2026 runoff? Lula beat Flávio Bolsonaro by about 4.3 million votes, and Bolsonaro says he will ask to annul the result after voting was extended.'
 pubDate: '2026-10-27T00:12:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Brasília, Brazil', lat: -15.79, lon: -47.88 }
 hype: { attention: 10, impact: 6 }
@@ -72,6 +73,8 @@ The first-round lead for Flávio Bolsonaro was about two points, and it turned i
 The annulment threat is a different kind of risk. Because both camps asked for the extension, and because a justice appointed by Jair Bolsonaro recognised the win, a challenge may be politically useful for Flávio more than legally viable. It could keep his base mobilised through a Congress where the right is strong. Whether it does so is a possibility, not a forecast.
 
 For Lula, the margin is clear, but the arithmetic in Congress is not in his favour. A fourth term at 80 would depend on bargaining with a legislature controlled by opponents, which may limit the fiscal and social agenda he campaigned on. Investors will likely watch how the new government handles the fiscal pressures the AP flagged.
+
+The annulment bid echoes 2022, when Jair Bolsonaro refused to concede and later plotted to overturn the result, a case that ended with his 27-year sentence. That precedent raises the cost of pushing a challenge too far. On balance, Lula wins the presidency, the right keeps a strong position in Congress, and the voters who stayed home in the first round turned out to decide the outcome.
 
 ## Sources
 

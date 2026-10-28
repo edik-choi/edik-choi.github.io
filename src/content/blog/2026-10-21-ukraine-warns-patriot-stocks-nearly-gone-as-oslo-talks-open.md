@@ -2,6 +2,7 @@
 title: 'Ukraine Warns Patriot Stocks Nearly Gone as Oslo Talks Open'
 description: 'Zelensky says Ukraine has almost no US-supplied Patriot interceptors left and offered a 30-day pause on refinery strikes. Here is what the dispute with Washington means as talks open in Oslo.'
 pubDate: '2026-10-21T00:11:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Oslo, Norway', lat: 59.91, lon: 10.75 }
 hype: { attention: 6, impact: 7 }
@@ -74,6 +75,8 @@ The most striking feature of this story is that both sides' accounts can be part
 The 30-day offer can be read as a bid to turn a bargaining weakness into leverage. Ukraine's refinery strikes are one of the few levers it holds over Russia's economy, and Washington has asked for them to stop. Trading them for air defence is a possibility the sources do not show Washington accepting, and Trump's comment about "somebody else" negotiating suggests patience may be thin. It is an assessment, not a fact, that pressure on Kyiv could grow if Oslo produces no movement.
 
 Finally, European roles are growing. Europe pays for much of the PURL flow, hosts the talks and is named in the US proposals on future security arrangements. If Washington's attention shifts, Europe may find itself holding more of the cost without more of the control, a trend worth following as winter approaches.
+
+The offer follows directly from the position Zelensky set out a week earlier, when he called Patriot interceptors a "minimum" for halting energy strikes. Russia gains from every week the stocks stay low, since thin air defence makes its strikes on Ukraine's grid more effective. Europe, which pays for much of the PURL flow, carries more of the cost of closing that gap.
 
 ## Sources
 

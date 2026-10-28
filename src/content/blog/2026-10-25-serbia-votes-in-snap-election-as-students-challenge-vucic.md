@@ -2,6 +2,7 @@
 title: 'Serbia Votes as Student Movement Challenges Vucic'
 description: 'Who could win Serbia''s snap election? Voters chose a parliament on 25 October as a student-led list, born of protests over a deadly 2024 collapse, ran level with Aleksandar Vucic''s party.'
 pubDate: '2026-10-25T07:10:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Belgrade, Serbia', lat: 44.79, lon: 20.45 }
 hype: { attention: 6, impact: 5 }
@@ -61,6 +62,8 @@ The close race matters less for who wins than for what the protest movement has 
 The foreign-policy picture is also uncertain. Vucic has balanced Beijing, Moscow and Brussels. The students' silence on Russia, Kosovo and EU entry means a change of government would not automatically mean a clear turn toward the EU. Observers such as Teneo suggest the first challenge could be governing at all.
 
 Finally, the comparison drawn with Hungary shows how electoral outcomes in Central and Eastern Europe are being read as tests of whether long-dominant parties can be voted out. Serbia's result could be cited in that debate, though the two countries differ in size, EU status and party systems.
+
+Serbia votes on the same day as [Brazil's presidential run-off](/blog/2026-10-16-brazil-runoff-tightens-between-lula-and-flavio-bolsonaro/), and both votes test whether a long-dominant political force can be held to account at the ballot box. In Serbia, Brussels would gain an opening if the students win, while Moscow and Beijing could lose a partner that has kept ties with all sides. The students carry the greatest risk: a narrow loss could leave the movement weaker than before it entered politics.
 
 ## Sources
 

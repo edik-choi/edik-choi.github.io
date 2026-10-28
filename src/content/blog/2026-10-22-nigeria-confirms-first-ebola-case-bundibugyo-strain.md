@@ -2,6 +2,7 @@
 title: 'Nigeria confirms first Ebola case, same strain as DR Congo'
 description: 'Nigeria confirmed an imported Ebola Bundibugyo case in Abuja on 20 October, the fifth country to detect the virus in the outbreak that began in the DR Congo.'
 pubDate: '2026-10-22T07:13:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'society'
 location: { name: 'Abuja, Nigeria', lat: 9.06, lon: 7.49 }
 hype: { attention: 8, impact: 5 }
@@ -68,6 +69,8 @@ The Nigerian case is a reminder that the weak point in an Ebola response is ofte
 There is also a contrast with 2014. Nigeria then contained an outbreak of 20 infections within three months. Whether that past experience helps this time depends on how many of the 44 contacts, and any others yet to be found, are traced and monitored. The sources do not yet say whether any contact is ill, so a quick containment is a possibility, not a finding.
 
 For the wider region, the main question is travel and trade policy. The WHO's advice against restrictions sits against a political reality in which governments often act on fear of imported cases. If more countries detect cases, pressure for border measures may grow. That is analysis rather than a reported development, and it will depend on how the case count moves in the coming weeks.
+
+If travel restrictions follow, the costs would fall on travellers and on trade along routes out of the DRC, which is why the WHO advises against them. The health workers and private clinics that see patients first carry the most immediate risk, as the infected health workers in Kenya showed. The likely winner from early action is Nigeria itself: its 2014 record suggests that quick tracing costs far less than a wider outbreak.
 
 ## Sources
 

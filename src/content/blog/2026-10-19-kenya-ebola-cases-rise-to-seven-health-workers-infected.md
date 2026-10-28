@@ -2,6 +2,7 @@
 title: 'Kenya Ebola outbreak: cases rise to seven, health workers hit'
 description: 'Kenya confirmed four more Ebola cases on 17 October, the first infections passed on inside the country, among them three health workers who treated the first patient.'
 pubDate: '2026-10-19T00:10:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'society'
 location: { name: 'Nairobi, Kenya', lat: -1.29, lon: 36.82 }
 hype: { attention: 6, impact: 5 }
@@ -67,6 +68,8 @@ The Kenyan figures show how an imported case can turn into local transmission wi
 The contact-tracing numbers are the encouraging counterweight. With 128 of 130 contacts quarantined, Kenya is above the 85% benchmark cited in the reporting, and a case that develops inside quarantine does not spread the virus further in the community. If that performance holds, the outbreak in Kenya could remain a small cluster, though that is a possibility and not a finding.
 
 The larger uncertainty is regional. Because the Bundibugyo strain has no approved vaccine or treatment, every country on the route out of the DRC depends on screening, isolation and tracing alone. Early-stage vaccine trials may change that over time, but the sources do not say when results are expected. For now, Kenya's experience is a test of whether those measures can contain the strain once it crosses a border.
+
+The cost of the gap has fallen first on health workers: three of the seven confirmed cases are people infected while caring for the first patient. The pattern resembles the [cholera outbreak in Yemen](/blog/2026-10-14-yemen-cholera-cases-triple-as-fighting-displaces-families/), where the WHO also put surveillance ahead of treatment, because finding cases early is what keeps a cluster from becoming an outbreak. In both places, the people on the front line carry the risk that the system's delays create.
 
 ## Sources
 

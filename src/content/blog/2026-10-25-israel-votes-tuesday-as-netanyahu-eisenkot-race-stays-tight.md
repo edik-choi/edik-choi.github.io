@@ -2,6 +2,7 @@
 title: 'Israel Votes Tuesday as Netanyahu-Eisenkot Race Stays Tight'
 description: 'Who will win Israel''s 2026 election? Polls show Netanyahu''s bloc and Gadi Eisenkot''s neck and neck, with the Iran war and the Haredi draft dispute shaping the 27 October vote.'
 pubDate: '2026-10-25T00:12:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'politics'
 location: { name: 'Tel Aviv, Israel', lat: 32.08, lon: 34.78 }
 hype: { attention: 4, impact: 6 }
@@ -74,6 +75,8 @@ The campaign shows a country voting on three questions at once: who led it throu
 Polls this close tend to make small parties and post-election bargaining decisive. If the picture in the sources holds, neither Netanyahu nor Eisenkot can count on a clean majority, and a weeks-long negotiation is a possibility, not a forecast. Eisenkot would then face the same dependence on the Haredi and Arab parties that has complicated Netanyahu's position.
 
 For outside observers, the main link is Iran. A government more reluctant to strike could ease pressure on Hormuz shipping and on energy prices, while a hawkish one could prolong it. That is an inference from the candidates' reported positions, not a prediction.
+
+If no bloc wins a majority, the main winners would be the small parties that can make or break a coalition, the Haredi and Arab parties among them, because both leaders would need their votes. The main loser could be whoever forms a government, since that leader would start out dependent on partners whose demands, from army service to the course of the war, pull in different directions.
 
 ## Sources
 

@@ -2,6 +2,7 @@
 title: 'Ukraine Ends Energy Truce and Resumes Refinery Strikes'
 description: 'Days after a US-announced energy ceasefire, Ukraine says it will again target Russian oil refineries, deepening a rift with Washington.'
 pubDate: '2026-10-16T00:04:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'conflict'
 location: { name: 'Kyiv', lat: 50.45, lon: 30.52 }
 hype: { attention: 10, impact: 7 }
@@ -50,6 +51,16 @@ The energy fight also has human costs. Reuters reported that a six-year-old girl
 - **Diesel prices:** whether the Russian diesel deal and Ukrainian strikes change fuel prices before the US midterms.
 - **Europe:** Zelensky is due at an EU summit on Friday, and EU ministers are discussing more sanctions on Russia and Ukraine's accession talks.
 - **Winter:** military experts quoted by NBC News warn that losing US intelligence or satellite access could weaken Ukraine's position as winter approaches.
+
+## Editor's Insight
+
+The truce asked Kyiv to give up one of its few levers on Russia's economy in exchange for an unspecified promise. The Ryazan refinery alone handles nearly 5% of Russia's refinery throughput, and strikes on such sites impose a direct cost that sanctions take longer to deliver. Ukraine says that during its three-day pause Russia kept attacking power stations and hundreds of thousands of people lost electricity. From Kyiv's side, a ceasefire without the "real guarantees" Zelensky asked for meant restraint on one side only.
+
+The pressure from Washington is driven largely by American pump prices. Diesel has hit record highs since the US war with Iran began in February, midterm elections are less than three weeks away, and Trump blames Ukraine's refinery campaign for part of the rise. The 300,000-tonne Russian diesel deal, which analysts say is too small to lower prices for long, shows how far domestic fuel politics now shapes US policy toward the war. Moscow is the clearest beneficiary: it gains if US pressure restrains strikes on its refineries, and it gains a diesel sale.
+
+The week also exposed how much of Ukraine's defence depends on systems controlled by others. The reported threat to withhold intelligence, the ballistic strikes that came without the usual warning and the Starshield speed limits all point to the same vulnerability, whatever their causes turn out to be. With US weapons supplies halted, Europe's ability to buy American arms for Kyiv has become more important to Ukraine.
+
+Zelensky's demand for Patriot interceptors as a "minimum" ties the energy question to air defence: restraint on refineries would be traded for protection of Ukraine's grid. If no such exchange is reached, both sides may keep escalating their attacks on energy, and civilians bear the cost, as the killing of a six-year-old in Zaporizhzhia and the drone strikes on tankers off Romania, a NATO member, already show.
 
 ## Sources
 

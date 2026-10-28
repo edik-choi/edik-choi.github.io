@@ -2,6 +2,7 @@
 title: 'EU Enters Winter With Record-Low Gas Storage, IEA Warns'
 description: 'Why is Europe short of gas this winter? The IEA chief says EU storage is about 72% full against a usual 90%, as the Iran war squeezes LNG and fuel supplies.'
 pubDate: '2026-10-24T07:12:00Z'
+updatedDate: '2026-10-28T00:41:00Z'
 category: 'economy'
 location: { name: 'Berlin, Germany', lat: 52.52, lon: 13.40 }
 hype: { attention: 7, impact: 8 }
@@ -70,6 +71,8 @@ The central lesson of this story is that Europe's energy security now depends on
 There is also a policy trade-off. The EU has spent over €100 billion more on imports without gaining extra supply, according to Jørgensen, which suggests money alone cannot buy security in a physically constrained market. If Brussels moves to ration demand, it would shift the debate from price to fairness, since households and industry feel cuts differently. That is a possibility, not a forecast the sources make.
 
 Finally, Birol's comments hint at a longer horizon. He expects difficulty "this year and also next year," and Columbia's analysis doubted that Qatari output would return to full capacity by early 2027. If those assessments hold, this winter may be the first of several tight ones, which could accelerate investment in bypass pipelines, storage and demand reduction. Whether governments act on that is an open question.
+
+The comparison with 2022 is instructive. When Nord Stream was destroyed, as this site noted in covering the Hamburg sabotage trial, Germany lost a pipeline that had supplied about half of its gas imports. Europe replaced that single dependency with LNG, which travels through several chokepoints. The exporters gain from the extra €100 billion Europe has spent, while European households and industry pay more without receiving more gas.
 
 ## Sources
 
