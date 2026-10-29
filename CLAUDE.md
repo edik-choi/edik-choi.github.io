@@ -36,7 +36,7 @@ Claude Code CLI에서는 mod pane으로 화면 우측에 대시보드를 띄웁�
 
 ## 서버리스 펑션 번들 크기
 
-Next.js 프로젝트는 서버리스 펑션 하나하나의 번들 크기를 작게 유지합니다. 설정은 이미 배포된 빌드에는 영향이 없고, 다음 git push로 새 빌드가 생성될 때부터 적용됩니다.
+이 규칙은 Next.js 프로젝트에만 해당합니다. 서버리스 펑션 하나하나의 번들 크기를 작게 유지합니다. 설정은 이미 배포된 빌드에는 영향이 없고, 다음 git push로 새 빌드가 생성될 때부터 적용됩니다.
 
 - Standalone 모드: `next.config`에 `output: 'standalone'`을 둡니다. 서버 실행에 필요한 파일만 추려서 내보냅니다.
 - File Tracing 제외: 런타임에 쓰지 않는데 트레이싱에 딸려 들어가는 파일은 `outputFileTracingExcludes`에 넣어 뺍니다. 빌드 도구, 소스맵, 테스트, 문서, 브라우저 전용 패키지(예: `**/*.map`, `node_modules/@swc/**`, `node_modules/typescript/**`, `node_modules/@esbuild/**`)가 대상입니다. 라우트 키는 실제로 필요한 라우트를 빼지 않도록 좁게 씁니다.
