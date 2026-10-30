@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Ports involved across regions">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="60" y="92" font-size="40" font-weight="700">A PORT ACTION ACROSS THREE REGIONS</text>
+    <rect x="60" y="155" width="680" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="220" font-size="38" font-weight="700" fill="#2f6b0f">EUROPE</text>
+    <text x="95" y="290" font-size="34">Hamburg · Valencia</text>
+    <text x="95" y="350" font-size="34">Le Havre · Algeciras</text>
+    <text x="95" y="410" font-size="34">Piraeus · Genoa</text>
+    <rect x="780" y="155" width="360" height="170" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="815" y="215" font-size="32" font-weight="700" fill="#a14d12">NORTH AFRICA</text>
+    <text x="815" y="275" font-size="34">Tangier Med</text>
+    <rect x="780" y="355" width="360" height="190" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="815" y="420" font-size="32" font-weight="700" fill="#a14d12">SOUTH ASIA</text>
+    <text x="815" y="485" font-size="34">Nhava Sheva</text>
+  </g>
+  <text x="60" y="600" font-size="28" fill="#4a4a3a">Examples of hubs named in Reuters coverage</text>
+  <text x="60" y="640" font-size="28" fill="#5c6b40">Source: Reuters; AP</text>
+</svg>

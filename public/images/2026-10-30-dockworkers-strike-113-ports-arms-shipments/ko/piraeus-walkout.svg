@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="피레우스 항만 파업 영향">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="60" y="92" font-size="42" fill="#4a4a3a">그리스 피레우스 · 2026년 10월 30일</text>
+    <text x="60" y="290" font-size="170" font-weight="700" fill="#2f6b0f">3,000명</text>
+    <text x="70" y="355" font-size="42" font-weight="700">항만 노동자와 선원 참여</text>
+    <rect x="60" y="425" width="520" height="125" rx="18" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="480" font-size="34" font-weight="700" fill="#a14d12">화물 작업</text>
+    <text x="95" y="525" font-size="34">차질 발생</text>
+    <rect x="620" y="425" width="520" height="125" rx="18" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="655" y="480" font-size="34" font-weight="700" fill="#a14d12">섬 노선 여객선</text>
+    <text x="655" y="525" font-size="34">운항 중단</text>
+  </g>
+  <text x="60" y="635" font-size="28" fill="#5c6b40">출처: Reuters; AP</text>
+</svg>

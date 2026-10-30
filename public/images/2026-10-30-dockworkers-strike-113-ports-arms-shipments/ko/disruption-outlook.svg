@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="파업 차질 전망과 전문가 평가">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="60" y="92" font-size="42" font-weight="700">파업으로 인한 차질 전망</text>
+    <rect x="60" y="145" width="520" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="205" font-size="34" font-weight="700" fill="#a14d12">주최 측 사전 전망</text>
+    <text x="95" y="325" font-size="108" font-weight="700" fill="#a14d12">40% 초과</text>
+    <text x="100" y="375" font-size="32">지중해 화물 영향 가능성</text>
+    <text x="95" y="465" font-size="68" font-weight="700" fill="#2f6b0f">20억 달러+</text>
+    <text x="100" y="510" font-size="30">위험에 놓일 수 있는 화물</text>
+    <rect x="620" y="145" width="520" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="655" y="205" font-size="34" font-weight="700" fill="#2f6b0f">AP 전문가 평가</text>
+    <text x="655" y="315" font-size="62" font-weight="700">제한적</text>
+    <text x="655" y="375" font-size="32">세계 무역 영향은 제한 전망</text>
+    <text x="655" y="465" font-size="32">광범위한 물자 부족은</text>
+    <text x="655" y="510" font-size="32">없을 것으로 예상</text>
+  </g>
+  <text x="60" y="590" font-size="28" fill="#4a4a3a">사전 전망은 실제 측정 결과가 아님</text>
+  <text x="60" y="635" font-size="28" fill="#5c6b40">출처: Reuters; AP</text>
+</svg>

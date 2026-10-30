@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="지역별 파업 참여 항만">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Pretendard, 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="60" y="92" font-size="40" font-weight="700">세 지역에 걸친 항만 공동 행동</text>
+    <rect x="60" y="155" width="680" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="220" font-size="38" font-weight="700" fill="#2f6b0f">유럽</text>
+    <text x="95" y="290" font-size="34">함부르크 · 발렌시아</text>
+    <text x="95" y="350" font-size="34">르아브르 · 알헤시라스</text>
+    <text x="95" y="410" font-size="34">피레우스 · 제노바</text>
+    <rect x="780" y="155" width="360" height="170" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="815" y="215" font-size="32" font-weight="700" fill="#a14d12">북아프리카</text>
+    <text x="815" y="275" font-size="34">탕헤르 메드</text>
+    <rect x="780" y="355" width="360" height="190" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="815" y="420" font-size="32" font-weight="700" fill="#a14d12">남아시아</text>
+    <text x="815" y="485" font-size="34">나바 셰바</text>
+  </g>
+  <text x="60" y="600" font-size="28" fill="#4a4a3a">Reuters 보도에 나온 주요 거점 예시</text>
+  <text x="60" y="640" font-size="28" fill="#5c6b40">출처: Reuters; AP</text>
+</svg>

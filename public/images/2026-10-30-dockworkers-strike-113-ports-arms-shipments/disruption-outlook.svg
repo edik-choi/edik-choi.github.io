@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Strike disruption estimates and expert assessment">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+    <text x="60" y="92" font-size="42" font-weight="700">THE DISRUPTION PICTURE</text>
+    <rect x="60" y="145" width="520" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="205" font-size="34" font-weight="700" fill="#a14d12">ORGANISERS' FORECAST</text>
+    <text x="95" y="325" font-size="108" font-weight="700" fill="#a14d12">&gt;40%</text>
+    <text x="100" y="375" font-size="32">of Mediterranean cargo</text>
+    <text x="95" y="465" font-size="68" font-weight="700" fill="#2f6b0f">&gt;$2bn</text>
+    <text x="100" y="510" font-size="30">freight potentially at risk</text>
+    <rect x="620" y="145" width="520" height="390" rx="20" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="655" y="205" font-size="34" font-weight="700" fill="#2f6b0f">AP EXPERT VIEW</text>
+    <text x="655" y="315" font-size="62" font-weight="700">LIMITED</text>
+    <text x="655" y="375" font-size="32">global trade effect expected</text>
+    <text x="655" y="465" font-size="32">No widespread shortages</text>
+    <text x="655" y="510" font-size="32">expected from one day</text>
+  </g>
+  <text x="60" y="590" font-size="28" fill="#4a4a3a">Forecasts are not measured outcomes.</text>
+  <text x="60" y="635" font-size="28" fill="#5c6b40">Source: Reuters; AP</text>
+</svg>
