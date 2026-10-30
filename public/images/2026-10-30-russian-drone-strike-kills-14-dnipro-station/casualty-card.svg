@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" role="img" aria-label="Dnipro attack infographic">
+  <rect width="100%" height="100%" fill="#f6fcbb"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1a1a1a">
+
+    <text x="60" y="92" font-size="38" fill="#4a4a3a">DNIPRO RAILWAY STATION · 29 OCT 2026</text>
+    <text x="60" y="270" font-size="170" font-weight="700" fill="#a14d12">14</text>
+    <text x="65" y="330" font-size="42" font-weight="700">people killed</text>
+    <line x1="590" y1="145" x2="590" y2="480" stroke="#8a9560" stroke-width="3"/>
+    <text x="660" y="260" font-size="120" font-weight="700" fill="#2f6b0f">14</text>
+    <text x="665" y="320" font-size="42" font-weight="700">people injured</text>
+    <rect x="60" y="405" width="1080" height="105" rx="18" fill="#eef6b0" stroke="#8a9560" stroke-width="2"/>
+    <text x="95" y="475" font-size="42"><tspan font-weight="700" fill="#a14d12">6</tspan><tspan> in serious condition</tspan></text>
+  
+  </g>
+  <text x="60" y="635" font-size="28" fill="#5c6b40">Source: AP; regional governor Oleksandr Hanzha</text>
+</svg>
